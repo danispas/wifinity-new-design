@@ -29,6 +29,10 @@
   width: 25%;
 }
 
+.w-50 {
+  width: 50%;
+}
+
 .w-progress-bar-actions-container {
   display: flex;
   justify-content: space-between;
@@ -41,6 +45,11 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+}
+
+.w-progress-bar-link {
+  text-decoration: none;
+  color: inherit;
   cursor: pointer;
 }
 
@@ -274,9 +283,18 @@
 /* ---------------- */
 
 .w-plan-price {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+}
+
+.w-plan-price__old-amount {
+  font-size: 36px;
+  font-weight: 700;
+  color: #999;
+  line-height: 1;
+  text-decoration: line-through;
 }
 
 .w-plan-price__amount {
@@ -304,6 +322,38 @@
   color: var(--secondary-color);
   text-decoration: underline;
   cursor: pointer;
+}
+
+.w-purchase-step__connection-type-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.w-purchase-step__connection-type__icon {
+  width: 64px;
+  height: 64px;
+}
+
+.w-purchase-step__connection-type-container__title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--secondary-color);
+  line-height: 1;
+}
+
+.w-purchase-step__connection-type-container__subtitle {
+  font-family: 'europa-light', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.w-plan-price__save-info {
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
+  color: red;
 }
 
 /* -------------------- */

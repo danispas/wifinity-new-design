@@ -55,6 +55,13 @@ body {
   font-family: 'panton-bold', sans-serif;
 }
 
+.w-continue-button {
+  margin-top: 2rem;
+  height: 44px;
+  min-width: 264px;
+  text-decoration: none;
+}
+
 .w-container {
   display: flex;
   flex-flow: column;
