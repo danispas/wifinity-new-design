@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" href="styles-bundle.css">
+    <link rel="stylesheet" href="purchase-internet.css">
+
+    <title>Wifinity</title>
+
+    <script src="purchase-internet.js" defer></script>
+    <script
+      type="text/javascript"
+      src="https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
+      async>
+    </script>
+  </head>
+
+  <body class="w-light-theme">
+    <header>
+      <div class="w-header">
+        <div class="w-logo-container">
+          <img src="img/wifinity_logo_black.png" alt="Wifinity Logo" class="w-logo">
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="w-background-white">
+        <div class="w-purchase-progress-container">
+          <div class="w-progress-bar-container">
+            <div class="w-progress-bar-track">
+              <div class="w-progress-bar-indicator"></div>
+            </div>
+
+            <div class="w-progress-bar-actions-container">
+              <div class="w-progress-bar-action">
+                <img src="img/arrow_left_alt_icon.svg" alt="Arrow Left Icon" class="w-progress-bar-action__icon">
+                <div>Back</div>
+              </div>
+      
+              <div class="w-progress-bar-title">
+                Select Plan
+              </div>
+      
+              <div class="w-progress-bar-action">
+                <div>Next</div>
+                <img src="img/arrow_right_alt_icon.svg" alt="Arrow Right Icon" class="w-progress-bar-action__icon">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-container">
+          <div class="w-purchase-step-container">
+            <div class="w-purchase-step-header">
+              <div>
+                <h3 class="w-purchase-step__title">WiFi and Wired Internet</h3>
+                <p class="w-purchase-step__subtitle">At 160+ MoD locations</p>
+              </div>
+
+              <div class="w-billing-switch">
+                <input
+                  id="billing-monthly"
+                  class="w-billing-switch__input"
+                  type="radio"
+                  name="billing"
+                  checked
+                />
+
+                <label
+                  for="billing-monthly"
+                  class="w-billing-switch__option"
+                >
+                  Monthly
+                </label>
+
+                <input
+                  id="billing-daily"
+                  class="w-billing-switch__input"
+                  type="radio"
+                  name="billing"
+                />
+
+                <label
+                  for="billing-daily"
+                  class="w-billing-switch__option"
+                >
+                  Daily
+                </label>
+
+                <span class="w-billing-switch__slider"></span>
+              </div>
+            </div>
+
+            <div class="w-plan-selector">
+              <!-- Plans -->
+              <div class="w-plan-selector__plans">
+                <label class="w-plan-option">
+                  <input
+                    class="w-plan-option__input"
+                    type="radio"
+                    name="plan"
+                    value="basic"
+                  />
+
+                  <span class="w-plan-option__radio"></span>
+                  <span class="w-plan-option__name">Basic</span>
+                </label>
+
+                <label class="w-plan-option">
+                  <input
+                    class="w-plan-option__input"
+                    type="radio"
+                    name="plan"
+                    value="standard"
+                  />
+
+                  <span class="w-plan-option__radio"></span>
+                  <span class="w-plan-option__name">Standard</span>
+                </label>
+
+                <label class="w-plan-option w-plan-option--recommended">
+                  <input
+                    class="w-plan-option__input"
+                    type="radio"
+                    name="plan"
+                    value="plus"
+                    checked
+                  />
+
+                  <span class="w-plan-option__radio"></span>
+                  <span class="w-plan-option__name">Plus</span>
+
+                  <span class="w-plan-option__badge">
+                    Recommended
+                  </span>
+                </label>
+              </div>
+
+              <!-- Details -->
+              <div class="w-plan-details">
+                <div>
+                  <div class="w-plan-details__row">
+                    <span class="w-plan-details__label">Speed:</span>
+                    <span class="w-plan-details__speed">Up to 1000 mb/s</span>
+                  </div>
+  
+                  <div class="w-plan-details__row">
+                    <span class="w-plan-details__label">Use with:</span>
+                    <span class="w-plan-details__devices">All personal devices</span>
+                  </div>
+                </div>
+
+                <div class="w-plan-details__row">
+                  <div class="w-plan-details__left">
+                    <div class="w-plan-feature">
+                      ✓  Cancel anytime
+                    </div>
+  
+                    <div class="w-plan-feature">
+                      ✓  No Content Filtering
+                    </div>
+  
+                    <div class="w-plan-feature">
+                      ✓  Unlimited Data
+                    </div>
+                  </div>
+  
+                  <div class="w-plan-details__right">
+                    <!-- Price -->
+                    <div class="w-plan-price">
+                      <div class="w-plan-price__amount">
+                        £41.99
+                      </div>
+  
+                      <div class="w-plan-price__period">
+                        monthly rolling
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="w-speed-test-description">
+                Speed varies by location.
+                <a
+                  href="#"
+                  class="w-speed-test-description__link"
+                  id="openSpeedTestModal"
+                >Click here</a>
+                to test the speed where you are.
+              </div>
+
+              <div
+                class="w-full-screen-modal"
+                id="speedTestModal"
+                aria-hidden="true"
+              >
+                <div class="w-full-screen-modal__overlay"></div>
+
+                <div class="w-full-screen-modal__content">
+                  <button
+                    class="w-full-screen-modal__close"
+                    id="closeSpeedTestModal"
+                    aria-label="Close modal"
+                  >
+                    <span></span>
+                    <span></span>
+                  </button>
+
+                  <div class="w-full-screen-modal__body">
+                    <h2 class="w-full-screen-modal__title">
+                      Internet Speed Test
+                    </h2>
+
+                    <p class="w-full-screen-modal__text">
+                      We use Ookla’s Speedtest to measure your current internet speed.
+                    </p>
+
+                    <p class="w-full-screen-modal__text">
+                      To get the most accurate results, use a laptop connected to your router with an ethernet cable.
+                      If connecting through WiFi, make sure you’re close to your router and have a strong signal.
+                      Results will be dependent on your device’s capability.
+                    </p>
+
+                    <!-- Example -->
+                    <div class="w-full-screen-modal__placeholder">
+                      <div class="w-speed-test__image-container">
+                        <img
+                          src="img/speed_test_transparent.png"
+                          alt="Speed Test"
+                          class="w-speed-test__image"
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="w-footer-container">
+        <div>
+          <span class="w-footer__contact">Tel: +44 (0) 20 8090 1290</span>
+          <span class="w-footer__contact">Email: support@wifinity.co.uk</span>
+        </div>
+        <p>©2026 Wifinity</p>
+      </div>
+    </footer>
+  </body>
+</html>

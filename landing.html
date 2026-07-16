@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="segmented-control.css">
+
+    <title>Wifinity</title>
+
+    <script src="scripts.js" defer></script>
+    <script
+      type="text/javascript"
+      src="https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
+      async>
+    </script>
+  </head>
+
+  <body class="w-light-theme">
+    <div class="w-header-banner">
+      <p>
+        Attention iOS 18 Device Users: We recommend that you switch off "Private Wi-Fi Address". <a href="https://wifinity.co.uk/ios-18-private-wi-fi-address/" target="_blank" rel="noopener noreferrer">Learn more</a>
+      </p>
+    </div>
+
+    <header>
+      <div class="w-header">
+        <div class="w-logo-container">
+          <img src="img/wifinity_logo_black.png" alt="Wifinity Logo" class="w-logo">
+          <h1 class="w-location">Cosford</h1>
+        </div>
+
+        <div class="w-header-actions">
+          <a href="./login.html">Log In</a>
+          <button class="w-button w-signup-button" id="signup-button">
+            <span>Create Account</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="w-container w-main">
+        <div class="w-hero-container">
+          <div>
+            <h1 class="w-main-title">
+              Get unfiltered, unlimited internet that you can use at 150 MOD locations
+            </h1>
+  
+            <div class="w-plan-benefits-rotator">
+              <span class="w-plan-benefits-rotator__icon">✓</span>
+  
+              <div class="w-plan-benefits-rotator__text">
+                <span class="is-active">No content filtering</span>
+                <span>Pause anytime</span>
+                <span>Unlimited data</span>
+                <span>Armed Forces discounts</span>
+              </div>
+            </div>
+          </div>
+
+          <div
+            ref="trustbox"
+            class="trustpilot-widget"
+            data-locale="en-US"
+            data-template-id="53aa8807dec7e10d38f59f32"
+            data-businessunit-id="57b60ae20000ff000593a426"
+            data-style-height="125px"
+            data-style-width="100%"
+            data-theme="light"
+          >
+            <a
+              href="https://www.trustpilot.com/review/wifinity.co.uk"
+              target="_blank"
+              rel="noopener"
+            >Trustpilot</a>
+          </div>
+        </div>
+
+        <!-- <p class="w-main-description">Connect instantly and browse without limits!</p> -->
+
+        <div class="w-segmented-control-container">
+          <div class="w-segmented-control">
+            <input type="radio" name="seg" id="monthly" checked>
+            <label for="monthly">Monthly</label>
+  
+            <input type="radio" name="seg" id="day-passes">
+            <label for="day-passes">Day passes</label>
+  
+            <span class="indicator"></span>
+          </div>
+        </div>
+
+        <div class="w-plans-container">
+          <!-- <div class="w-plan-card">
+            <p class="w-plan-card-title">Free</p>
+
+            <div class="w-plan-card-price-container">
+              <h3 class="w-plan-card-price">£0</h3>
+            </div>
+          </div> -->
+
+          <div class="w-plan-card">
+            <p class="w-plan-card-title">Basic</p>
+
+            <div class="w-plan-card-price-container">
+              <h3 class="w-plan-card-price">£24</h3>
+              <p class="w-plan-card-cycle">/month</p>
+            </div>
+
+            <button class="w-plan-card-button-outlined">Get started with Basic</button>
+
+            <ul class="w-plan-card-features">
+              <li class="w-plan-card-feature">
+                up to <b>30Mb/s</b>
+              </li>
+              <li class="w-plan-card-feature">2 devices</li>
+            </ul>
+          </div>
+
+          <div class="w-plan-card w-plan-card-highlight">
+            <p class="w-plan-card-title">Standard</p>
+
+            <div class="w-plan-card-price-container">
+              <h3 class="w-plan-card-price">£35</h3>
+              <p class="w-plan-card-cycle">/month</p>
+            </div>
+
+            <button class="w-plan-card-button">Get started with Standard</button>
+
+            <ul class="w-plan-card-features">
+              <li class="w-plan-card-feature">up to <b>120Mb/s</b></li>
+              <li class="w-plan-card-feature">5 devices</li>
+            </ul>
+          </div>
+
+          <div class="w-plan-card">
+            <p class="w-plan-card-title">Plus</p>
+
+            <div class="w-plan-card-price-container">
+              <h3 class="w-plan-card-price">£42</h3>
+              <p class="w-plan-card-cycle">/month</p>
+            </div>
+
+            <button class="w-plan-card-button-outlined">Get started with Plus</button>
+
+            <ul class="w-plan-card-features">
+              <li class="w-plan-card-feature">up to <b>1Gb/s</b><sup>*</sup></li>
+              <li class="w-plan-card-feature">all personal devices <sup>**</sup></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-speed-test-container">
+        <div class="w-speed-test">
+          <div class="w-speed-test__note">
+            <p>Check your <span class="w-text-accent">speed</span> before you buy</p>
+          </div>
+  
+          <div class="w-speed-test__image-container">
+            <img
+              src="img/speed_test.png"
+              alt="Speed Test"
+              class="w-speed-test__image"
+            >
+          </div>
+  
+          <div class="w-speed-test__cta-note">
+            <p>Hit '<b>GO</b>' to test the connection speed you could get right now with Wifinity.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-esim-promo-container">
+        <div class="w-esim-promo">
+          <div class="w-esim-promo__image-container">
+            <img
+              src="img/e_sim.png"
+              alt="eSIM Promo"
+              class="w-esim-promo__image"
+            >
+          </div>
+
+          <div class="w-esim-promo__content">
+            <h2 class="w-esim-promo__title">Travel eSIM discounts</h2>
+            <p class="w-esim-promo__description">
+              No need to wait for a SIM card to arrive in the post. Get your eSIM instantly and start using Wifinity mobile right away.
+            </p>
+            <button class="w-button w-esim-promo__button">Get your eSIM</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-faq-container">
+        <div class="w-faq">
+          <h2 class="w-faq__title">Got questions? <span class="w-text-primary">We've got answers.</span></h2>
+  
+          <p class="w-faq__subtitle">We're here to help you get started with ease.</p>
+  
+          <div class="w-faq__item">
+            <input
+              class="w-faq__toggle"
+              type="checkbox"
+              id="faq-1"
+              checked
+            />
+  
+            <label class="w-faq__question" for="faq-1">
+              <span>How does this service work?</span>
+  
+              <svg
+                class="w-faq__icon"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M6 15L12 9L18 15"
+                  stroke="#6ED48C"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </label>
+  
+            <div class="w-faq__answer">
+              <p>
+                It's a bit like home broadband, but rather than using your own phone line, we install a central, high-capacity internet connection and use WiFi access points to send that connection all around your site.
+                You can then get online by connecting to this network and use it like you would home broadband.
+              </p>
+            </div>
+          </div>
+  
+          <div class="w-faq__item">
+            <input
+              class="w-faq__toggle"
+              type="checkbox"
+              id="faq-2"
+            />
+  
+            <label class="w-faq__question" for="faq-2">
+              <span>How fast does it go?</span>
+  
+              <svg
+                class="w-faq__icon"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M6 15L12 9L18 15"
+                  stroke="#6ED48C"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </label>
+  
+            <div class="w-faq__answer">
+              <p>
+                Like mobile phone coverage, the speed you get depends on how close you are to the WiFi access point or if there are thick walls in the way.
+                Your speeds will also vary depending on things like time of day and number of other users.
+              </p>
+            </div>
+          </div>
+  
+          <div class="w-faq__item">
+            <input
+              class="w-faq__toggle"
+              type="checkbox"
+              id="faq-3"
+            />
+  
+            <label class="w-faq__question" for="faq-3">
+              <span>What are the Armed Forces discounts?</span>
+  
+              <svg
+                class="w-faq__icon"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M6 15L12 9L18 15"
+                  stroke="#6ED48C"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </label>
+  
+            <div class="w-faq__answer">
+              <p>
+                Wifinity Perks is our discounts and offers website for our MOD PAYG WiFi subscribers.
+                Our way of rewarding our Armed Forces community. Purpose-built for the military, find savings on the products and services for you and your family.
+              </p>
+            </div>
+          </div>
+
+          <div class="w-faq__item">
+            <input
+              class="w-faq__toggle"
+              type="checkbox"
+              id="faq-4"
+            />
+  
+            <label class="w-faq__question" for="faq-4">
+              <span>What is a travel eSIM?</span>
+  
+              <svg
+                class="w-faq__icon"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M6 15L12 9L18 15"
+                  stroke="#6ED48C"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </label>
+  
+            <div class="w-faq__answer">
+              <p>
+                A travel eSIM is a digital SIM that lets you access mobile data without needing a physical SIM card.
+                It is downloaded onto your phone and connects you to a mobile network abroad.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="w-footer-container">
+        <div>
+          <span class="w-footer__contact">Tel: +44 (0) 20 8090 1290</span>
+          <span class="w-footer__contact">Email: support@wifinity.co.uk</span>
+        </div>
+        <p>©2026 Wifinity</p>
+      </div>
+    </footer>
+  </body>
+</html>

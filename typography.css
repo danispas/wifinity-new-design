@@ -1,0 +1,21 @@
+@font-face {
+  font-family: 'panton-bold';
+  src: url('fonts/panton-bold-webfont.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'europa-light';
+  src: url('fonts/europa-light-webfont.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: 'panton-bold', sans-serif;
+  font-size: 1rem;
+  color: var(--secondary-color);
+}

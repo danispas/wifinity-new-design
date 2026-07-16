@@ -1,0 +1,56 @@
+.w-segmented-control {
+  position: relative;
+  display: inline-flex;
+  background-color: #e8e8ed; /* #e5e5e5 */
+  border-radius: calc(48px * (var(--button-radius) / 100));
+  padding: 4px;
+  gap: 4px;
+}
+
+/* hide radio buttons */
+.w-segmented-control input {
+  display: none;
+}
+
+.w-segmented-control label {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  text-align: center;
+  padding: 8px 18px;
+  cursor: pointer;
+  border-radius: calc(48px * (var(--button-radius) / 100));
+  font-size: 16px;
+  color: var(--secondary-color);
+  transition: color 0.3s ease;
+  user-select: none;
+  width: 144px;
+}
+
+/* active text color */
+/* #monthly:checked ~ label[for="monthly"],
+#day-passes:checked ~ label[for="day-passes"] {
+  color: #fff;
+} */
+
+/* moving background */
+.indicator {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  height: calc(100% - 8px);
+  width: calc((100% - 8px) / 2);
+  background: var(--accent-color);
+  border-radius: calc(48px * (var(--button-radius) / 100));
+  transition: transform 0.3s ease;
+  z-index: 1;
+}
+
+/* move indicator */
+#monthly:checked ~ .indicator {
+  transform: translateX(0%);
+}
+
+#day-passes:checked ~ .indicator {
+  transform: translateX(100%);
+}
