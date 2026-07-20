@@ -33,67 +33,73 @@
           <div class="w-plan-selector">
             <div class="w-plan-selector__plans"></div>
 
-            <div class="w-plan-summary">
-              <div class="w-plan-summary__header">
-                <div>
-                  <div id="planName" class="w-plan-summary__plane-name">
-                    Basic
-                  </div>
-                </div>
+            <div class="w-plan-summary-container">
+              <div class="w-plan-summary__banner">
+                Order summary
               </div>
 
-              <div class="w-plan-details">
-                <div class="w-plan-details__row">
-                  <div class="w-plan-details__row-header">
-                    <img
-                      id="planSpeedIcon"
-                      src="img/speed_basic_icon.svg"
-                      alt="Speed Icon"
-                      class="w-plan-details__icon"
-                    >
-                    <span>Speed</span>
+              <div class="w-plan-summary">
+                <div class="w-plan-summary__header">
+                  <div>
+                    <div id="planName" class="w-plan-summary__plane-name">
+                      Basic
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="w-plan-details">
+                  <div class="w-plan-details__row">
+                    <div class="w-plan-details__row-header">
+                      <img
+                        id="planSpeedIcon"
+                        src="img/speed_basic_icon.svg"
+                        alt="Speed Icon"
+                        class="w-plan-details__icon"
+                      >
+                      <span>Speed</span>
+                    </div>
+    
+                    <span class="w-plan-details__plan-metadata">
+                      Up to
+                      <span id="planSpeed">
+                        30 mb/s
+                      </span>
+                    </span>
                   </div>
   
-                  <span class="w-plan-details__plan-metadata">
-                    Up to
-                    <span id="planSpeed">
-                      30 mb/s
-                    </span>
-                  </span>
-                </div>
-
-                <div class="w-plan-details__row">
-                  <div class="w-plan-details__row-header">
-                    <img
-                      id="planDevicesIcon"
-                      src="img/devices_icon.svg"
-                      alt="Devices Icon"
-                      class="w-plan-details__icon"
+                  <div class="w-plan-details__row">
+                    <div class="w-plan-details__row-header">
+                      <img
+                        id="planDevicesIcon"
+                        src="img/devices_icon.svg"
+                        alt="Devices Icon"
+                        class="w-plan-details__icon"
+                      >
+                      <span>Devices</span>
+                    </div>
+  
+                    <span
+                      id="planDevices"
+                      class="w-plan-details__plan-metadata"
                     >
-                    <span>Devices</span>
-                  </div>
-
-                  <span
-                    id="planDevices"
-                    class="w-plan-details__plan-metadata"
-                  >
-                    2 Devices
-                  </span>
-                </div>
-              </div>
-
-              <div class="w-plan-price">
-                <div class="w-plan-price__row w-plan-price__row--total">
-                  <span></span>
-                  <div>
-                    <span id="totalPrice">£24.99</span><span class="w-plan-price__row-cycle">/month</span>
+                      2 Devices
+                    </span>
                   </div>
                 </div>
+  
+                <div class="w-plan-price">
+                  <div class="w-plan-price__row w-plan-price__row--total">
+                    <span></span>
+                    <div>
+                      <span id="totalPrice">£24.99</span><span class="w-plan-price__row-cycle">/month</span>
+                    </div>
+                  </div>
+                </div>
+  
+                <button class="w-plan-summary__button">
+                  Get connected
+                </button>
               </div>
-
-              <button class="w-plan-summary__button">
-                Get connected
-              </button>
             </div>
           </div>
         </div>

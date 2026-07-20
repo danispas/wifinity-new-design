@@ -19,7 +19,6 @@
 }
 
 .w-plan-simple-card__recommended-banner {
-  /* width: 100%; */
   padding: 6px 28px 20px;
 
   border-top-right-radius: 20px;
@@ -142,10 +141,31 @@
 
 /* RIGHT SIDE */
 
+.w-plan-summary-container {
+  position: relative;
+}
+
+.w-plan-summary__banner {
+  padding: 6px 28px 20px;
+
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+
+  background-color: rgba(5, 5, 45, 0.2);
+  color: var(--secondary-color);
+
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
 .w-plan-summary {
-  padding: 24px;
+  position: relative;
+  top: -18px;
+  padding: 24px 28px;
   border: 2px solid #ebebeb;
   border-radius: 24px;
+  background-color: white;
 }
 
 .w-plan-summary__header {
