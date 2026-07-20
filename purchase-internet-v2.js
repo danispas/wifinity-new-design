@@ -1,20 +1,23 @@
 const plans = {
   basic: {
-    speed: 'Up to 30 mb/s',
+    speed: '30 mb/s',
     price: '£24.99',
     devices: 2,
+    description: 'Perfect for light browsing.',
   },
 
   standard: {
-    speed: 'Up to 120 mb/s',
+    speed: '120 mb/s',
     price: '£34.99',
     devices: 5,
+    description: 'Ideal for streaming and calls.',
   },
 
   plus: {
-    speed: 'Up to 1000 mb/s',
+    speed: '1000 mb/s',
     price: '£41.99',
     devices: 'All personal devices',
+    description: 'Best for gaming and 4K streaming.',
   }
 };
 
@@ -36,22 +39,63 @@ function renderPlans() {
           ? 'w-plan-simple-card--active'
           : '';
 
+      const recommendedBanner =
+        key === 'plus'
+          ? '<div class="w-plan-simple-card__recommended-banner">Fastest</div>'
+          : '';
+      
+      const recommendedClass =
+        key === 'plus'
+          ? 'w-plan-simple-card--recommended'
+          : '';
+
       plansContainer.innerHTML += `
-        <div
-          class="w-plan-simple-card ${active}"
-          data-plan="${key}"
-        >
-          <div class="w-plan-simple-card__plan-name">
-            ${key}
-          </div>
+        <div class="w-plan-simple-card-container">
+          ${recommendedBanner}
 
-          <div class="w-plan-simple-card__prices">
-            <span class="w-plan-simple-card__price">
-              ${plan.price}
-            </span>
-          </div>
+          <div
+            class="w-plan-simple-card ${active} ${recommendedClass}"
+            data-plan="${key}"
+          >
 
-          <div class="w-plan-simple-card__check"></div>
+            <div class="w-plan-simple-card__row">
+              <div class="w-plan-simple-card__plan-name">
+                ${key}
+              </div>
+
+              <div class="w-plan-simple-card__prices">
+                <span class="w-plan-simple-card__price">
+                  ${plan.price}
+                </span>
+              </div>
+
+              <div class="w-plan-simple-card__check"></div>
+            </div>
+
+            <div class="w-plan-simple-card__row-start">
+              <div class="w-plan-simple-card__row-info">
+                <img
+                  src="img/speed_${key}_icon.svg"
+                  alt="Speed Icon"
+                  class="w-plan-simple-card__icon"
+                >
+                <span>${plan.speed}</span>
+              </div>
+
+              <div class="w-plan-simple-card__row-info">
+                <img
+                  src="img/devices_icon.svg"
+                  alt="Devices Icon"
+                  class="w-plan-simple-card__icon"
+                >
+                <span>${plan.devices}</span>
+              </div>
+            </div>
+
+            <div class="w-plan-simple-card__row">
+              <span class="w-plan-simple-card__description">${plan.description}</span>
+            </div>
+          </div>
         </div>
       `
     }
