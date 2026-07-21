@@ -31,7 +31,39 @@
       <div class="w-background-white">
         <div class="w-container">
           <div class="w-plan-selector">
-            <div class="w-plan-selector__plans"></div>
+            <div>
+              <div class="w-plan-tabs">
+                <button
+                  class="w-plan-tabs__tab w-plan-tabs__tab--active"
+                  data-tab="monthly"
+                >
+                  Monthly plans
+                </button>
+  
+                <button
+                  class="w-plan-tabs__tab"
+                  data-tab="passes"
+                >
+                  Short-term passes
+                </button>
+              </div>
+  
+              <div class="w-plan-tabs__content">
+                <div
+                  class="w-plan-tabs__panel w-plan-tabs__panel--active"
+                  id="monthly"
+                >
+                  <div class="w-plan-selector__monthly-plans"></div>
+                </div>
+  
+                <div
+                  class="w-plan-tabs__panel"
+                  id="passes"
+                >
+                  <div class="w-plan-selector__passes-plans"></div>
+                </div>
+              </div>
+            </div>
 
             <div class="w-plan-summary-container">
               <div class="w-plan-summary__banner">
@@ -85,13 +117,32 @@
                       2 Devices
                     </span>
                   </div>
+
+                  <div class="w-plan-details__row">
+                    <div class="w-plan-details__row-header">
+                      <img
+                        id="planDataIcon"
+                        src="img/swap_vert_icon.svg"
+                        alt="Data Icon"
+                        class="w-plan-details__icon"
+                      >
+                      <span>Data</span>
+                    </div>
+  
+                    <span
+                      id="planData"
+                      class="w-plan-details__plan-metadata"
+                    >
+                      Unlimited
+                    </span>
+                  </div>
                 </div>
   
                 <div class="w-plan-price">
                   <div class="w-plan-price__row w-plan-price__row--total">
                     <span></span>
                     <div>
-                      <span id="totalPrice">£24.99</span><span class="w-plan-price__row-cycle">/month</span>
+                      <span id="totalPrice">£24.99</span>
                     </div>
                   </div>
                 </div>

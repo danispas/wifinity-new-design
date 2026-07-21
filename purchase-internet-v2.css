@@ -8,10 +8,83 @@
 
 /* LEFT SIDE */
 
-.w-plan-selector__plans {
+.w-plan-selector__monthly-plans,
+.w-plan-selector__passes-plans {
   display: flex;
   flex-direction: column;
   gap: 24px;
+}
+
+.w-plan-tabs {
+  display: flex;
+  gap: 6px;
+  margin-bottom: -1px;
+}
+
+.w-plan-tabs__tab {
+  position: relative;
+
+  padding: 16px 28px;
+
+  border: 2px solid #e5e5e5;
+  border-bottom: none;
+
+  background: #F8F9FC;
+
+  border-radius: 20px 20px 0 0;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  color: #6B7280;
+
+  cursor: pointer;
+
+  transition: all .25s ease;
+}
+
+.w-plan-tabs__tab:hover {
+  background: #F3F4F6;
+}
+
+.w-plan-tabs__tab--active {
+  background-color: rgba(115, 92, 245, 0.12);
+  color: #05052D;
+
+  border-color: rgba(115, 92, 245, 0.12);
+
+  z-index: 2;
+}
+
+.w-plan-tabs__tab--active::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: -1px;
+
+  height: 2px;
+
+  background: white;
+}
+
+.w-plan-tabs__content {
+  border: 2px solid #e5e5e5;
+  border-radius: 0 20px 20px 20px;
+
+  background: white;
+
+  padding: 24px;
+}
+
+.w-plan-tabs__panel {
+  display: none;
+}
+
+.w-plan-tabs__panel--active {
+  display: block;
 }
 
 .w-plan-simple-card-container {
@@ -24,8 +97,8 @@
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
 
-  background-color: rgba(115, 92, 245, 0.2);
-  color: var(--primary-color);
+  background-color: rgba(110, 212, 140, 0.8);
+  color: var(--secondary-color);
 
   font-size: 14px;
   font-weight: 600;
@@ -52,7 +125,7 @@
 
 .w-plan-simple-card--recommended {
   position: relative;
-  top: -18px;
+  margin-top: -16px;
 }
 
 .w-plan-simple-card:hover {
@@ -146,7 +219,7 @@
 }
 
 .w-plan-summary__banner {
-  padding: 6px 28px 20px;
+  padding: 6px 28px 28px;
 
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
@@ -161,7 +234,7 @@
 
 .w-plan-summary {
   position: relative;
-  top: -18px;
+  top: -24px;
   padding: 24px 28px;
   border: 2px solid #ebebeb;
   border-radius: 24px;
