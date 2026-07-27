@@ -73,6 +73,12 @@ body {
   margin: 0px auto;
 }
 
+@media (max-width: 1280px) {
+  .w-container {
+    max-width: calc(100% - 2rem);
+  }
+}
+
 .w-text-primary {
   color: var(--primary-color);
 }

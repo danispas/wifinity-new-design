@@ -1,6 +1,6 @@
 const plans = {
   basic: {
-    speed: '30 mb/s',
+    speed: '30Mb/s',
     price: '£24.99',
     devices: 2,
     data: 'Unlimited',
@@ -8,7 +8,7 @@ const plans = {
   },
 
   standard: {
-    speed: '120 mb/s',
+    speed: '120Mb/s',
     price: '£34.99',
     devices: 5,
     data: 'Unlimited',
@@ -16,7 +16,7 @@ const plans = {
   },
 
   plus: {
-    speed: '1000 mb/s',
+    speed: '1Gb/s',
     price: '£41.99',
     devices: 'All personal devices',
     data: 'Unlimited',
@@ -26,24 +26,27 @@ const plans = {
 
 const passes = {
   '1 day': {
-    speed: '100 mb/s',
+    speed: '100Mb/s',
     price: '£6',
     devices: 5,
     data: 'Unlimited',
+    description: 'Ideal for streaming, calls, and everyday use.',
   },
 
   '4 days': {
-    speed: '100 mb/s',
+    speed: '100Mb/s',
     price: '£11',
     devices: 5,
     data: 'Unlimited',
+    description: 'Ideal for streaming, calls, and everyday use.',
   },
 
   '7 days': {
-    speed: '100 mb/s',
+    speed: '100Mb/s',
     price: '£16',
     devices: 5,
     data: 'Unlimited',
+    description: 'Ideal for streaming, calls, and everyday use.',
   }
 };
 
@@ -100,8 +103,6 @@ function renderPlans(selectedPlans = plans, type = 'monthly') {
     );
 
   plansContainer.innerHTML = '';
-
-  console.log('renderPlans selectedPlan:', selectedPlan);
 
   Object.entries(selectedPlans).forEach(
     function ([key, plan]) {
@@ -188,7 +189,6 @@ function renderPlans(selectedPlans = plans, type = 'monthly') {
       card.addEventListener(
         'click',
         function () {
-          console.log('this.dataset.plan:', this.dataset.plan);
           selectedPlan = this.dataset.plan;
 
           updateUI(selectedPlans, type);
@@ -220,6 +220,10 @@ function updateUI(selectedPlans = plans, type = 'monthly') {
 
   document.getElementById(
     'totalPrice'
+  ).innerHTML = plan.price + billingCycle;
+
+  document.getElementById(
+    'totalPriceMobile'
   ).innerHTML = plan.price + billingCycle;
 
   document.getElementById(

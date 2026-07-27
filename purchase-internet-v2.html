@@ -28,7 +28,7 @@
     </header>
 
     <main>
-      <div class="w-background-white">
+      <div class="w-background-white h-100">
         <div class="w-container">
           <div class="w-plan-selector">
             <div>
@@ -66,17 +66,23 @@
             </div>
 
             <div class="w-plan-summary-container">
-              <div class="w-plan-summary__banner">
-                Order summary
+              <div class="w-plan-summary__session">
+                <div>Order summary</div>
+                <div>Session <b>expires in 30 minutes</b></div>
               </div>
 
               <div class="w-plan-summary">
                 <div class="w-plan-summary__header">
-                  <div>
-                    <div id="planName" class="w-plan-summary__plane-name">
-                      Basic
-                    </div>
+                  <div id="planName" class="w-plan-summary__plane-name">
+                    Basic
                   </div>
+
+                  <span
+                    id="totalPriceMobile"
+                    class="w-plan-summary__header-price"
+                  >
+                    £24.99
+                  </span>
                 </div>
   
                 <div class="w-plan-details">
@@ -140,16 +146,18 @@
   
                 <div class="w-plan-price">
                   <div class="w-plan-price__row w-plan-price__row--total">
-                    <span></span>
+                    <span>Total Price</span>
                     <div>
                       <span id="totalPrice">£24.99</span>
                     </div>
                   </div>
                 </div>
   
-                <button class="w-plan-summary__button">
-                  Get connected
-                </button>
+                <a href="purchase-internet-add-esim-v2.html">
+                  <button class="w-plan-summary__button">
+                    Get connected
+                  </button>
+                </a>
               </div>
             </div>
           </div>
