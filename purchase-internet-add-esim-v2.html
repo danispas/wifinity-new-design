@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" href="styles-bundle.css">
+    <link rel="stylesheet" href="purchase-internet-v2.css">
+
+    <title>Wifinity</title>
+
+    <script src="purchase-internet-v2.js" defer></script>
+    <script src="purchase-internet-add-esim-v2.js" defer></script>
+  </head>
+
+  <body class="w-light-theme">
+    <header>
+      <div class="w-header">
+        <div class="w-logo-container">
+          <img src="img/wifinity_logo_black.png" alt="Wifinity Logo" class="w-logo">
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="w-background-white h-100">
+        <div class="w-container">
+          <div class="w-plan-selector">
+            <div class="w-mobile-plan-selector">
+              <div class="w-mobile-plan-selector__header-title">Great - you selected <span>Standard</span> Wifi</div>
+              <div class="w-mobile-plan-selector__header-subtitle"> Why not stay connected everywhere?</div>
+              
+              <div class="w-plan-simple-card-container">
+                <div class="w-plan-simple-card">
+                  <div class="w-plan-simple-card__row">
+                    <img
+                      src="img/e_sim.webp"
+                      alt="eSIM Icon"
+                      class="w-plan-simple-card__esim-icon"
+                    >
+                    <div class="w-plan-simple-card__esim-title">Wifinity mobile</div>
+
+                    <div class="w-plan-simple-card__check"></div>
+                  </div>
+                  
+                  <div class="w-plan-simple-card__row-start">
+                    <div class="w-plan-simple-card__row-info">Unlimited UK data, calls and texts.</div>
+                  </div>
+
+                  <div class="w-plan-simple-card__row-start">
+                    <div class="w-plan-simple-card__row-info">Keep your number or get a new one.</div>
+                  </div>
+
+                  <div class="w-plan-simple-card__row-start">
+                    <div class="w-plan-simple-card__row-info">eSIM — start using in minutes.</div>
+                  </div>
+
+                  <div class="w-plan-simple-card__row-start">
+                    <div class="w-plan-simple-card__row-info">Your phone can also use Wifinity WiFi at MoD locations.</div>
+                  </div>
+
+                  <div class="w-plan-simple-card__row-start">
+                    <div class="w-plan-simple-card__row-info">Discount with any Wifinity WiFi plan.</div>
+                  </div>
+
+                  <div class="w-plan-simple-card__row-end mt-24">
+                    <div class="w-plan-simple-card__price w-plan-simple-card__esim-price"><del>£25/month</del></div>
+                    <div class="w-plan-simple-card__price">£15/month</div>
+                  </div>
+
+                  <button class="w-plan-simple-card__add-button">Add Wifinity mobile</button>
+                  <button class="w-plan-simple-card__remove-button">No thanks, continue with WiFi</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="w-plan-summary-container">
+              <div class="w-plan-summary__session">
+                <div>Order summary</div>
+                <div>Session <b>expires in 30 minutes</b></div>
+              </div>
+
+              <div class="w-plan-summary">
+                <div class="w-plan-summary__header">
+                  <div id="planName" class="w-plan-summary__plane-name">
+                    Basic
+                  </div>
+
+                  <span
+                    id="totalPriceMobile"
+                    class="w-plan-summary__header-price"
+                  >
+                    £24.99
+                  </span>
+                </div>
+  
+                <div class="w-plan-details">
+                  <div class="w-plan-details__row">
+                    <div class="w-plan-details__row-header">
+                      <img
+                        id="planSpeedIcon"
+                        src="img/speed_basic_icon.svg"
+                        alt="Speed Icon"
+                        class="w-plan-details__icon"
+                      >
+                      <span>Speed</span>
+                    </div>
+    
+                    <span class="w-plan-details__plan-metadata">
+                      Up to
+                      <span id="planSpeed">
+                        30 mb/s
+                      </span>
+                    </span>
+                  </div>
+  
+                  <div class="w-plan-details__row">
+                    <div class="w-plan-details__row-header">
+                      <img
+                        id="planDevicesIcon"
+                        src="img/devices_icon.svg"
+                        alt="Devices Icon"
+                        class="w-plan-details__icon"
+                      >
+                      <span>Devices</span>
+                    </div>
+  
+                    <span
+                      id="planDevices"
+                      class="w-plan-details__plan-metadata"
+                    >
+                      2 Devices
+                    </span>
+                  </div>
+
+                  <div class="w-plan-details__row">
+                    <div class="w-plan-details__row-header">
+                      <img
+                        id="planDataIcon"
+                        src="img/swap_vert_icon.svg"
+                        alt="Data Icon"
+                        class="w-plan-details__icon"
+                      >
+                      <span>Data</span>
+                    </div>
+  
+                    <span
+                      id="planData"
+                      class="w-plan-details__plan-metadata"
+                    >
+                      Unlimited
+                    </span>
+                  </div>
+                </div>
+
+                
+                <div class="w-plan-summary__esim">
+                  <!-- <div class="w-plan-summary-separator"></div> -->
+
+                  <div class="w-plan-summary__header">
+                    <div id="planName" class="w-plan-summary__plane-name">
+                      Wifinity mobile
+                    </div>
+  
+                    <span
+                      id="totalPriceMobile"
+                      class="w-plan-summary__header-price"
+                    >
+                      £15.00<span class="w-plan-price__row-cycle">/month</span>
+                    </span>
+                  </div>
+    
+                  <div class="w-plan-details">
+                    <div class="w-plan-details__row">
+                      <div class="w-plan-details__row-header">
+                        <img
+                          id="planDataIcon"
+                          src="img/swap_vert_icon.svg"
+                          alt="Data Icon"
+                          class="w-plan-details__icon"
+                        >
+                        <span>Data</span>
+                      </div>
+    
+                      <span
+                        id="planData"
+                        class="w-plan-details__plan-metadata"
+                      >
+                        Unlimited
+                      </span>
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="w-plan-price">
+                  <div class="w-plan-price__row w-plan-price__row--total">
+                    <span>Total Price</span>
+                    <div>
+                      <span id="totalPrice">£24.99</span>
+                    </div>
+                  </div>
+                </div>
+
+                <a href="purchase-internet-add-esim-v2.html">
+                  <button class="w-plan-summary__button">
+                    Continue to checkout
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="w-footer-container">
+        <div>
+          <span class="w-footer__contact">Tel: +44 (0) 20 8090 1290</span>
+          <span class="w-footer__contact">Email: support@wifinity.co.uk</span>
+        </div>
+        <p>©2026 Wifinity</p>
+      </div>
+    </footer>
+  </body>
+</html>
