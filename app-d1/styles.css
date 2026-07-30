@@ -568,7 +568,7 @@ body {
 }
 
 .w-login {
-  margin: 2rem 0px;
+  margin: 2rem 0px 4rem;
   text-align: center;
   font-family: 'europa-light', sans-serif;
   color: var(--secondary-color);
