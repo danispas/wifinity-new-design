@@ -104,84 +104,36 @@
           In-room Internet.
         </p>
 
-        <div class="w-connection__cards">
-          <div class="w-connection__side">
-            <div class="w-connection-card--large w-primary-highlight disable-hover">
-              <div class="w-plan-card__header">
-                <div class="w-plan-card__info">
-                  <h3 class="w-plan-card__title">Standard</h3>
-  
-                  <div class="w-plan-card__description">
-                    Best for most people
-                  </div>
-  
-                  <div class="w-plan-card__price">
-                    £34.49<span>/month</span>
-                  </div>
-                </div>
-  
-                <div class="w-plan-card__speed">
-                  <svg
-                    class="w-plan-card__gauge"
-                    viewBox="0 0 120 70"
-                  >
-                    <!-- Background -->
-                    <path
-                      d="M20 60 A40 40 0 0 1 100 60"
-                      class="w-plan-card__gauge-bg"
-                    />
-
-                    <!-- Value -->
-                    <path
-                      d="M20 60 A40 40 0 0 1 78 26"
-                      class="w-plan-card__gauge-value"
-                    />
-
-                    <!-- Needle -->
-                    <line
-                      x1="60"
-                      y1="60"
-                      x2="76"
-                      y2="31"
-                      class="w-plan-card__needle"
-                    />
-
-                    <circle
-                      cx="60"
-                      cy="60"
-                      r="4"
-                      class="w-plan-card__center"
-                    />
-                  </svg>
-                </div>
-              </div>
-  
-              <div class="w-plan-card__content">
-                <hr class="w-plan-card__divider">
-  
-                <ul class="w-plan-card__features">
-                  <li>Up to 120 Mb/s</li>
-                  <li>Use on 5 devices</li>
-                  <li>Unlimited data</li>
-                  <li>No content filtering</li>
-                </ul>
-  
-                <div class="w-plan-card__best-for">
-                  <strong>Best for:</strong>
-                  <p>Streaming. Video calls.</p>
-                </div>
-              </div>
-
-              <div class="w-connection__switch-button">
-                Want more? Switch to <b>Plus</b>.
-              </div>
-            </div>
-
+        <div class="w-connection-summary mt-2">
+          <div class="w-connection-summary__session">
+            <div>Order summary</div>
+            <div>Session <b>expires in 30 minutes</b></div>
           </div>
 
-          <div class="w-connection__side flex-2">
-            <div class="w-connection-card--large w-primary-highlight disable-hover">
-              <div class="w-badge w-error-bg">Save 25% with a WiFi plan</div>
+          <div class="w-connection-summary__details">
+            <div class="w-connection-summary__header">
+              <div id="planName" class="w-connection-summary__plane-name">
+                Standard
+              </div>
+
+              <span
+                id="totalPriceMobile"
+                class="w-connection-summary__price"
+              >
+                £34.49<span>/month</span>
+              </span>
+            </div>
+
+            <div class="w-connection__cta">
+              <div>Want more? Switch to Plus</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-connection__cards">
+          <div class="w-connection__side">
+            <div class="w-connection-card--large w-primary-highlight">
+              <div class="w-badge w-secondary-bg">Save 25% with a WiFi plan</div>
               <div class="w-plan-card__header-esim">
                 <div>Stay connected everywhere</div>
                 <div>Add <b>Unlimited Mobile</b> eSIM</div>
@@ -199,12 +151,6 @@
                   <li>Unlimited data</li>
                   <li>No content filtering</li>
                 </ul>
-              </div>
-
-              <div class="w-plan-card__content-actions">
-                <div class="w-plan-card__content-action">No thanks</div>
-
-                <div class="w-plan-card__content-action">Add mobile and continue</div>
               </div>
             </div>
           </div>

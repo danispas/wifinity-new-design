@@ -9,7 +9,7 @@
 
     <title>Wifinity - Select Plan</title>
 
-    <script src="scripts.js" defer></script>
+    <script src="main.js" defer></script>
     <script
       type="text/javascript"
       src="https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
@@ -76,7 +76,7 @@
       <div class="w-stepper__line"></div>
 
       <a
-        href="account.html"
+        href="#"
         class="w-stepper__item"
       >
         <span class="w-stepper__number">3</span>
@@ -86,7 +86,7 @@
       <div class="w-stepper__line"></div>
 
       <a
-        href="pay.html"
+        href="#"
         class="w-stepper__item"
       >
         <span class="w-stepper__number">4</span>
@@ -97,7 +97,7 @@
     <main>
       <section class="w-connection">
         <h1 class="w-connection__title">
-          How long do you want to stay connected for?
+          Pick the best short term pass for you.
         </h1>
 
         <p class="w-connection__subtitle">
@@ -105,54 +105,70 @@
         </p>
 
         <div class="w-connection__cards">
-          <!-- Left column -->
           <div class="w-connection__side">
             <div class="w-connection-card--large">
-              <a href="select-subscription.html" class="w-connection-card__ahref"></a>
-      
-              <div class="w-badge w-secondary-bg">Best Value</div>
+              <a href="review-subscription.html" class="w-connection-card__ahref"></a>
 
-              <div class="w-connection-card__icon-container">
-                <img src="../img/event_repeat_icon.svg" alt="Event Repeat Icon" class="w-connection-card__icon">
-              </div>
+              <div class="w-plan-card__header">
+                <div class="w-plan-card__info">
+                  <h3 class="w-plan-card__title">1 day</h3>
+  
+                  <div class="w-plan-card__price">
+                    £6
+                  </div>
+                </div>
+  
+                <div class="w-plan-card__speed">
+                  <svg
+                    class="w-plan-card__gauge"
+                    viewBox="0 0 120 70"
+                  >
+                    <!-- Background -->
+                    <path
+                      d="M20 60 A40 40 0 0 1 100 60"
+                      class="w-plan-card__gauge-bg"
+                    />
 
-              <h2 class="w-connection-card__title my-2">Monthly Subscription</h2>
+                    <!-- Value -->
+                    <path
+                      d="M20 60 A40 40 0 0 1 78 26"
+                      class="w-plan-card__gauge-value"
+                    />
 
-              <div class="w-connection-card__type">
-                Cancel anytime
-              </div>
+                    <!-- Needle -->
+                    <line
+                      x1="60"
+                      y1="60"
+                      x2="76"
+                      y2="31"
+                      class="w-plan-card__needle"
+                    />
 
-              <div class="w-connection-card__price-info">
-                From 80 p / day
-              </div>
-            </div>
-          </div>
-
-          <!-- Right column -->
-          <div class="w-connection__side">
-            <div class="w-connection-card--large">
-              <a href="select-pass.html" class="w-connection-card__ahref"></a>
-
-              <div class="w-connection-card__icon-container">
-                <img src="../img/pass_icon.svg" alt="Pass Icon" class="w-connection-card__icon">
-              </div>
-
-              <h2 class="w-connection-card__title my-2">Short-Term Pass</h2>
-
-              <div class="w-connection-card__type">
-                1, 4 or 7 days
-              </div>
-
-              <div class="w-connection-card__price-info">
-                From £6
+                    <circle
+                      cx="60"
+                      cy="60"
+                      r="4"
+                      class="w-plan-card__center"
+                    />
+                  </svg>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="w-login">
-          Already a Wifinity customer?
-          <a href="#">Sign in</a> to add Mobile or manage plans.
+        <div class="w-connection__extra">
+          <div class="w-connection__extra-description">
+            <div><b>Need a longer stay?</b></div>
+            <div>
+              Monthly plans from <b>80p per day</b>. Cancel anytime.
+            </div>
+          </div>
+
+          <div class="w-connection__cta">
+            <a href="select-subscription.html" class="w-connection-card__ahref"></a>
+            <div>View Monthly Plans</div>
+          </div>
         </div>
       </section>
     </main>
