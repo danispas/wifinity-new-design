@@ -650,6 +650,54 @@ body {
   text-transform: uppercase;
 }
 
+.w-connection-summary__speed-info {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 8px;
+}
+
+.w-connection-summary__speed {
+  width: 48px;
+}
+
+.w-connection__pass-cards {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.w-connection__pass-side {
+  display: flex;
+  width: 100%;
+  max-width: 720px;
+}
+
+.w-connection-summary__pass-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 12px;
+  padding: 16px 20px;
+  background-color: rgba(5, 5, 45, 0.04);
+}
+
+.w-connection-summary__pass-features {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0px 16px;
+}
+
+.w-accent-highlight .w-connection-summary__pass-features li::marker {
+  color: var(--accent-color);
+}
+
 .w-login {
   margin: 2rem 0px 4rem;
   text-align: center;

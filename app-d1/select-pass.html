@@ -97,15 +97,30 @@
     <main>
       <section class="w-connection">
         <h1 class="w-connection__title">
-          Pick the best short term pass for you.
+          Pick the best short-term pass for you.
         </h1>
 
         <p class="w-connection__subtitle">
           In-room Internet.
         </p>
 
-        <div class="w-connection__cards">
-          <div class="w-connection__side">
+        <div class="w-connection-summary mt-2">
+          <div class="w-connection-summary__session">
+            <div>All passes include</div>
+          </div>
+
+          <div class="w-connection-summary__pass-content w-accent-highlight">
+            <ul class="w-connection-summary__pass-features">
+              <li>Up to 120 Mb/s</li>
+              <li>Use on 5 devices</li>
+              <li>Unlimited data</li>
+              <li>No content filtering</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="w-connection__pass-cards">
+          <div class="w-connection__pass-side">
             <div class="w-connection-card--large">
               <a href="review-subscription.html" class="w-connection-card__ahref"></a>
 
@@ -114,7 +129,7 @@
                   <h3 class="w-plan-card__title">1 day</h3>
   
                   <div class="w-plan-card__price">
-                    £6
+                    £6 <span>£6/day</span>
                   </div>
                 </div>
   
@@ -131,7 +146,109 @@
 
                     <!-- Value -->
                     <path
-                      d="M20 60 A40 40 0 0 1 78 26"
+                      d="M20 60 A40 40 0 0 1 78 24"
+                      class="w-plan-card__gauge-value"
+                    />
+
+                    <!-- Needle -->
+                    <line
+                      x1="60"
+                      y1="60"
+                      x2="76"
+                      y2="31"
+                      class="w-plan-card__needle"
+                    />
+
+                    <circle
+                      cx="60"
+                      cy="60"
+                      r="4"
+                      class="w-plan-card__center"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="w-connection__pass-side">
+            <div class="w-connection-card--large">
+              <a href="review-subscription.html" class="w-connection-card__ahref"></a>
+
+              <div class="w-plan-card__header">
+                <div class="w-plan-card__info">
+                  <h3 class="w-plan-card__title">4 days</h3>
+  
+                  <div class="w-plan-card__price">
+                    £11 <span>~ £2.75/day</span>
+                  </div>
+                </div>
+  
+                <div class="w-plan-card__speed">
+                  <svg
+                    class="w-plan-card__gauge"
+                    viewBox="0 0 120 70"
+                  >
+                    <!-- Background -->
+                    <path
+                      d="M20 60 A40 40 0 0 1 100 60"
+                      class="w-plan-card__gauge-bg"
+                    />
+
+                    <!-- Value -->
+                    <path
+                      d="M20 60 A40 40 0 0 1 78 24"
+                      class="w-plan-card__gauge-value"
+                    />
+
+                    <!-- Needle -->
+                    <line
+                      x1="60"
+                      y1="60"
+                      x2="76"
+                      y2="31"
+                      class="w-plan-card__needle"
+                    />
+
+                    <circle
+                      cx="60"
+                      cy="60"
+                      r="4"
+                      class="w-plan-card__center"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="w-connection__pass-side">
+            <div class="w-connection-card--large">
+              <a href="review-subscription.html" class="w-connection-card__ahref"></a>
+
+              <div class="w-plan-card__header">
+                <div class="w-plan-card__info">
+                  <h3 class="w-plan-card__title">7 days</h3>
+  
+                  <div class="w-plan-card__price">
+                    £16 <span>~ £2.29/day</span>
+                  </div>
+                </div>
+  
+                <div class="w-plan-card__speed">
+                  <svg
+                    class="w-plan-card__gauge"
+                    viewBox="0 0 120 70"
+                  >
+                    <!-- Background -->
+                    <path
+                      d="M20 60 A40 40 0 0 1 100 60"
+                      class="w-plan-card__gauge-bg"
+                    />
+
+                    <!-- Value -->
+                    <path
+                      d="M20 60 A40 40 0 0 1 78 24"
                       class="w-plan-card__gauge-value"
                     />
 
@@ -161,7 +278,7 @@
           <div class="w-connection__extra-description">
             <div><b>Need a longer stay?</b></div>
             <div>
-              Monthly plans from <b>80p per day</b>. Cancel anytime.
+              Monthly plans from <b>~ 80p/day</b>. Cancel anytime.
             </div>
           </div>
 
