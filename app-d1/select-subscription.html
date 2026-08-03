@@ -333,9 +333,55 @@
           </div>
         </div>
 
+        <div
+          class="w-full-screen-modal"
+          id="speedTestModal"
+          aria-hidden="true"
+        >
+          <div class="w-full-screen-modal__overlay"></div>
+
+          <div class="w-full-screen-modal__content">
+            <button
+              class="w-full-screen-modal__close"
+              id="closeSpeedTestModal"
+              aria-label="Close modal"
+            >
+              <span></span>
+              <span></span>
+            </button>
+
+            <div class="w-full-screen-modal__body">
+              <h2 class="w-full-screen-modal__title">
+                Internet Speed Test
+              </h2>
+
+              <p class="w-full-screen-modal__text">
+                We use Ookla’s Speedtest to measure your current internet speed.
+              </p>
+
+              <p class="w-full-screen-modal__text">
+                To get the most accurate results, use a laptop connected to your router with an ethernet cable.
+                If connecting through WiFi, make sure you’re close to your router and have a strong signal.
+                Results will be dependent on your device’s capability.
+              </p>
+
+              <!-- Example -->
+              <div class="w-full-screen-modal__placeholder">
+                <div class="w-speed-test__image-container">
+                  <img
+                    src="../img/speed_test_transparent.png"
+                    alt="Speed Test"
+                    class="w-speed-test__image"
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div class="w-login">
           Not sure?
-          <a href="#">Test the speed</a> where you are.
+          <a href="#" id="openSpeedTestModal">Test the speed</a> where you are.
         </div>
       </section>
     </main>
