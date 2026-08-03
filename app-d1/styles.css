@@ -48,6 +48,10 @@ body {
   flex: 3 !important;
 }
 
+.gap-0 {
+  gap: 0px !important;
+}
+
 .mt-0 {
   margin-top: 0rem !important;
 }
@@ -773,6 +777,18 @@ body {
   border: none;
   border-top: 2px solid rgba(0, 0, 0, 0.02) !important;
   width: 100%;
+}
+
+.w-create-account__offers {
+  display: flex;
+  gap: 8px;
+  font-family: 'europa-light', sans-serif;
+  margin-left: 16px;
+  width: 100%;
+}
+
+.w-primary-checkbox {
+  accent-color: var(--primary-color);
 }
 
 .w-login {

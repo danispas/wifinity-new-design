@@ -6,6 +6,7 @@
 
     <link rel="icon" href="../favicon.ico" />
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="login.css" />
 
     <title>Wifinity - Create Account</title>
 
@@ -101,8 +102,79 @@
         </h1>
 
         <div class="w-create-account__cards">
-          <div class="w-connection__side flex-3">
-            
+          <div class="w-connection__side gap-0 flex-2">
+            <div class="w-connection-summary__session">
+              <div>Account Details</div>
+            </div>
+  
+            <div class="w-login-content__form">
+              <div class="w-login-content__field">
+                <input
+                  class="w-login-content__input-field"
+                  type="text"
+                  placeholder="First Name"
+                />
+              </div>
+
+              <div class="w-login-content__field">
+                <input
+                  class="w-login-content__input-field"
+                  type="text"
+                  placeholder="Last Name"
+                />
+              </div>
+
+              <div class="w-login-content__field">
+                <input
+                  class="w-login-content__input-field"
+                  type="tel"
+                  placeholder="Phone Number"
+                />
+              </div>
+  
+              <div class="w-login-content__field">
+                <input
+                  class="w-login-content__input-field"
+                  type="email"
+                  placeholder="E-mail"
+                />
+              </div>
+
+              <div class="w-login-content__field">
+                <input
+                  class="w-login-content__input-field w-login-content__input-field--password"
+                  type="password"
+                  placeholder="Password"
+                />
+              </div>
+            </div>
+
+            <div class="w-create-account__offers">
+              <input
+                id="offers"
+                type="checkbox"
+                name="offers"
+                value="offers"
+                class="w-primary-checkbox"
+              >
+              <label for="offers">Send me Wifinity offers and product updates</label><br>
+            </div>
+
+            <div class="w-create-account__offers">
+              <input
+                id="terms"
+                type="checkbox"
+                name="terms"
+                value="terms"
+                class="w-primary-checkbox"
+              >
+              <label for="terms">I agree to the terms and conditions</label><br>
+            </div>
+
+            <div class="w-connection__cta mt-2">
+              <a href="payment.html" class="w-connection-card__ahref"></a>
+              <div>Create Account and continue to Payment</div>
+            </div>
           </div>
 
           <div class="w-connection__side flex-2">
