@@ -13,6 +13,7 @@
   0. RESET
 --------------------- */
 @import url('../reset.css');
+@import url('../scrollbar.css');
 
 /* ---------------------
   1. TYPOGRAPHY
@@ -45,6 +46,10 @@ body {
 
 .flex-3 {
   flex: 3 !important;
+}
+
+.mt-0 {
+  margin-top: 0rem !important;
 }
 
 .mt-2 {
@@ -441,6 +446,11 @@ body {
   color: var(--accent-color);
 }
 
+.w-plan-card__icon {
+  width: 56px;
+  height: 56px;
+}
+
 .w-plan-card__description {
   margin-top: 2px;
   font-family: 'europa-light', sans-serif;
@@ -615,6 +625,14 @@ body {
   text-align: left;
 }
 
+.w-plan-card__header-description {
+  margin-top: 16px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--secondary-color);
+  text-align: left;
+}
+
 .w-connection-summary {
   display: flex;
   flex-flow: column;
@@ -696,6 +714,65 @@ body {
 
 .w-accent-highlight .w-connection-summary__pass-features li::marker {
   color: var(--accent-color);
+}
+
+.w-create-account__cards {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.w-create-account__summary-details {
+  display: flex;
+  flex-flow: column;
+  gap: 8px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 12px;
+  padding: 16px 24px;
+  background-color: rgba(5, 5, 45, 0.04);
+}
+
+.w-create-account__summary-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.w-create-account__summary-plane-name {
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+  text-transform: uppercase;
+}
+
+.w-create-account__summary-subtitle {
+  font-family: 'europa-light', sans-serif;
+  font-size: 14px;
+  opacity: 0.64;
+}
+
+.w-create-account__summary-price {
+  font-family: 'panton-bold', sans-serif !important;
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+
+  span {
+    font-size: 1rem;
+    color: var(--secondary-color) !important;
+    opacity: 0.4;
+  }
+}
+
+.w-create-account__divider {
+  margin: 8px 0;
+  border: none;
+  border-top: 2px solid rgba(0, 0, 0, 0.02) !important;
+  width: 100%;
 }
 
 .w-login {
