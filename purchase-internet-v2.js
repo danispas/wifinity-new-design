@@ -92,7 +92,6 @@ tabs.forEach(function (tab) {
   });
 });
 
-
 let selectedPlan = 'standard';
 const recommendedPlan = 'standard';
 
