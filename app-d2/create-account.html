@@ -10,7 +10,7 @@
 
     <title>Wifinity - Create Account</title>
 
-    <script src="main.js" defer></script>
+    <script src="toggle-esim.js" defer></script>
     <script
       type="text/javascript"
       src="https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
@@ -31,9 +31,6 @@
           <div class="w-header__title">
             Connecting the Armed Forces since 2007
           </div>
-          <div class="w-header__subtitle">
-            Unlimited data  •  No Content Filtering  •  Pause or cancel anytime
-          </div>
         </div>
       </div>
 
@@ -43,8 +40,8 @@
         data-locale="en-US"
         data-template-id="53aa8807dec7e10d38f59f32"
         data-businessunit-id="57b60ae20000ff000593a426"
-        data-style-height="125px"
-        data-style-width="72%"
+        data-style-height="100px"
+        data-style-width="64%"
         data-theme="dark"
       >
         <a
@@ -181,7 +178,6 @@
             <div class="w-order-summary">
               <div class="w-connection-summary__session">
                 <div>Order summary</div>
-                <div>Session <b>expires in 30 minutes</b></div>
               </div>
   
               <div class="w-create-account__summary-details">
@@ -191,10 +187,18 @@
                     <p class="w-create-account__summary-subtitle">
                       In-room Internet
                     </p>
+                    <div class="w-order-summary__cta">
+                      <a href="select-plan.html" class="w-connection-card__ahref"></a>
+                      <img
+                        src="../img/change_icon.svg"
+                        alt="Change Icon"
+                        class="w-order-summary__cta-icon"
+                      >
+                      Change plan
+                    </div>
                   </div>
   
                   <span
-                    id="totalPriceMobile"
                     class="w-create-account__summary-price mt-0"
                   >
                     £34.49<span>/month</span>
@@ -203,20 +207,38 @@
 
                 <hr class="w-create-account__divider">
 
-                <div class="w-create-account__summary-header">
-                  <div id="planName" class="w-create-account__summary-plane-name">
-                    Mobile
+                <div class="w-create-account__summary-header w-create-account__summary-header__esim">
+                  <div id="mobileESIM" class="w-create-account__summary-plane-name">
+                    Mobile eSIM
                     <p class="w-create-account__summary-subtitle">
                       Unlimited UK eSIM
                     </p>
+                    <div id="removeMobileESIM" class="w-order-summary__cta">
+                      <img
+                        src="../img/close_icon.svg"
+                        alt="Remove Icon"
+                        class="w-order-summary__cta-icon"
+                      >
+                      Remove Mobile eSIM
+                    </div>
                   </div>
   
                   <span
-                    id="totalPriceMobile"
                     class="w-create-account__summary-price mt-0"
                   >
-                    £15<span>/month</span>
+                    <del>£20</del> £15<span>/month</span>
                   </span>
+                </div>
+
+                <div class="w-create-account__summary-header w-create-account__summary-header__add-esim is-hidden">
+                  <div id="addMobileESIM" class="w-order-summary__cta">
+                    <img
+                      src="../img/add_icon.svg"
+                      alt="Add Icon"
+                      class="w-order-summary__cta-icon"
+                    >
+                    Add Mobile eSIM
+                  </div>
                 </div>
 
                 <hr class="w-create-account__divider">
