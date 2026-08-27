@@ -84,7 +84,17 @@ body {
 
 .w-primary-bg {
   background-color: var(--color-primary);
-  color: #FFFFFF;
+  color: #FFFFFF !important;
+}
+
+.w-dark-bg {
+  background-color: var(--color-dark) !important;
+  color: #FFFFFF !important;
+}
+
+.w-accent-bg {
+  background-color: var(--color-accent);
+  color: #FFFFFF !important;
 }
 
 .w-dark-bg {
@@ -99,6 +109,34 @@ body {
 .w-highlighted {
   background-color: var(--secondary-color) !important;
   color: #FFFFFF !important;
+}
+
+.w-white-text {
+  color: #FFFFFF !important;
+}
+
+.w-light-bga {
+  background-color: rgba(228, 228, 228, 0.4);
+}
+
+.w-accent-bga {
+  background-color: rgba(97, 64, 241, 0.12) !important;
+}
+
+.w-accent-dark-bga {
+  background-color: rgba(110, 211, 129, 0.12) !important;
+}
+
+.w-dark-bga {
+  background-color: rgba(5, 5, 45, 0.12) !important;
+}
+
+.opacity-80 {
+  opacity: 0.8 !important;
+}
+
+.opacity-88 {
+  opacity: 0.88 !important;
 }
 
 .w-badge {
@@ -339,7 +377,7 @@ body {
   flex-grow: 1;
   background-color: #FFFFFF;
   border: 2px solid rgb(232, 232, 232);
-  border-radius: 20px;
+  border-radius: 24px;
   overflow: hidden;
 
   cursor: pointer;
@@ -518,8 +556,8 @@ body {
   justify-content: space-between;
   align-items: flex-start;
   border: 4px solid #FFFFFF;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
   padding: 2rem;
   width: 100%;
   text-align: left;
@@ -546,18 +584,6 @@ body {
   color: var(--color-accent-dark);
 }
 
-.w-light-bga {
-  background-color: rgba(228, 228, 228, 0.24);
-}
-
-.w-accent-bga {
-  background-color: rgba(97, 64, 241, 0.12) !important;
-}
-
-.w-accent-dark-bga {
-  background-color: rgba(110, 211, 129, 0.12) !important;
-}
-
 .w-plan-card__icon {
   width: 56px;
   height: 56px;
@@ -567,6 +593,7 @@ body {
   margin-top: 2px;
   font-family: 'europa-light', sans-serif;
   color: #555;
+  max-width: 240px;
 }
 
 .w-plan-card__price,
@@ -578,8 +605,8 @@ body {
 
   span {
     font-size: 16px;
-    color: var(--color-dark) !important;
-    opacity: 0.4;
+    /* color: var(--color-dark) !important; */
+    opacity: 0.64;
   }
 }
 
