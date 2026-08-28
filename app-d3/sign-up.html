@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="../favicon.ico" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="sign-in.css" />
+
+    <title>Wifinity - Log In</title>
+
+    <script src="scripts.js" defer></script>
+    <script
+      type="text/javascript"
+      src="https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
+      async>
+    </script>
+  </head>
+
+  <body class="w-light-theme">
+    <header class="w-header">
+      <div class="w-header__container">
+        <img
+          src="../img/wifinity_logo_white.svg"
+          alt="Wifinity"
+          class="w-logo"
+        />
+  
+        <div class="w-header__menu">
+          <div class="w-header__menu-item">Internet</div>
+          <div class="w-header__menu-item">eSIM</div>
+          <div class="w-header__menu-item">About</div>
+        </div>
+      </div>
+
+      <div class="w-header__menu">
+        <div class="w-header__menu-item">
+          Need Help?
+        </div>
+        <div class="w-header__cta">Check Availability</div>
+      </div>
+    </header>
+
+    <div class="w-login-container">
+      <div class="w-login-content">
+        <div class="w-login-content__form">
+          <div class="w-login-content__note">
+            <p><b>Setup your account</b></p>
+            <p>Create your account to manage your plans, devices and billing in one place.</p>
+          </div>
+
+          <div class="w-login-content__info mb-2">Already have an account? <span class="w-login-content__info-link">Sign In</span></div>
+          
+          <div class="w-login-content__field">
+            <input
+              class="w-login-content__input-field"
+              type="text"
+              placeholder="First Name"
+            />
+          </div>
+
+          <div class="w-login-content__field">
+            <input
+              class="w-login-content__input-field"
+              type="text"
+              placeholder="Last Name"
+            />
+          </div>
+
+          <div class="w-login-content__field">
+            <input
+              class="w-login-content__input-field"
+              type="tel"
+              placeholder="Phone Number"
+            />
+          </div>
+
+          <div class="w-login-content__field">
+            <input
+              class="w-login-content__input-field"
+              type="email"
+              placeholder="E-mail"
+            />
+          </div>
+
+          <div class="w-login-content__field">
+            <input
+              class="w-login-content__input-field w-login-content__input-field--password"
+              type="password"
+              placeholder="Password"
+            />
+
+            <button
+              type="button"
+              class="w-login-content__password-toggle"
+              aria-label="Show password"
+            >
+              <!-- Eye icon -->
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M1 12S5 5 12 5s11 7 11 7-4 7-11 7S1 12 1 12Z" />
+                <circle cx="12" cy="12" r="3" />
+              </svg>
+            </button>
+          </div>
+
+          <div class="w-create-account__offers">
+            <input
+              id="terms"
+              type="checkbox"
+              name="terms"
+              value="terms"
+              class="w-primary-checkbox"
+            >
+            <label for="terms">I agree to the <span class="w-login-content__info-link">Privacy Policy</span></label><br>
+          </div>
+
+          <div class="w-create-account__offers-selection">
+            <div>Send me Wifinity offers and product updates by:</div>
+            <div class="w-create-account__offers">
+              <input
+                id="email-offers"
+                type="checkbox"
+                name="offers"
+                value="offers"
+                class="w-primary-checkbox"
+              >
+              <label for="email-offers">E-mail</label><br>
+            </div>
+            <div class="w-create-account__offers">
+              <input
+                id="sms-offers"
+                type="checkbox"
+                name="offers"
+                value="offers"
+                class="w-primary-checkbox"
+              >
+              <label for="sms-offers">SMS</label><br>
+            </div>
+          </div>
+
+          <button class="w-login-content__submit-button mt-2 mb-2" type="submit">
+            Sign Up
+          </button>
+        </div>
+      </div>
+
+      <div class="w-login-illustration">
+        <div
+          ref="trustbox"
+          class="trustpilot-widget"
+          data-locale="en-US"
+          data-template-id="53aa8807dec7e10d38f59f32"
+          data-businessunit-id="57b60ae20000ff000593a426"
+          data-style-height="125px"
+          data-style-width="100%"
+          data-theme="dark"
+        >
+          <a
+            href="https://www.trustpilot.com/review/wifinity.co.uk"
+            target="_blank"
+            rel="noopener"
+          >Trustpilot</a>
+        </div>
+
+        <div class="w-login-illustration-note">
+          <p>
+            Our customers love our reliable service and easy-to-use platform.
+            See what they have to say on Trustpilot!
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

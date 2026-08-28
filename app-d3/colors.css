@@ -1,0 +1,16 @@
+:root {
+  /* Dark elements only */
+  --color-dark: #05052d;
+
+  /* Main base colour */
+  --color-primary: #302398;
+
+  /* Accent colour, Button colour on light backgrounds */
+  --color-accent: #6140f1;
+
+  /* Accent colour only, Button colour on dark backgrounds */
+  --color-accent-dark: #6ed381;
+
+  /* Light alternative to white */
+  --color-light: #e4e4e4;
+}
