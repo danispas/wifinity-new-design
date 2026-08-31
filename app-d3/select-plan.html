@@ -27,73 +27,67 @@
           alt="Wifinity"
           class="w-logo"
         />
-
-        <div class="w-header__text">
-          <div class="w-header__title">
-            Connecting the Armed Forces since 2007
+  
+        <div class="w-header__menu">
+          <div class="w-header__menu-item">
+            <a href="./select-plan.html" class="w-header__menu-item-ahref"></a>
+            Internet
           </div>
+          <div class="w-header__menu-item">eSIM</div>
+          <div class="w-header__menu-item">About</div>
         </div>
       </div>
 
-      <div
-        ref="trustbox"
-        class="trustpilot-widget"
-        data-locale="en-US"
-        data-template-id="53aa8807dec7e10d38f59f32"
-        data-businessunit-id="57b60ae20000ff000593a426"
-        data-style-height="100px"
-        data-style-width="64%"
-        data-theme="dark"
-      >
-        <a
-          href="https://www.trustpilot.com/review/wifinity.co.uk"
-          target="_blank"
-          rel="noopener"
-        >Trustpilot</a>
+      <div class="w-header__menu">
+        <div class="w-header__menu-item">
+          <a href="./sign-in.html" class="w-header__menu-item-ahref"></a>
+          My Account
+        </div>
+        <div class="w-header__cta">Check Availability</div>
       </div>
     </header>
+    
+    <main class="w-main">
+      <nav class="w-stepper">
+        <a
+          href="../index.html"
+          class="w-stepper__item w-stepper__item--done"
+        >
+          <span class="w-stepper__number">✓</span>
+          <span class="w-stepper__label">Connection</span>
+        </a>
+  
+        <div class="w-stepper__line"></div>
+  
+        <a
+          href="#"
+          class="w-stepper__item w-stepper__item--active"
+        >
+          <span class="w-stepper__number">2</span>
+          <span class="w-stepper__label">Plans</span>
+        </a>
+  
+        <div class="w-stepper__line"></div>
+  
+        <a
+          href="#"
+          class="w-stepper__item"
+        >
+          <span class="w-stepper__number">3</span>
+          <span class="w-stepper__label">Account</span>
+        </a>
+  
+        <div class="w-stepper__line"></div>
+  
+        <a
+          href="#"
+          class="w-stepper__item"
+        >
+          <span class="w-stepper__number">4</span>
+          <span class="w-stepper__label">Checkout</span>
+        </a>
+      </nav>
 
-    <nav class="w-stepper">
-      <a
-        href="../index.html"
-        class="w-stepper__item w-stepper__item--done"
-      >
-        <span class="w-stepper__number">✓</span>
-        <span class="w-stepper__label">Connection</span>
-      </a>
-
-      <div class="w-stepper__line"></div>
-
-      <a
-        href="#"
-        class="w-stepper__item w-stepper__item--active"
-      >
-        <span class="w-stepper__number">2</span>
-        <span class="w-stepper__label">Plans</span>
-      </a>
-
-      <div class="w-stepper__line"></div>
-
-      <a
-        href="#"
-        class="w-stepper__item"
-      >
-        <span class="w-stepper__number">3</span>
-        <span class="w-stepper__label">Account</span>
-      </a>
-
-      <div class="w-stepper__line"></div>
-
-      <a
-        href="#"
-        class="w-stepper__item"
-      >
-        <span class="w-stepper__number">4</span>
-        <span class="w-stepper__label">Checkout</span>
-      </a>
-    </nav>
-
-    <main>
       <section class="w-connection">
         <h1 class="w-connection__title">
           Pick the best plan for you.
@@ -717,13 +711,47 @@
       </section>
     </main>
 
-    <footer>
-      <div class="w-footer-container">
-        <div>
-          <span class="w-footer__contact">Tel: +44 (0) 20 8090 1290</span>
-          <span class="w-footer__contact">Email: support@wifinity.co.uk</span>
+    <footer class="w-footer">
+      <div class="w-footer__container">
+        <div class="w-footer__info">
+          <div class="w-footer__info-block">
+            <div
+              ref="trustbox"
+              class="trustpilot-widget"
+              data-locale="en-US"
+              data-template-id="53aa8807dec7e10d38f59f32"
+              data-businessunit-id="57b60ae20000ff000593a426"
+              data-style-height="120px"
+              data-style-width="240px"
+              data-theme="dark"
+            >
+              <a
+                href="https://www.trustpilot.com/review/wifinity.co.uk"
+                target="_blank"
+                rel="noopener"
+              >Trustpilot</a>
+            </div>
+            <div class="w-footer__info-block__description">
+              Connecting the Armed Forces since 2007
+            </div>
+          </div>
+
+          <div class="w-footer__info-block">
+            <div class="w-footer__info-block__title">Support</div>
+            <a href="#" class="w-footer__info-block__link">FAQ</a>
+            <a href="#" class="w-footer__info-block__link">+44 (0) 20 8090 1290</a>
+            <a href="#" class="w-footer__info-block__link">support@wifinity.co.uk</a>
+          </div>
+
+          <div class="w-footer__info-block">
+            <div class="w-footer__info-block__title">Legal</div>
+            <a href="#" class="w-footer__info-block__link">Terms & Conditions</a>
+            <a href="#" class="w-footer__info-block__link">Privacy Policy</a>
+            <a href="#" class="w-footer__info-block__link">Refund Policy</a>
+          </div>
         </div>
-        <p>©2026 Wifinity</p>
+
+        <p class="w-footer__copyright">©2026 Wifinity. All rights reserved.</p>
       </div>
     </footer>
   </body>

@@ -4,8 +4,10 @@
 
 .w-login-container {
   display: flex;
+  flex: 1;
   flex-direction: row;
-  min-height: calc(100% - 100px);
+  /* min-height: calc(100% - 106px); */
+  height: 100%;
 }
 
 .w-login-content {
