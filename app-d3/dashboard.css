@@ -1,0 +1,192 @@
+.w-dashboard {
+  display: flex;
+  flex-flow: column;
+  width: 1120px;
+  max-width: calc(100% - 2rem);
+  margin: 0px auto;
+  padding: 4rem 0;
+}
+
+.w-dashboard__cards-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .w-dashboard__cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.w-dashboard__card {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+  background-color: #FFFFFF;
+  border: 2px solid rgb(232, 232, 232);
+  border-radius: 24px;
+}
+
+.w-dashboard__card-header {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  border: 4px solid #FFFFFF;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  min-height: 150px;
+  width: 100%;
+  padding: 1rem 2rem;
+  text-align: left;
+}
+
+.w-dashboard__card-caption {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.w-dashboard__card-title {
+  margin: 0.5rem 0;
+  font-family: 'panton-bold', sans-serif;
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+.w-dashboard__card-subtitle {
+  margin: 0.25rem 0;
+  font-size: 1rem;
+  text-align: left;
+  opacity: 0.8;
+}
+
+.w-dashboard__card-badge {
+  position: absolute;
+  top: calc(1rem + 4px);
+  right: calc(1rem + 4px);
+    
+  color: var(--color-dark);
+  padding: 0.125rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.w-dashboard__card-details {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 1rem;
+  font-family: 'panton-bold', sans-serif;
+}
+
+.w-dashboard__card-details__separator {
+  width: 1px;
+  background-color: rgba(0, 0, 0, 0.1);
+  align-self: stretch;
+}
+
+.w-dashboard__card-details__item {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.w-dashboard__card-details__item-title {
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+
+.w-dashboard__card-details__item-caption {
+  font-size: 0.875rem;
+  font-weight: bold;
+  opacity: 0.48;
+}
+
+.w-dashboard__card-promo-price {
+  font-family: 'panton-bold', sans-serif;
+  font-size: 2.5rem;
+
+  del {
+    font-size: 2rem;
+    opacity: 0.48;
+  }
+
+  span {
+    font-size: 1.5rem;
+    opacity: 0.48;
+  }
+}
+
+.w-dashboard__card-promo-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 1rem 2rem;
+}
+
+.w-dashboard__card-promo-details__item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.w-dashboard__card-promo-details__item-icon {
+  width: 22px;
+  height: 22px;
+}
+
+.w-dashboard__card-promo-details__item-title {
+  font-weight: 600;
+}
+
+.w-dashboard__card-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 2rem;
+}
+
+.w-dashboard__button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  line-height: 1;
+  text-align: center;
+  height: 52px;
+  border-radius: 26px;
+  width: 100%;
+  max-width: 320px;
+  font-family: 'panton-bold', sans-serif;
+  cursor: pointer;
+}
+
+.w-dashboard__button--outlined {
+  border: 2px solid rgb(232, 232, 232);
+  background-color: #FFFFFF;
+  color: var(--color-dark);
+}
+
+.w-dashboard__button--outlined:hover {
+  background-color: rgb(232, 232, 232);
+}
+
+.w-dashboard__button.w-accent-dark-gradient-bg:hover {
+  background: linear-gradient(135deg, var(--color-dark) 24.64%, var(--color-accent-dark) 94.36%);
+}

@@ -48,22 +48,12 @@
     </header>
     
     <main class="w-main">
-      <nav class="w-stepper">
-        <a
-          href="../index.html"
-          class="w-stepper__item w-stepper__item--done"
-        >
-          <span class="w-stepper__number">✓</span>
-          <span class="w-stepper__label">Connection</span>
-        </a>
-  
-        <div class="w-stepper__line"></div>
-  
+      <nav class="w-stepper mt-2">  
         <a
           href="#"
           class="w-stepper__item w-stepper__item--active"
         >
-          <span class="w-stepper__number">2</span>
+          <span class="w-stepper__number">1</span>
           <span class="w-stepper__label">Plans</span>
         </a>
   
@@ -73,7 +63,7 @@
           href="#"
           class="w-stepper__item"
         >
-          <span class="w-stepper__number">3</span>
+          <span class="w-stepper__number">2</span>
           <span class="w-stepper__label">Account</span>
         </a>
   
@@ -83,12 +73,12 @@
           href="#"
           class="w-stepper__item"
         >
-          <span class="w-stepper__number">4</span>
+          <span class="w-stepper__number">3</span>
           <span class="w-stepper__label">Checkout</span>
         </a>
       </nav>
 
-      <section class="w-connection">
+      <section class="w-connection mb-2">
         <h1 class="w-connection__title">
           Pick the best plan for you.
         </h1>
@@ -98,7 +88,7 @@
         </p>
 
         <div class="w-segmented-control-container">
-          <div class="w-segmented-control">
+          <div class="w-segmented-control w-light-bga">
             <input type="radio" name="seg" id="monthly" checked>
             <label for="monthly">Monthly</label>
   
@@ -156,17 +146,19 @@
         <div class="w-connection__cards w-plans">
           <div class="w-connection__side">
             <div class="w-connection-card--large">
-              <div class="w-plan-card__header w-light-bga">
+              <div class="w-plan-card__header w-gold-gradient-bg">
                 <div class="w-plan-card__info">
-                  <h3 class="w-plan-card__title">BASIC</h3>
+                  <h3 class="w-plan-card__title">Plus</h3>
   
                   <div class="w-plan-card__price">
-                    £23.99<span>/month</span>
+                    £41.99<span>/month</span>
                   </div>
 
-                  <div class="w-plan-card__description">
-                    Great for email, browsing, and everyday tasks
+                  <div class="w-plan-card__description w-white-text opacity-88">
+                    Ideal for gamers or large downloads
                   </div>
+
+                  <div class="w-badge w-dark-bg">Fastest</div>
                 </div>
   
                 <!-- <div class="w-plan-card__speed-info">
@@ -181,15 +173,15 @@
                       />
   
                       <path
-                        d="M20 60 A40 40 0 0 1 40 25"
+                        d="M20 60 A40 40 0 0 1 100 60"
                         class="w-plan-card__gauge-value"
                       />
   
                       <line
                         x1="60"
                         y1="60"
-                        x2="42"
-                        y2="30"
+                        x2="90"
+                        y2="60"
                         class="w-plan-card__needle"
                       />
   
@@ -211,7 +203,7 @@
                     alt="Speed Icon"
                     class="w-plan-simple-card__icon"
                   >
-                  <span>Up to <b>30 Mb/s</b></span>
+                  <span>Up to <b>1 Gb/s</b></span>
                 </div>
 
                 <div class="w-plan-card__divider"></div>
@@ -222,18 +214,18 @@
                     alt="Devices Icon"
                     class="w-plan-simple-card__icon"
                   >
-                  <span>Use on <b>2 devices</b></span>
+                  <span><b>All</b> personal <b>devices</b></span>
                 </div>
   
                 <div class="w-plan-card__best-for">
-                  <div class="w-plan-card__best-for-pill w-light-bga">Browsing</div>
-                  <div class="w-plan-card__best-for-pill w-light-bga">Social</div>
+                  <div class="w-plan-card__best-for-pill w-dark-bga">4K content</div>
+                  <div class="w-plan-card__best-for-pill w-dark-bga">Gaming</div>
                 </div>
 
                 <div class="w-plan-card__cta mt-2">
                   <a href="review-subscription.html" class="w-connection-card__ahref"></a>
         
-                  <div>Get Basic</div>
+                  <div>Get Plus</div>
                 </div>
               </div>
             </div>
@@ -241,7 +233,7 @@
 
           <div class="w-connection__side">
             <div class="w-connection-card--large">
-              <div class="w-plan-card__header w-accent-bg">
+              <div class="w-plan-card__header w-accent-gradient-bg">
                 <div class="w-plan-card__info">
                   <h3 class="w-plan-card__title">Standard</h3>
   
@@ -327,14 +319,14 @@
             <div class="w-connection-card--large">
               <div class="w-plan-card__header w-dark-bg">
                 <div class="w-plan-card__info">
-                  <h3 class="w-plan-card__title">Plus</h3>
+                  <h3 class="w-plan-card__title">BASIC</h3>
   
                   <div class="w-plan-card__price">
-                    £41.99<span>/month</span>
+                    £23.99<span>/month</span>
                   </div>
 
                   <div class="w-plan-card__description w-white-text opacity-88">
-                    Ideal for gamers or large downloads
+                    Great for email, browsing, and everyday tasks
                   </div>
                 </div>
   
@@ -350,15 +342,15 @@
                       />
   
                       <path
-                        d="M20 60 A40 40 0 0 1 100 60"
+                        d="M20 60 A40 40 0 0 1 40 25"
                         class="w-plan-card__gauge-value"
                       />
   
                       <line
                         x1="60"
                         y1="60"
-                        x2="90"
-                        y2="60"
+                        x2="42"
+                        y2="30"
                         class="w-plan-card__needle"
                       />
   
@@ -380,7 +372,7 @@
                     alt="Speed Icon"
                     class="w-plan-simple-card__icon"
                   >
-                  <span>Up to <b>1 Gb/s</b></span>
+                  <span>Up to <b>30 Mb/s</b></span>
                 </div>
 
                 <div class="w-plan-card__divider"></div>
@@ -391,18 +383,18 @@
                     alt="Devices Icon"
                     class="w-plan-simple-card__icon"
                   >
-                  <span><b>All</b> personal <b>devices</b></span>
+                  <span>Use on <b>2 devices</b></span>
                 </div>
   
                 <div class="w-plan-card__best-for">
-                  <div class="w-plan-card__best-for-pill w-dark-bga">4K content</div>
-                  <div class="w-plan-card__best-for-pill w-dark-bga">Gaming</div>
+                  <div class="w-plan-card__best-for-pill w-light-bga">Browsing</div>
+                  <div class="w-plan-card__best-for-pill w-light-bga">Social</div>
                 </div>
 
                 <div class="w-plan-card__cta mt-2">
                   <a href="review-subscription.html" class="w-connection-card__ahref"></a>
         
-                  <div>Get Plus</div>
+                  <div>Get Basic</div>
                 </div>
               </div>
             </div>
