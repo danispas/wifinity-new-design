@@ -305,8 +305,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  min-height: 72px;
   background: linear-gradient(to right, var(--color-dark), var(--color-primary), var(--color-accent));
-  padding: 1.25rem 2rem;
+  padding: 0 2rem;
 }
 
 .w-header__container {
@@ -326,11 +327,22 @@ body {
   align-items: center;
 }
 
-.w-header__menu-item {
+.w-header__menu-item,
+.w-header__menu-text {
   position: relative;
   font-family: 'panton-bold', sans-serif;
   color: #FFFFFF;
   text-decoration: none;
+}
+
+.w-header__menu-text {
+  right: -8px;
+}
+
+@media (max-width: 640px) {
+  .w-header__menu-text {
+    display: none;
+  }
 }
 
 .w-header__menu-item::after {
@@ -370,6 +382,7 @@ body {
   gap: 8px;
   background-color: var(--color-accent-dark);
   height: 42px;
+  min-width: 120px;
   border-radius: 21px;
   padding: 12px 18px;
   font-family: 'panton-bold', sans-serif;
