@@ -4,11 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="icon" href="favicon.ico" />
+    <link rel="icon" href="./favicon.ico" />
+
     <link rel="stylesheet" href="./app-d3/styles.css">
+    <link rel="stylesheet" href="./app-d3/segmented-control.css">
+    <link rel="stylesheet" href="./app-d3/tooltip.css">
 
-    <title>Wifinity - Connection</title>
+    <title>Wifinity</title>
 
+    <script src="app-d3/tooltip.js" defer></script>
+    <script src="app-d3/app.js" defer></script>
     <script
       type="text/javascript"
       src="https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
@@ -24,87 +29,490 @@
           alt="Wifinity"
           class="w-logo"
         />
-  
-        <div class="w-header__menu">
-          <div class="w-header__menu-item">
-            <a href="./app-d3/select-plan.html" class="w-header__menu-item-ahref"></a>
-            Internet
-          </div>
-          <div class="w-header__menu-item">eSIM</div>
-          <div class="w-header__menu-item">About</div>
-        </div>
       </div>
 
       <div class="w-header__menu">
-        <div class="w-header__menu-item">
+        <!-- <div class="w-header__menu-item">
           <a href="./app-d3/sign-in.html" class="w-header__menu-item-ahref"></a>
           My Account
+        </div> -->
+
+        <div class="w-header__menu-item">
+          Need Help?
         </div>
-        <div class="w-header__cta">Check Availability</div>
+
+        <div class="w-header__menu-icon-button">
+          <a href="./app-d3/sign-in.html" class="w-header__menu-item-ahref"></a>
+          <img
+            src="./img/person_icon.svg"
+            class="w-header__menu-icon-button__icon"
+          />
+        </div>
       </div>
     </header>
     
     <main class="w-main">
-      <section class="w-connection mt-4 mb-3">
-        <h1 class="w-connection__title">
-          High-Speed Connectivity, <span class="w-accent-text">Built for Your Location</span>
-        </h1>
+      <section class="w-connection mt-2 mb-2">
+        <div class="w-connection__title-container">
+          <h1 class="w-connection__title">
+            In-room internet for the Armed Forces
+          </h1>
 
-        <p class="w-connection__subtitle">
-          Get secure wired broadband, high-speed Wi-Fi, or instant eSIM coverage across 150+ MoD locations.
-        </p>
+          <div class="w-connection__more-info-cta">
+            <img src="./img/info_icon.svg" class="w-connection__more-info-cta__icon">
+            <a href="#" id="openMoreInfoModal" class="w-connection__more-info-cta__title">More Info</a>
+          </div>
+        </div>
 
-        <div class="w-connection__cards-container mt-4">
-          <div class="w-connection__card">
-            <div class="w-connection-card--large pa-2">
-              <div class="w-connection-card__icon-container">
-                <img src="./img/wifi_icon.svg" alt="WiFi Icon" class="w-connection-card__icon">
+        <div class="w-segmented-control-container">
+          <div class="w-segmented-control w-light-bga">
+            <input type="radio" name="seg" id="monthly" checked>
+            <label for="monthly">Monthly</label>
+  
+            <input type="radio" name="seg" id="day-passes">
+            <label for="day-passes">Short-Term Pass</label>
+  
+            <span class="indicator"></span>
+          </div>
+        </div>
+
+        <div class="w-connection-summary">
+          <div class="w-connection-summary__plans-content w-light-bga">
+            <div class="w-connection-summary__plans-features">
+              <div class="w-connection-summary__plans-content__header">
+                Each plan includes
               </div>
-              
-              <div class="w-connection-card__info py-2">
-                <h2 class="w-connection-card__title">In-room Internet</h2>
-    
-                <div class="w-connection-card__type">
-                  WiFi and Wired
+
+              <div class="w-connection-summary__plan-feature">
+                <img
+                  src="./img/all_inclusive_icon.svg"
+                  alt="Devices Icon"
+                  class="w-plan-simple-card__icon"
+                >
+                <div>Unlimited data</div>
+              </div>
+            
+              <div class="w-connection-summary__plan-feature">
+                <img
+                  src="./img/18_up_rating_icon.svg"
+                  alt="Devices Icon"
+                  class="w-plan-simple-card__icon"
+                >
+                <div>No content filtering</div>
+              </div>
+
+              <div class="w-connection-summary__plan-feature">
+                <img
+                  src="./img/encrypted_icon.svg"
+                  alt="Devices Icon"
+                  class="w-plan-simple-card__icon"
+                >
+                <div>Secure connection</div>
+              </div>
+
+              <div class="w-connection-summary__plan-feature">
+                <img
+                  src="./img/contact_support_icon.svg"
+                  alt="Devices Icon"
+                  class="w-plan-simple-card__icon"
+                >
+                <div>24/7 support</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-connection__cards w-plans">
+          <div class="w-connection__side">
+            <div class="w-connection-card--large">
+              <div class="w-plan-card__header w-dark-bg">
+                <div class="w-plan-card__info">
+                  <h3 class="w-plan-card__title">BASIC</h3>
+  
+                  <div class="w-plan-card__price">
+                    <div>£23.99<span>/month</span></div>
+                  </div>
+
+                  <div class="w-plan-card__description w-white-text opacity-88">
+                    Great for email, browsing, and everyday tasks
+                  </div>
+                </div>
+              </div>
+  
+              <div class="w-plan-card__content">
+                <div class="w-plan-simple-card__row-start">
+                  <img
+                    src="./img/wifi_icon.svg"
+                    alt="Speed Icon"
+                    class="w-plan-simple-card__icon"
+                  >
+                  <span>Up to <b>30 Mb/s</b></span>
                 </div>
 
-                <p class="w-connection-card__description">
-                  Fast, private internet at 150+ MoD locations.
-                </p>
-              </div>
-              
-              <div class="w-connection-card__cta">
-                <a href="./app-d3/select-plan.html" class="w-connection-card__ahref"></a>
-      
-                <div>Explore</div>
+                <div class="w-plan-card__divider"></div>
+
+                <div class="w-plan-simple-card__row-start">
+                  <img
+                    src="./img/devices_icon_accent.svg"
+                    alt="Devices Icon"
+                    class="w-plan-simple-card__icon"
+                  >
+                  <span>Use on <b>2 devices</b></span>
+                </div>
+
+                <div class="w-plan-card__cta w-dark-bg mt-1">
+                  <a href="./app-d3/create-account.html" class="w-connection-card__ahref"></a>
+        
+                  <div>Buy Plan</div>
+                </div>
               </div>
             </div>
           </div>
 
-          <div class="w-connection__card">
-            <div class="w-connection-card--large pa-2">
-              <div class="w-connection-card__icon-container">
-                <img src="./img/e_sim.webp" alt="eSIM Icon" class="w-connection-card__icon">
-              </div>
-
-              <div class="w-connection-card__info py-2">
-                <h2 class="w-connection-card__title">
-                  Wifinity Mobile eSIM
-                </h2>
+          <div class="w-connection__side">
+            <div class="w-connection-card--large">
+              <div class="w-plan-card__header w-accent-gradient-bg">
+                <div class="w-plan-card__info">
+                  <h3 class="w-plan-card__title">Standard</h3>
   
-                <div class="w-connection-card__type">
-                  Unlimited 4G / 5G Data
+                  <div class="w-plan-card__price">
+                    <div>£34.49<span>/month</span></div>
+                  </div>
+
+                  <div class="w-plan-card__description w-white-text opacity-88">
+                    Suitable for a streaming and video calls
+                  </div>
+                </div>
+              </div>
+  
+              <div class="w-plan-card__content">
+                <div class="w-plan-simple-card__row-start">
+                  <img
+                    src="./img/wifi_icon.svg"
+                    alt="Speed Icon"
+                    class="w-plan-simple-card__icon"
+                  >
+                  <span>Up to <b>120 Mb/s</b></span>
                 </div>
 
-                <p class="w-connection-card__description">
-                  Unlimited UK Calls, SMS and Data eSIM.
-                </p>
-              </div>
+                <div class="w-plan-card__divider"></div>
 
-              <div class="w-connection-card__cta">
-                <a href="./app-d1/select-mobile.html" class="w-connection-card__ahref"></a>
-      
-                <div>Explore</div>
+                <div class="w-plan-simple-card__row-start">
+                  <img
+                    src="./img/devices_icon_accent.svg"
+                    alt="Devices Icon"
+                    class="w-plan-simple-card__icon"
+                  >
+                  <span>Use on <b>5 devices</b></span>
+                </div>
+
+                <div class="w-plan-card__cta w-accent-gradient-bg mt-1">
+                  <a href="./app-d3/create-account.html" class="w-connection-card__ahref"></a>
+                  <div>Buy Plan</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="w-connection__side">
+            <div class="w-connection-card--large">
+              <div class="w-plan-card__header w-gold-gradient-bg">
+                <div class="w-plan-card__info">
+                  <h3 class="w-plan-card__title">Plus</h3>
+  
+                  <div class="w-plan-card__price">
+                    <div>£41.99<span>/month</span></div>
+                  </div>
+
+                  <div class="w-plan-card__description w-white-text opacity-88">
+                    Ideal for gamers or large downloads
+                  </div>
+
+                  <div class="w-badge w-dark-bg">Fastest</div>
+                </div>
+              </div>
+  
+              <div class="w-plan-card__content">
+                <div class="w-plan-simple-card__row-start">
+                  <img
+                    src="./img/wifi_icon.svg"
+                    alt="Speed Icon"
+                    class="w-plan-simple-card__icon"
+                  >
+                  <span>Up to <b>1 Gb/s</b></span>
+                  <div class="w-tooltip-container">
+                    <button class="w-tooltip-trigger">
+                      <img src="./img/info_icon.svg" class="w-tooltip-icon">
+                    </button>
+                    <div class="w-tooltip" role="tooltip" id="tooltip-demo">
+                      Fastest possible WiFi, up to 1 Gb/s on wired connections
+                      <div class="w-tooltip-arrow"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="w-plan-card__divider"></div>
+
+                <div class="w-plan-simple-card__row-start">
+                  <img
+                    src="./img/devices_icon_accent.svg"
+                    alt="Devices Icon"
+                    class="w-plan-simple-card__icon"
+                  >
+                  <span><b>All</b> personal <b>devices</b></span>
+                  <div class="w-tooltip-container">
+                    <button class="w-tooltip-trigger">
+                      <img src="./img/info_icon.svg" class="w-tooltip-icon">
+                    </button>
+                    <div class="w-tooltip" role="tooltip" id="tooltip-demo">
+                      6 device slots provided, further devices slots can be added on request for legitimate personal use. Account sharing with non-subscribers is not permitted
+                      <div class="w-tooltip-arrow"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="w-plan-card__cta w-gold-gradient-bg mt-1">
+                  <a href="./app-d3/create-account.html" class="w-connection-card__ahref"></a>
+        
+                  <div>Buy Plan</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-connection__cards w-passes">
+          <div class="w-connection__side">
+            <div class="w-connection-card--large">
+              <div class="w-plan-card__header w-dark-bg">
+                <div class="w-plan-card__info">
+                  <h3 class="w-plan-card__title">Short-term Pass</h3>
+  
+                  <div class="w-plan-card__price">
+                    <div>1 DAY</div>
+                    <div>£6</div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="w-plan-card__content">
+                <div class="w-plan-simple-card__row-start">
+                  <img
+                    src="./img/wifi_icon.svg"
+                    alt="Speed Icon"
+                    class="w-plan-simple-card__icon"
+                  >
+                  <span>Up to <b>120 Mb/s</b></span>
+                </div>
+
+                <div class="w-plan-card__divider"></div>
+
+                <div class="w-plan-simple-card__row-start">
+                  <img
+                    src="./img/devices_icon_accent.svg"
+                    alt="Devices Icon"
+                    class="w-plan-simple-card__icon"
+                  >
+                  <span>Use on <b>5 devices</b></span>
+                </div>
+
+                <div class="w-plan-card__cta w-dark-bg mt-1">
+                  <a href="review-subscription.html" class="w-connection-card__ahref"></a>
+                  <div>Buy Plan</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="w-connection__side">
+            <div class="w-connection-card--large">
+              <div class="w-plan-card__header w-accent-gradient-bg">
+                <div class="w-plan-card__info">
+                  <h3 class="w-plan-card__title">Short-term Pass</h3>
+  
+                  <div class="w-plan-card__price">
+                    <div>4 DAYS</div>
+                    <div>£11</div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="w-plan-card__content">
+                <div class="w-plan-simple-card__row-start">
+                  <img
+                    src="./img/wifi_icon.svg"
+                    alt="Speed Icon"
+                    class="w-plan-simple-card__icon"
+                  >
+                  <span>Up to <b>120 Mb/s</b></span>
+                </div>
+
+                <div class="w-plan-card__divider"></div>
+
+                <div class="w-plan-simple-card__row-start">
+                  <img
+                    src="./img/devices_icon_accent.svg"
+                    alt="Devices Icon"
+                    class="w-plan-simple-card__icon"
+                  >
+                  <span>Use on <b>5 devices</b></span>
+                </div>
+
+                <div class="w-plan-card__cta w-accent-gradient-bg mt-1">
+                  <a href="review-subscription.html" class="w-connection-card__ahref"></a>
+                  <div>Buy Plan</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="w-connection__side">
+            <div class="w-connection-card--large">
+              <div class="w-plan-card__header w-gold-gradient-bg">
+                <div class="w-plan-card__info">
+                  <h3 class="w-plan-card__title">Short-term Pass</h3>
+  
+                  <div class="w-plan-card__price">
+                    <div>7 DAYS</div>
+                    <div>£16</div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="w-plan-card__content">
+                <div class="w-plan-simple-card__row-start">
+                  <img
+                    src="./img/wifi_icon.svg"
+                    alt="Speed Icon"
+                    class="w-plan-simple-card__icon"
+                  >
+                  <span>Up to <b>120 Mb/s</b></span>
+                </div>
+
+                <div class="w-plan-card__divider"></div>
+
+                <div class="w-plan-simple-card__row-start">
+                  <img
+                    src="./img/devices_icon_accent.svg"
+                    alt="Devices Icon"
+                    class="w-plan-simple-card__icon"
+                  >
+                  <span>Use on <b>5 devices</b></span>
+                </div>
+
+                <div class="w-plan-card__cta w-gold-gradient-bg mt-1">
+                  <a href="review-subscription.html" class="w-connection-card__ahref"></a>
+                  <div>Buy Plan</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-connection__title-container mt-2">
+          <h1 class="w-connection__title">
+            Mobile eSIM
+          </h1>
+
+          <div class="w-connection__more-info-cta">
+            <img src="./img/info_icon.svg" class="w-connection__more-info-cta__icon">
+            <div class="w-connection__more-info-cta__title">More Info</div>
+          </div>
+        </div>
+
+        <div class="w-connection__cards w-esim-plans">
+          <div class="w-connection__side"></div>
+
+          <div class="w-connection__side">
+            <div class="w-connection-card--large">
+              <div class="w-plan-card__header w-accent-dark-gradient-bg">
+                <div class="w-plan-card__info">
+                  <h3 class="w-plan-card__title">Unlimited Mobile Data</h3>
+  
+                  <div class="w-plan-card__price">
+                    <div>£20<span>/month</span></div>
+                  </div>
+
+                  <div class="w-plan-card__description w-white-text opacity-88">
+                    Mobile data wherever you go 
+                  </div>
+                </div>
+              </div>
+  
+              <div class="w-plan-card__content">
+                <div class="w-plan-simple-card__row-start">
+                  <img
+                  src="./img/sim_icon.svg"
+                  alt="Devices Icon"
+                  class="w-plan-simple-card__icon"
+                  >
+                  <span>Unlimited UK 4G / 5G</span>
+                </div>
+                
+                <div class="w-plan-card__divider"></div>
+
+                <div class="w-plan-simple-card__row-start">
+                  <img
+                  src="./img/change_icon.svg"
+                  alt="Devices Icon"
+                  class="w-plan-simple-card__icon"
+                  >
+                  <span>5GB EU roaming included</span>
+                </div>
+                
+                <div class="w-plan-card__divider"></div>
+                
+                <div class="w-plan-simple-card__row-start">
+                  <img
+                    src="./img/wifi_icon.svg"
+                    alt="Speed Icon"
+                    class="w-plan-simple-card__icon"
+                  >
+                  <span>Access Wifinity MOD WiFi</span>
+                </div>
+
+                <div class="w-plan-card__cta w-accent-dark-gradient-bg mt-1">
+                  <a href="review-subscription.html" class="w-connection-card__ahref"></a>
+        
+                  <div>Buy Plan</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="w-connection__side"></div>
+        </div>
+
+        <div
+          class="w-full-screen-modal"
+          id="moreInfoModal"
+          aria-hidden="true"
+        >
+          <div class="w-full-screen-modal__overlay"></div>
+
+          <div class="w-full-screen-modal__content">
+            <button
+              class="w-full-screen-modal__close"
+              id="closeMoreInfoModal"
+              aria-label="Close modal"
+            >
+              <span></span>
+              <span></span>
+            </button>
+
+            <div class="w-full-screen-modal__body">
+              <h2 class="w-full-screen-modal__title">
+                Connectivity for our Armed Forces
+              </h2>
+
+              <p class="w-full-screen-modal__text">
+                Fast, secure Wi‑Fi across MoD locations.
+                Flexible plans, simple sign-up, and dedicated support for service personnel.
+              </p>
+
+              <!-- Example -->
+              <div class="w-full-screen-modal__placeholder">
+                
               </div>
             </div>
           </div>

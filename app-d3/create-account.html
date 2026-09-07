@@ -6,7 +6,7 @@
 
     <link rel="icon" href="../favicon.ico" />
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="login.css" />
+    <link rel="stylesheet" href="sign-in.css" />
 
     <title>Wifinity - Create Account</title>
 
@@ -26,80 +26,61 @@
           alt="Wifinity"
           class="w-logo"
         />
+      </div>
 
-        <div class="w-header__text">
-          <div class="w-header__title">
-            Connecting the Armed Forces since 2007
-          </div>
+      <div class="w-header__menu">
+        <div class="w-header__menu-item">
+          Need Help?
+        </div>
+
+        <div class="w-header__menu-icon-button">
+          <a href="./sign-in.html" class="w-header__menu-item-ahref"></a>
+          <img
+            src="../img/person_icon.svg"
+            class="w-header__menu-icon-button__icon"
+          />
         </div>
       </div>
-
-      <div
-        ref="trustbox"
-        class="trustpilot-widget"
-        data-locale="en-US"
-        data-template-id="53aa8807dec7e10d38f59f32"
-        data-businessunit-id="57b60ae20000ff000593a426"
-        data-style-height="100px"
-        data-style-width="64%"
-        data-theme="dark"
-      >
-        <a
-          href="https://www.trustpilot.com/review/wifinity.co.uk"
-          target="_blank"
-          rel="noopener"
-        >Trustpilot</a>
-      </div>
     </header>
+    
+    <main class="w-main">
+      <nav class="w-stepper">
+        <a
+          href="#"
+          class="w-stepper__item w-stepper__item--active"
+        >
+          <span class="w-stepper__number">1</span>
+          <span class="w-stepper__label">Account</span>
+        </a>
+  
+        <div class="w-stepper__line"></div>
+  
+        <a
+          href="#"
+          class="w-stepper__item w-stepper__item"
+        >
+          <span class="w-stepper__number">2</span>
+          <span class="w-stepper__label">Review Plan</span>
+        </a>
+  
+        <div class="w-stepper__line"></div>
+  
+        <a
+          href="#"
+          class="w-stepper__item"
+        >
+          <span class="w-stepper__number">3</span>
+          <span class="w-stepper__label">Checkout</span>
+        </a>
+      </nav>
 
-    <nav class="w-stepper">
-      <a
-        href="../index.html"
-        class="w-stepper__item w-stepper__item--done"
-      >
-        <span class="w-stepper__number">✓</span>
-        <span class="w-stepper__label">Connection</span>
-      </a>
-
-      <div class="w-stepper__line"></div>
-
-      <a
-        href="#"
-        class="w-stepper__item w-stepper__item--done"
-      >
-        <span class="w-stepper__number">✓</span>
-        <span class="w-stepper__label">Plans</span>
-      </a>
-
-      <div class="w-stepper__line"></div>
-
-      <a
-        href="#"
-        class="w-stepper__item w-stepper__item--active"
-      >
-        <span class="w-stepper__number">3</span>
-        <span class="w-stepper__label">Account</span>
-      </a>
-
-      <div class="w-stepper__line"></div>
-
-      <a
-        href="#"
-        class="w-stepper__item"
-      >
-        <span class="w-stepper__number">4</span>
-        <span class="w-stepper__label">Checkout</span>
-      </a>
-    </nav>
-
-    <main>
       <section class="w-connection mb-2">
         <h1 class="w-connection__title">
-          Create an account or sign in.
+          Setup your account
         </h1>
 
         <div class="w-create-account__cards">
-          <div class="w-connection__side gap-0 flex-2">
+          <div class="w-connection__side gap-0">
             <div class="w-connection-summary__session">
               <div>Account Details</div>
             </div>
@@ -148,33 +129,63 @@
 
             <div class="w-create-account__offers">
               <input
-                id="offers"
-                type="checkbox"
-                name="offers"
-                value="offers"
-                class="w-primary-checkbox"
-              >
-              <label for="offers">Send me Wifinity offers and product updates</label><br>
-            </div>
-
-            <div class="w-create-account__offers">
-              <input
                 id="terms"
                 type="checkbox"
                 name="terms"
                 value="terms"
                 class="w-primary-checkbox"
               >
-              <label for="terms">I agree to the terms and conditions</label><br>
+              <label for="terms">I agree to the <span class="w-login-content__info-link">Privacy Policy</span></label><br>
             </div>
 
-            <div class="w-connection__cta mt-2">
-              <a href="payment.html" class="w-connection-card__ahref"></a>
-              <div>Create Account and continue to Payment</div>
+            <div class="w-create-account__offers">
+              <input
+                id="terms-conditions"
+                type="checkbox"
+                name="terms-conditions"
+                value="terms-conditions"
+                class="w-primary-checkbox"
+              >
+              <label for="terms-conditions">I agree to the <span class="w-login-content__info-link">Terms and Conditions</span></label><br>
+            </div>
+
+            <div class="w-create-account__offers-selection">
+              <div>Send me Wifinity offers and product updates by:</div>
+              <div class="w-create-account__offers">
+                <input
+                  id="email-offers"
+                  type="checkbox"
+                  name="offers"
+                  value="offers"
+                  class="w-primary-checkbox"
+                >
+                <label for="email-offers">E-mail</label><br>
+              </div>
+              <div class="w-create-account__offers">
+                <input
+                  id="sms-offers"
+                  type="checkbox"
+                  name="offers"
+                  value="offers"
+                  class="w-primary-checkbox"
+                >
+                <label for="sms-offers">SMS</label><br>
+              </div>
+            </div>
+
+            <div class="w-create-account__cta-container">
+              <div class="w-create-account__cta mt-2">
+                <a href="review-subscription.html" class="w-connection-card__ahref"></a>
+                <div>Create Account</div>
+              </div>
+            </div>
+
+            <div class="w-login-content__info mt-2">
+              Already have an account? <span class="w-login-content__info-link">Sign In</span>
             </div>
           </div>
 
-          <div class="w-connection__side flex-2">
+          <!-- <div class="w-connection__side flex-2">
             <div class="w-order-summary">
               <div class="w-connection-summary__session">
                 <div>Order summary</div>
@@ -257,23 +268,52 @@
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-
-        <div class="w-login">
-          Already a Wifinity customer?
-          <a href="login.html">Sign in</a> to add Mobile or manage plans.
+          </div> -->
         </div>
       </section>
     </main>
 
-    <footer>
-      <div class="w-footer-container">
-        <div>
-          <span class="w-footer__contact">Tel: +44 (0) 20 8090 1290</span>
-          <span class="w-footer__contact">Email: support@wifinity.co.uk</span>
+    <footer class="w-footer">
+      <div class="w-footer__container">
+        <div class="w-footer__info">
+          <div class="w-footer__info-block">
+            <div
+              ref="trustbox"
+              class="trustpilot-widget"
+              data-locale="en-US"
+              data-template-id="53aa8807dec7e10d38f59f32"
+              data-businessunit-id="57b60ae20000ff000593a426"
+              data-style-height="120px"
+              data-style-width="240px"
+              data-theme="dark"
+            >
+              <a
+                href="https://www.trustpilot.com/review/wifinity.co.uk"
+                target="_blank"
+                rel="noopener"
+              >Trustpilot</a>
+            </div>
+            <div class="w-footer__info-block__description">
+              Connecting the Armed Forces since 2007
+            </div>
+          </div>
+
+          <div class="w-footer__info-block">
+            <div class="w-footer__info-block__title">Support</div>
+            <a href="#" class="w-footer__info-block__link">FAQ</a>
+            <a href="#" class="w-footer__info-block__link">+44 (0) 20 8090 1290</a>
+            <a href="#" class="w-footer__info-block__link">support@wifinity.co.uk</a>
+          </div>
+
+          <div class="w-footer__info-block">
+            <div class="w-footer__info-block__title">Legal</div>
+            <a href="#" class="w-footer__info-block__link">Terms & Conditions</a>
+            <a href="#" class="w-footer__info-block__link">Privacy Policy</a>
+            <a href="#" class="w-footer__info-block__link">Refund Policy</a>
+          </div>
         </div>
-        <p>©2026 Wifinity</p>
+
+        <p class="w-footer__copyright">©2026 Wifinity. All rights reserved.</p>
       </div>
     </footer>
   </body>

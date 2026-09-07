@@ -9,15 +9,15 @@ document
   });
 });
 
-const modal = document.getElementById('speedTestModal');
-const openButton = document.getElementById('openSpeedTestModal');
-const closeButton = document.getElementById('closeSpeedTestModal');
-const overlay = modal.querySelector('.w-full-screen-modal__overlay');
+const moreInfoModal = document.getElementById('moreInfoModal');
+const openMoreInfoButton = document.getElementById('openMoreInfoModal');
+const closeMoreInfoButton = document.getElementById('closeMoreInfoModal');
+const overlay = moreInfoModal.querySelector('.w-full-screen-modal__overlay');
 
-openButton.addEventListener('click', function (event) {
+openMoreInfoButton.addEventListener('click', function (event) {
   event.preventDefault();
 
-  modal.classList.add(
+  moreInfoModal.classList.add(
     'w-full-screen-modal--open'
   );
 
@@ -25,14 +25,14 @@ openButton.addEventListener('click', function (event) {
 })
 
 function closeModal() {
-  modal.classList.remove(
+  moreInfoModal.classList.remove(
     'w-full-screen-modal--open'
   );
 
   document.body.style.overflow = '';
 }
 
-closeButton.addEventListener(
+closeMoreInfoButton.addEventListener(
   'click',
   closeModal
 );
@@ -47,7 +47,7 @@ document.addEventListener(
   function (event) {
     if (
       event.key === 'Escape' &&
-      modal.classList.contains(
+      moreInfoModal.classList.contains(
         'w-full-screen-modal--open'
       )
     ) {

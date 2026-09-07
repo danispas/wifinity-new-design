@@ -6,11 +6,11 @@
 
     <link rel="icon" href="../favicon.ico" />
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="login.css" />
+    <link rel="stylesheet" href="sign-in.css" />
 
-    <title>Wifinity - Create Account</title>
+    <title>Wifinity - Review Subscription</title>
 
-    <script src="main.js" defer></script>
+    <script src="toggle-esim.js" defer></script>
     <script
       type="text/javascript"
       src="https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
@@ -26,88 +26,64 @@
           alt="Wifinity"
           class="w-logo"
         />
+      </div>
 
-        <div class="w-header__text">
-          <div class="w-header__title">
-            Connecting the Armed Forces since 2007
-          </div>
+      <div class="w-header__menu">
+        <div class="w-header__menu-item">
+          Need Help?
+        </div>
+
+        <div class="w-header__menu-icon-button">
+          <a href="./sign-in.html" class="w-header__menu-item-ahref"></a>
+          <img
+            src="../img/person_icon.svg"
+            class="w-header__menu-icon-button__icon"
+          />
         </div>
       </div>
-
-      <div
-        ref="trustbox"
-        class="trustpilot-widget"
-        data-locale="en-US"
-        data-template-id="53aa8807dec7e10d38f59f32"
-        data-businessunit-id="57b60ae20000ff000593a426"
-        data-style-height="100px"
-        data-style-width="64%"
-        data-theme="dark"
-      >
-        <a
-          href="https://www.trustpilot.com/review/wifinity.co.uk"
-          target="_blank"
-          rel="noopener"
-        >Trustpilot</a>
-      </div>
     </header>
+    
+    <main class="w-main">
+      <nav class="w-stepper">
+        <a
+          href="#"
+          class="w-stepper__item w-stepper__item--done"
+        >
+          <span class="w-stepper__number">✓</span>
+          <span class="w-stepper__label">Account</span>
+        </a>
+  
+        <div class="w-stepper__line"></div>
+  
+        <a
+          href="#"
+          class="w-stepper__item w-stepper__item--done"
+        >
+          <span class="w-stepper__number">✓</span>
+          <span class="w-stepper__label">Review Plan</span>
+        </a>
+  
+        <div class="w-stepper__line"></div>
+  
+        <a
+          href="#"
+          class="w-stepper__item w-stepper__item--active"
+        >
+          <span class="w-stepper__number">3</span>
+          <span class="w-stepper__label">Checkout</span>
+        </a>
+      </nav>
 
-    <nav class="w-stepper">
-      <a
-        href="../index.html"
-        class="w-stepper__item w-stepper__item--done"
-      >
-        <span class="w-stepper__number">✓</span>
-        <span class="w-stepper__label">Connection</span>
-      </a>
-
-      <div class="w-stepper__line"></div>
-
-      <a
-        href="#"
-        class="w-stepper__item w-stepper__item--done"
-      >
-        <span class="w-stepper__number">✓</span>
-        <span class="w-stepper__label">Plans</span>
-      </a>
-
-      <div class="w-stepper__line"></div>
-
-      <a
-        href="#"
-        class="w-stepper__item w-stepper__item--done"
-      >
-        <span class="w-stepper__number">✓</span>
-        <span class="w-stepper__label">Account</span>
-      </a>
-
-      <div class="w-stepper__line"></div>
-
-      <a
-        href="#"
-        class="w-stepper__item w-stepper__item--active"
-      >
-        <span class="w-stepper__number">4</span>
-        <span class="w-stepper__label">Checkout</span>
-      </a>
-    </nav>
-
-    <main>
       <section class="w-connection mb-2">
         <h1 class="w-connection__title">
-          Checkout.
+          Checkout
         </h1>
 
         <div class="w-create-account__cards">
-          <div class="w-connection__side gap-0 flex-2">
-            
-          </div>
-
           <div class="w-connection__side flex-2">
             <div class="w-order-summary">
               <div class="w-connection-summary__session">
                 <div>Order summary</div>
-                <div>Session <b>expires in 30 minutes</b></div>
               </div>
   
               <div class="w-create-account__summary-details">
@@ -117,10 +93,18 @@
                     <p class="w-create-account__summary-subtitle">
                       In-room Internet
                     </p>
+                    <div class="w-order-summary__cta">
+                      <a href="../index.html" class="w-connection-card__ahref"></a>
+                      <img
+                        src="../img/change_icon.svg"
+                        alt="Change Icon"
+                        class="w-order-summary__cta-icon"
+                      >
+                      Change plan
+                    </div>
                   </div>
   
                   <span
-                    id="totalPriceMobile"
                     class="w-create-account__summary-price mt-0"
                   >
                     £34.49<span>/month</span>
@@ -129,20 +113,38 @@
 
                 <hr class="w-create-account__divider">
 
-                <div class="w-create-account__summary-header">
-                  <div id="planName" class="w-create-account__summary-plane-name">
-                    Mobile
+                <div class="w-create-account__summary-header w-create-account__summary-header__esim">
+                  <div id="mobileESIM" class="w-create-account__summary-plane-name">
+                    Mobile eSIM
                     <p class="w-create-account__summary-subtitle">
                       Unlimited UK eSIM
                     </p>
+                    <div id="removeMobileESIM" class="w-order-summary__cta">
+                      <img
+                        src="../img/close_icon.svg"
+                        alt="Remove Icon"
+                        class="w-order-summary__cta-icon"
+                      >
+                      Remove Mobile eSIM
+                    </div>
                   </div>
   
                   <span
-                    id="totalPriceMobile"
                     class="w-create-account__summary-price mt-0"
                   >
-                    £15<span>/month</span>
+                    <del>£20</del> £15<span>/month</span>
                   </span>
+                </div>
+
+                <div class="w-create-account__summary-header w-create-account__summary-header__add-esim is-hidden">
+                  <div id="addMobileESIM" class="w-order-summary__cta">
+                    <img
+                      src="../img/add_icon.svg"
+                      alt="Add Icon"
+                      class="w-order-summary__cta-icon"
+                    >
+                    Add Mobile eSIM
+                  </div>
                 </div>
 
                 <hr class="w-create-account__divider">
@@ -161,18 +163,59 @@
                 </div>
               </div>
             </div>
+
+            <div class="w-create-account__cta-container">
+              <div class="w-create-account__cta">
+                <a href="dashboard.html" class="w-connection-card__ahref"></a>
+                <div>Continue</div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
     </main>
 
-    <footer>
-      <div class="w-footer-container">
-        <div>
-          <span class="w-footer__contact">Tel: +44 (0) 20 8090 1290</span>
-          <span class="w-footer__contact">Email: support@wifinity.co.uk</span>
+    <footer class="w-footer">
+      <div class="w-footer__container">
+        <div class="w-footer__info">
+          <div class="w-footer__info-block">
+            <div
+              ref="trustbox"
+              class="trustpilot-widget"
+              data-locale="en-US"
+              data-template-id="53aa8807dec7e10d38f59f32"
+              data-businessunit-id="57b60ae20000ff000593a426"
+              data-style-height="120px"
+              data-style-width="240px"
+              data-theme="dark"
+            >
+              <a
+                href="https://www.trustpilot.com/review/wifinity.co.uk"
+                target="_blank"
+                rel="noopener"
+              >Trustpilot</a>
+            </div>
+            <div class="w-footer__info-block__description">
+              Connecting the Armed Forces since 2007
+            </div>
+          </div>
+
+          <div class="w-footer__info-block">
+            <div class="w-footer__info-block__title">Support</div>
+            <a href="#" class="w-footer__info-block__link">FAQ</a>
+            <a href="#" class="w-footer__info-block__link">+44 (0) 20 8090 1290</a>
+            <a href="#" class="w-footer__info-block__link">support@wifinity.co.uk</a>
+          </div>
+
+          <div class="w-footer__info-block">
+            <div class="w-footer__info-block__title">Legal</div>
+            <a href="#" class="w-footer__info-block__link">Terms & Conditions</a>
+            <a href="#" class="w-footer__info-block__link">Privacy Policy</a>
+            <a href="#" class="w-footer__info-block__link">Refund Policy</a>
+          </div>
         </div>
-        <p>©2026 Wifinity</p>
+
+        <p class="w-footer__copyright">©2026 Wifinity. All rights reserved.</p>
       </div>
     </footer>
   </body>
