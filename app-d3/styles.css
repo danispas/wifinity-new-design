@@ -129,9 +129,17 @@ body {
   color: #FFFFFF !important;
 }
 
+.w-dark-border {
+  border: 2px solid var(--color-dark) !important;
+}
+
 .w-accent-bg {
   background-color: var(--color-accent);
   color: #FFFFFF !important;
+}
+
+.w-accent-border {
+  border: 2px solid var(--color-accent) !important;
 }
 
 .w-accent-dark-bg {
@@ -139,13 +147,18 @@ body {
   color: var(--color-dark) !important;
 }
 
+.w-accent-dark-border {
+  border: 2px solid var(--color-accent-dark) !important;
+}
+
 .w-accent-gradient-bg {
-  background: linear-gradient(135deg, var(--color-dark) 14.64%, var(--color-accent) 85.36%);
+  background: linear-gradient(134.99deg, var(--color-dark) 15.93%, var(--color-accent) 85.57%);
   color: #FFFFFF !important;
 }
 
 .w-accent-dark-gradient-bg {
   background: linear-gradient(135deg, var(--color-dark) 14.64%, var(--color-accent-dark) 85.36%);
+  background: linear-gradient(135deg, #0A7A64 15.8%, var(--color-accent-dark) 72.3%);
   color: #FFFFFF !important;
 }
 
@@ -155,8 +168,12 @@ body {
 }
 
 .w-gold-gradient-bg {
-  background: linear-gradient(135deg, var(--color-dark) 14.64%, #E1C55D 85.36%);
+  background: linear-gradient(135deg, #985E2C 18.35%, #E7BF20 85.99%);
   color: #FFFFFF !important;
+}
+
+.w-gold-border {
+  border: 2px solid #985E2C !important;
 }
 
 .w-gray-bg {
@@ -779,7 +796,7 @@ body {
   border-top-left-radius: 32px;
   border-top-right-radius: 32px;
   border-bottom-width: 0px;
-  padding: 1.5rem 2rem;
+  padding: 1.5rem 1.75rem;
   width: 100%;
   text-align: left;
 }
@@ -817,8 +834,8 @@ body {
 .w-plan-card__description {
   margin-top: 2px;
   font-family: 'europa-light', sans-serif;
+  font-size: 1rem;
   color: #555;
-  max-width: 240px;
 }
 
 .w-plan-card__price,
@@ -902,7 +919,7 @@ body {
 
 .w-plan-card__content {
   width: 100%;
-  padding: 1rem 2rem;
+  padding: 1rem 1.75rem;
   text-align: left;
 }
 
@@ -1248,7 +1265,7 @@ footer {
 
 .w-footer__info {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 2rem;
   width: 100%;
 }
@@ -1257,6 +1274,11 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 8px;
+}
+
+.w-footer__amf-logo {
+  width: 112px;
+  height: auto;
 }
 
 .w-footer__info-block__description {
