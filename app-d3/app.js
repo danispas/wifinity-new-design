@@ -17,6 +17,10 @@ const speedTestModal = document.getElementById('speedTestModal');
 const openSpeedTestButton = document.getElementById('openSpeedTestModal');
 const closeSpeedTestButton = document.getElementById('closeSpeedTestModal');
 
+const boostYourPlanModal = document.getElementById('boostYourPlanModal');
+const openBoostYourPlanButton = document.getElementById('openBoostYourPlanModal');
+const closeBoostYourPlanButton = document.getElementById('closeBoostYourPlanModal');
+
 const overlay = moreInfoModal.querySelector('.w-full-screen-modal__overlay');
 const speedTestOverlay = speedTestModal.querySelector('.w-full-screen-modal__overlay');
 
@@ -38,6 +42,16 @@ function closeMoreInfoModal() {
   document.body.style.overflow = '';
 }
 
+closeMoreInfoButton.addEventListener(
+  'click',
+  closeMoreInfoModal
+);
+
+overlay.addEventListener(
+  'click',
+  closeMoreInfoModal
+);
+
 openSpeedTestButton.addEventListener('click', function (event) {
   event.preventDefault();
 
@@ -56,16 +70,6 @@ function closeSpeedTestModal() {
   document.body.style.overflow = '';
 }
 
-closeMoreInfoButton.addEventListener(
-  'click',
-  closeMoreInfoModal
-);
-
-overlay.addEventListener(
-  'click',
-  closeMoreInfoModal
-);
-
 closeSpeedTestButton.addEventListener(
   'click',
   closeSpeedTestModal
@@ -74,6 +78,35 @@ closeSpeedTestButton.addEventListener(
 speedTestOverlay.addEventListener(
   'click',
   closeSpeedTestModal
+);
+
+openBoostYourPlanButton.addEventListener('click', function (event) {
+  event.preventDefault();
+
+  boostYourPlanModal.classList.add(
+    'w-full-screen-modal--open'
+  );
+
+  document.body.style.overflow = 'hidden';
+});
+
+function closeBoostYourPlanModal() {
+  boostYourPlanModal.classList.remove(
+    'w-full-screen-modal--open'
+  );
+
+  document.body.style.overflow = '';
+}
+
+closeBoostYourPlanButton.addEventListener(
+  'click',
+  closeBoostYourPlanModal
+);
+
+const boostYourPlanOverlay = boostYourPlanModal.querySelector('.w-full-screen-modal__overlay');
+boostYourPlanOverlay.addEventListener(
+  'click',
+  closeBoostYourPlanModal
 );
 
 document.addEventListener(

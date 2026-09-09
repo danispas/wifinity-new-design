@@ -105,6 +105,11 @@ body {
   padding: 2rem !important;
 }
 
+.py-0 {
+  padding-top: 0rem !important;
+  padding-bottom: 0rem !important;
+}
+
 .py-2 {
   padding-top: 2rem !important;
   padding-bottom: 2rem !important;
@@ -178,6 +183,11 @@ body {
 
 .w-gold-border {
   border: 2px solid #985E2C !important;
+}
+
+.w-white-bg {
+  background-color: #FFFFFF !important;
+  color: var(--color-dark) !important;
 }
 
 .w-gray-bg {
@@ -588,6 +598,12 @@ body {
   flex: 1;
   gap: 1.5rem;
   max-width: 640px;
+}
+
+.w-connection__side__caption {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
 .w-connection__cards-container {
@@ -1733,7 +1749,7 @@ footer {
 .w-full-screen-modal__body {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 24px;
+  padding: 2rem;
 }
 
 .w-full-screen-modal__title {

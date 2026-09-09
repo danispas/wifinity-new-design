@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./app-d3/styles.css">
     <link rel="stylesheet" href="./app-d3/segmented-control.css">
     <link rel="stylesheet" href="./app-d3/tooltip.css">
+    <link rel="stylesheet" href="./app-d3/dashboard.css">
 
     <title>Wifinity</title>
 
@@ -120,7 +121,6 @@
                   class="w-plan-simple-card__icon"
                 >
               </div>
-              </div>
             </div>
           </div>
         </div>
@@ -210,7 +210,7 @@
                 </div>
 
                 <div class="w-plan-card__cta w-accent-gradient-bg mt-1">
-                  <a href="./app-d3/create-account.html" class="w-connection-card__ahref"></a>
+                  <a href="#" id="openBoostYourPlanModal" class="w-connection-card__ahref"></a>
                   <div>Buy Plan</div>
                 </div>
               </div>
@@ -635,6 +635,7 @@
           </div>
         </div>
 
+        <!-- More Info Modal -->
         <div
           class="w-full-screen-modal"
           id="moreInfoModal"
@@ -670,6 +671,152 @@
           </div>
         </div>
 
+        <!-- Boost Your Plan Modal -->
+        <div
+          class="w-full-screen-modal"
+          id="boostYourPlanModal"
+          aria-hidden="true"
+        >
+          <div class="w-full-screen-modal__overlay"></div>
+
+          <div class="w-full-screen-modal__content">
+            <button
+              class="w-full-screen-modal__close"
+              id="closeBoostYourPlanModal"
+              aria-label="Close modal"
+            >
+              <span></span>
+              <span></span>
+            </button>
+
+            <div class="w-full-screen-modal__body">
+              <h2 class="w-full-screen-modal__title">
+                Get More from Your Plan
+              </h2>
+
+              <div class="w-full-screen-modal__placeholder">
+                <div class="w-connection__cards w-plans">
+                  <div class="w-connection__side">
+                    <div class="w-connection__side__caption">Boost Plan</div>
+                    <div class="w-connection-card--large w-gold-border">
+                      <div class="w-plan-card__header w-gold-gradient-bg">
+                        <div class="w-plan-card__info">
+                          <h3 class="w-plan-card__title">
+                            Get More Wi‑Fi with Plus
+                          </h3>
+          
+                          <div class="w-plan-card__price">
+                            <div>+£7.49<span>/month</span></div>
+                          </div>
+                        </div>
+                      </div>
+          
+                      <div class="w-plan-card__content">
+                        <div class="w-plan-simple-card__row-start">
+                          <img
+                            src="./img/wifi_icon.svg"
+                            alt="Speed Icon"
+                            class="w-plan-simple-card__icon"
+                          >
+                          <span>Up to <b>1 Gb/s</b></span>
+                          <div class="w-tooltip-container">
+                            <button class="w-tooltip-trigger">
+                              <img src="./img/info_icon.svg" class="w-tooltip-icon">
+                            </button>
+                            <div class="w-tooltip" role="tooltip" id="tooltip-demo">
+                              Fastest possible WiFi, up to 1 Gb/s on wired connections
+                              <div class="w-tooltip-arrow"></div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="w-plan-card__divider"></div>
+
+                        <div class="w-plan-simple-card__row-start">
+                          <img
+                            src="./img/devices_icon_accent.svg"
+                            alt="Devices Icon"
+                            class="w-plan-simple-card__icon"
+                          >
+                          <span><b>All</b> personal <b>devices</b></span>
+                          <div class="w-tooltip-container">
+                            <button class="w-tooltip-trigger">
+                              <img src="./img/info_icon.svg" class="w-tooltip-icon">
+                            </button>
+                            <div class="w-tooltip" role="tooltip" id="tooltip-demo">
+                              6 device slots provided, further devices slots can be added on request for legitimate personal use. Account sharing with non-subscribers is not permitted
+                              <div class="w-tooltip-arrow"></div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="w-plan-card__cta w-gold-gradient-bg mt-1">
+                          <a href="./app-d3/create-account.html" class="w-connection-card__ahref"></a>
+                
+                          <div>Upgrade to Plus</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="w-connection__side">
+                    <div class="w-connection__side__caption">Bundle Offer</div>
+                    <div class="w-connection-card--large w-accent-dark-border">
+                      <div class="w-plan-card__header w-accent-dark-gradient-bg">
+                        <div class="w-plan-card__info">
+                          <h3 class="w-plan-card__title">Add Mobile eSIM</h3>
+          
+                          <div class="w-plan-card__price">
+                            <div><del>£20</del> +£15<span>/month</span></div>
+                          </div>
+
+                          <div class="w-badge w-white-bg">Save 25%</div>
+                        </div>
+                      </div>
+          
+                      <div class="w-plan-card__content">
+                        <div class="w-plan-simple-card__row-start">
+                          <img
+                          src="./img/sim_icon.svg"
+                          alt="Devices Icon"
+                          class="w-plan-simple-card__icon"
+                          >
+                          <span>Unlimited UK Calls, SMS, 4G / 5G Data</span>
+                        </div>
+                        
+                        <div class="w-plan-card__divider"></div>
+
+                        <div class="w-plan-simple-card__row-start">
+                          <img
+                          src="./img/change_icon.svg"
+                          alt="Devices Icon"
+                          class="w-plan-simple-card__icon"
+                          >
+                          <span>5GB EU roaming included</span>
+                        </div>
+
+                        <div class="w-plan-card__cta w-accent-dark-gradient-bg mt-1">
+                          <a href="review-subscription.html" class="w-connection-card__ahref"></a>
+                
+                          <div>Add Mobile eSIM</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="w-dashboard__card-footer py-0">
+                <div class="w-dashboard__button w-dashboard__button--outlined">
+                  <a href="./app-d3/create-account.html" class="w-connection-card__ahref"></a>
+                  Continue with Standard
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Speed Test Modal -->
         <div
           class="w-full-screen-modal"
           id="speedTestModal"
