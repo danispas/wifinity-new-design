@@ -54,11 +54,6 @@
           <h1 class="w-connection__title">
             In-room internet for the Armed Forces
           </h1>
-
-          <div class="w-connection__more-info-cta">
-            <img src="./img/info_icon.svg" class="w-connection__more-info-cta__icon">
-            <a href="#" id="openMoreInfoModal" class="w-connection__more-info-cta__title">More Info</a>
-          </div>
         </div>
 
         <div class="w-segmented-control-container">
@@ -74,12 +69,8 @@
         </div>
 
         <div class="w-connection-summary">
-          <div class="w-connection-summary__plans-content w-light-bga">
+          <div class="w-connection-summary__plans-content">
             <div class="w-connection-summary__plans-features">
-              <div class="w-connection-summary__plans-content__header">
-                Each plan includes
-              </div>
-
               <div class="w-connection-summary__plan-feature">
                 <img
                   src="./img/all_inclusive_icon.svg"
@@ -114,6 +105,21 @@
                   class="w-plan-simple-card__icon"
                 >
                 <div>24/7 support</div>
+              </div>
+
+              <!-- <div class="w-connection__more-info-cta">
+                <img src="./img/info_icon.svg" class="w-connection__more-info-cta__icon">
+                <a href="#" id="openMoreInfoModal" class="w-connection__more-info-cta__title">More Info</a>
+              </div> -->
+
+              <div id="openMoreInfoModal" class="w-connection-summary__plan-feature">
+                <a href="#" class="w-connection__more-info-cta__title">More info</a>
+                <img
+                  src="./img/arrow_right_alt_icon.svg"
+                  alt="Devices Icon"
+                  class="w-plan-simple-card__icon"
+                >
+              </div>
               </div>
             </div>
           </div>
@@ -406,15 +412,15 @@
           </div>
         </div>
 
+        <div class="w-login">
+          Not sure?
+          <a href="#" id="openSpeedTestModal">Test the speed</a> where you are.
+        </div>
+
         <div class="w-connection__title-container mt-2">
           <h1 class="w-connection__title">
             Mobile eSIM
           </h1>
-
-          <div class="w-connection__more-info-cta">
-            <img src="./img/info_icon.svg" class="w-connection__more-info-cta__icon">
-            <div class="w-connection__more-info-cta__title">More Info</div>
-          </div>
         </div>
 
         <div class="w-connection__cards w-esim-plans">
@@ -480,6 +486,155 @@
           <div class="w-connection__side"></div>
         </div>
 
+        <div class="w-faq-container my-2">
+          <div class="w-faq">
+            <h2 class="w-faq__title">Got questions? <span class="w-text-accent">We've got answers.</span></h2>
+    
+            <p class="w-faq__subtitle">We're here to help you get started with ease.</p>
+    
+            <div class="w-faq__item">
+              <input
+                class="w-faq__toggle"
+                type="checkbox"
+                id="faq-1"
+                checked
+              />
+    
+              <label class="w-faq__question" for="faq-1">
+                <span>How does this service work?</span>
+    
+                <svg
+                  class="w-faq__icon"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M6 15L12 9L18 15"
+                    stroke="#6140f1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </label>
+    
+              <div class="w-faq__answer">
+                <p>
+                  It's a bit like home broadband, but rather than using your own phone line, we install a central, high-capacity internet connection and use WiFi access points to send that connection all around your site.
+                  You can then get online by connecting to this network and use it like you would home broadband.
+                </p>
+              </div>
+            </div>
+    
+            <div class="w-faq__item">
+              <input
+                class="w-faq__toggle"
+                type="checkbox"
+                id="faq-2"
+              />
+    
+              <label class="w-faq__question" for="faq-2">
+                <span>How fast does it go?</span>
+    
+                <svg
+                  class="w-faq__icon"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M6 15L12 9L18 15"
+                    stroke="#6140f1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </label>
+    
+              <div class="w-faq__answer">
+                <p>
+                  Like mobile phone coverage, the speed you get depends on how close you are to the WiFi access point or if there are thick walls in the way.
+                  Your speeds will also vary depending on things like time of day and number of other users.
+                </p>
+              </div>
+            </div>
+    
+            <div class="w-faq__item">
+              <input
+                class="w-faq__toggle"
+                type="checkbox"
+                id="faq-3"
+              />
+    
+              <label class="w-faq__question" for="faq-3">
+                <span>What are the Armed Forces discounts?</span>
+    
+                <svg
+                  class="w-faq__icon"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M6 15L12 9L18 15"
+                    stroke="#6140f1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </label>
+    
+              <div class="w-faq__answer">
+                <p>
+                  Wifinity Perks is our discounts and offers website for our MOD PAYG WiFi subscribers.
+                  Our way of rewarding our Armed Forces community. Purpose-built for the military, find savings on the products and services for you and your family.
+                </p>
+              </div>
+            </div>
+
+            <div class="w-faq__item">
+              <input
+                class="w-faq__toggle"
+                type="checkbox"
+                id="faq-4"
+              />
+    
+              <label class="w-faq__question" for="faq-4">
+                <span>What is a travel eSIM?</span>
+    
+                <svg
+                  class="w-faq__icon"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M6 15L12 9L18 15"
+                    stroke="#6140f1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </label>
+    
+              <div class="w-faq__answer">
+                <p>
+                  A travel eSIM is a digital SIM that lets you access mobile data without needing a physical SIM card.
+                  It is downloaded onto your phone and connects you to a mobile network abroad.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div
           class="w-full-screen-modal"
           id="moreInfoModal"
@@ -510,6 +665,52 @@
               <!-- Example -->
               <div class="w-full-screen-modal__placeholder">
                 
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="w-full-screen-modal"
+          id="speedTestModal"
+          aria-hidden="true"
+        >
+          <div class="w-full-screen-modal__overlay"></div>
+
+          <div class="w-full-screen-modal__content">
+            <button
+              class="w-full-screen-modal__close"
+              id="closeSpeedTestModal"
+              aria-label="Close modal"
+            >
+              <span></span>
+              <span></span>
+            </button>
+
+            <div class="w-full-screen-modal__body">
+              <h2 class="w-full-screen-modal__title">
+                Internet Speed Test
+              </h2>
+
+              <p class="w-full-screen-modal__text">
+                We use Ookla’s Speedtest to measure your current internet speed.
+              </p>
+
+              <p class="w-full-screen-modal__text">
+                To get the most accurate results, use a laptop connected to your router with an ethernet cable.
+                If connecting through WiFi, make sure you’re close to your router and have a strong signal.
+                Results will be dependent on your device’s capability.
+              </p>
+
+              <!-- Example -->
+              <div class="w-full-screen-modal__placeholder w-dark-bg br-2">
+                <div class="w-speed-test__image-container">
+                  <img
+                    src="./img/speed_test_transparent.png"
+                    alt="Speed Test"
+                    class="w-speed-test__image"
+                  >
+                </div>
               </div>
             </div>
           </div>

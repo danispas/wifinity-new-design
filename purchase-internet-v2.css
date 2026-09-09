@@ -307,7 +307,7 @@ main {
   justify-content: space-between;
   padding: 0 2px;
   margin-bottom: 8px;
-  font-family: 'europa-light', sans-serif;
+  font-family: 'inter-light', sans-serif;
 }
 
 @media (max-width: 1280px) {
@@ -525,7 +525,7 @@ main {
 
 .w-mobile-plan-selector__header-subtitle {
   margin-bottom: 24px;
-  font-family: 'europa-light', sans-serif;
+  font-family: 'inter-light', sans-serif;
   font-size: 18px;
   font-weight: 400;
   opacity: 0.8;

@@ -1,6 +1,6 @@
 /* HEADINGS, SUBHEADINGS & BUTTONS */
 @font-face {
-  font-family: 'panton-bold';
+  font-family: 'manrope-bold';
   src: url('../fonts/panton-bold-webfont.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
@@ -9,7 +9,7 @@
 
 /* BODY & SUBHEADINGS */
 @font-face {
-  font-family: 'europa-light';
+  font-family: 'inter-light';
   src: url('../fonts/europa-light-webfont.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
@@ -17,7 +17,7 @@
 }
 
 body {
-  font-family: 'europa-light', sans-serif;
+  font-family: 'inter-light', sans-serif;
   font-size: 1rem;
   color: var(--secondary-color);
 }

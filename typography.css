@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'panton-bold';
+  font-family: 'manrope-bold';
   src: url('fonts/panton-bold-webfont.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
@@ -7,7 +7,7 @@
 }
 
 @font-face {
-  font-family: 'europa-light';
+  font-family: 'inter-light';
   src: url('fonts/europa-light-webfont.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
@@ -15,7 +15,7 @@
 }
 
 body {
-  font-family: 'panton-bold', sans-serif;
+  font-family: 'manrope-bold', sans-serif;
   font-size: 1rem;
   color: var(--secondary-color);
 }

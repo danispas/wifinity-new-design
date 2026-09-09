@@ -1,23 +1,39 @@
 /* HEADINGS, SUBHEADINGS & BUTTONS */
 @font-face {
-  font-family: 'panton-bold';
-  src: url('../fonts/panton-bold-webfont.woff2') format('woff2');
+  font-family: 'manrope-bold';
+  src: url('../fonts/Manrope-Bold.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
+/* @font-face {
+  font-family: 'panton-bold';
+  src: url('../fonts/panton-bold-webfont.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+} */
+
 /* BODY & SUBHEADINGS */
-@font-face {
+/* @font-face {
   font-family: 'europa-light';
   src: url('../fonts/europa-light-webfont.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+} */
+
+@font-face {
+  font-family: 'inter-light';
+  src: url('../fonts/Inter-Light.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 body {
-  font-family: 'europa-light', sans-serif;
+  font-family: 'inter-light', sans-serif;
   font-size: 1rem;
   color: var(--secondary-color);
 }

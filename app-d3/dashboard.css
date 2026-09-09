@@ -53,7 +53,7 @@
 
 .w-dashboard__card-title {
   margin: 0.5rem 0;
-  font-family: 'panton-bold', sans-serif;
+  font-family: 'manrope-bold', sans-serif;
   font-size: 1.5rem;
   text-align: left;
 }
@@ -85,7 +85,7 @@
   gap: 0.5rem;
   width: 100%;
   padding: 1rem;
-  font-family: 'panton-bold', sans-serif;
+  font-family: 'manrope-bold', sans-serif;
 }
 
 .w-dashboard__card-details__separator {
@@ -113,7 +113,7 @@
 }
 
 .w-dashboard__card-promo-price {
-  font-family: 'panton-bold', sans-serif;
+  font-family: 'manrope-bold', sans-serif;
   font-size: 2.5rem;
 
   del {
@@ -173,7 +173,7 @@
   border-radius: 26px;
   width: 100%;
   max-width: 320px;
-  font-family: 'panton-bold', sans-serif;
+  font-family: 'manrope-bold', sans-serif;
   cursor: pointer;
 }
 

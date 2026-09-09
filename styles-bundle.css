@@ -52,7 +52,7 @@ body {
   height: 2.375rem;
   padding: 0px 1.5rem;
   border-radius: calc(48px * (var(--button-radius) / 100));
-  font-family: 'panton-bold', sans-serif;
+  font-family: 'manrope-bold', sans-serif;
 }
 
 .w-continue-button {
@@ -105,7 +105,7 @@ body {
   gap: 0.25rem;
   background: radial-gradient(29.05% 42.59% at 50% -5.56%, var(--primary-color) 0%, var(--secondary-color) 100%);
   color: #FFFFFF;
-  font-family: 'panton-bold', sans-serif;
+  font-family: 'manrope-bold', sans-serif;
 }
 
 @media (min-width: 768px) {
@@ -170,14 +170,14 @@ header {
 .w-location {
   border-left: 2px solid var(--primary-color);
   padding-left: 1.25rem;
-  font-family: 'europa-light', sans-serif;
+  font-family: 'inter-light', sans-serif;
   font-size: 1.25rem;
   text-transform: uppercase;
   color: var(--primary-color);
 }
 
 .w-header-actions a {
-  font-family: 'panton-bold', sans-serif;
+  font-family: 'manrope-bold', sans-serif;
   color: var(--secondary-color);
   text-decoration: none;
 }
@@ -194,7 +194,7 @@ header {
 }
 
 .w-main-title {
-  font-family: 'panton-bold', sans-serif;
+  font-family: 'manrope-bold', sans-serif;
   font-size: 2.75rem;
   text-align: left;
   color: var(--secondary-color);
@@ -287,7 +287,7 @@ header {
 }
 
 .w-connection-type-card__subtitle {
-  font-family: 'europa-light', sans-serif;
+  font-family: 'inter-light', sans-serif;
   font-size: 1.25rem;
   line-height: 1;
 }
@@ -471,7 +471,7 @@ header {
 }
 
 .w-speed-test__cta-note {
-  font-family: 'europa-light', sans-serif;
+  font-family: 'inter-light', sans-serif;
   font-size: 1.5rem;
   line-height: 1.2;
   color: #FFFFFF;
@@ -506,7 +506,7 @@ header {
 
 .w-esim-promo__description {
   padding-top: 0.25rem;
-  font-family: 'europa-light', sans-serif;
+  font-family: 'inter-light', sans-serif;
   font-size: 1.25rem;
   line-height: 2rem;
   color: #FFFFFF;
@@ -541,7 +541,7 @@ header {
 .w-faq__subtitle {
   margin: 0 0 32px;
   font-size: 1.25rem;
-  font-family: 'europa-light', sans-serif;
+  font-family: 'inter-light', sans-serif;
   color: var(--secondary-color);
   line-height: 2rem;
   /* text-align: center; */
@@ -592,7 +592,7 @@ header {
 
   font-size: 1.25rem;
   line-height: 2rem;
-  font-family: 'europa-light', sans-serif;
+  font-family: 'inter-light', sans-serif;
   color: var(--secondary-color);
 }
 

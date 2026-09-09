@@ -12,7 +12,13 @@ document
 const moreInfoModal = document.getElementById('moreInfoModal');
 const openMoreInfoButton = document.getElementById('openMoreInfoModal');
 const closeMoreInfoButton = document.getElementById('closeMoreInfoModal');
+
+const speedTestModal = document.getElementById('speedTestModal');
+const openSpeedTestButton = document.getElementById('openSpeedTestModal');
+const closeSpeedTestButton = document.getElementById('closeSpeedTestModal');
+
 const overlay = moreInfoModal.querySelector('.w-full-screen-modal__overlay');
+const speedTestOverlay = speedTestModal.querySelector('.w-full-screen-modal__overlay');
 
 openMoreInfoButton.addEventListener('click', function (event) {
   event.preventDefault();
@@ -22,10 +28,28 @@ openMoreInfoButton.addEventListener('click', function (event) {
   );
 
   document.body.style.overflow = 'hidden';
-})
+});
 
-function closeModal() {
+function closeMoreInfoModal() {
   moreInfoModal.classList.remove(
+    'w-full-screen-modal--open'
+  );
+
+  document.body.style.overflow = '';
+}
+
+openSpeedTestButton.addEventListener('click', function (event) {
+  event.preventDefault();
+
+  speedTestModal.classList.add(
+    'w-full-screen-modal--open'
+  );
+
+  document.body.style.overflow = 'hidden';
+});
+
+function closeSpeedTestModal() {
+  speedTestModal.classList.remove(
     'w-full-screen-modal--open'
   );
 
@@ -34,12 +58,22 @@ function closeModal() {
 
 closeMoreInfoButton.addEventListener(
   'click',
-  closeModal
+  closeMoreInfoModal
 );
 
 overlay.addEventListener(
   'click',
-  closeModal
+  closeMoreInfoModal
+);
+
+closeSpeedTestButton.addEventListener(
+  'click',
+  closeSpeedTestModal
+);
+
+speedTestOverlay.addEventListener(
+  'click',
+  closeSpeedTestModal
 );
 
 document.addEventListener(
@@ -51,7 +85,7 @@ document.addEventListener(
         'w-full-screen-modal--open'
       )
     ) {
-      closeModal();
+      closeMoreInfoModal();
     }
   }
 );

@@ -144,7 +144,7 @@ body {
   right: 0.75rem;
   top: 0.75rem;
   padding: 0.125rem 1rem;
-  font-family: 'europa-light', sans-serif;
+  font-family: 'inter-light', sans-serif;
   font-size: 14px;
   font-weight: 600;
   border-radius: 8px;
@@ -164,7 +164,7 @@ body {
   height: 2.375rem;
   padding: 0px 1.5rem;
   border-radius: calc(48px * (var(--button-radius) / 100));
-  font-family: 'panton-bold', sans-serif;
+  font-family: 'manrope-bold', sans-serif;
 }
 
 .w-container {
@@ -200,7 +200,7 @@ body {
   gap: 0.25rem;
   background: radial-gradient(29.05% 42.59% at 50% -5.56%, var(--color-primary) 0%, var(--secondary-color) 100%);
   color: #FFFFFF;
-  font-family: 'panton-bold', sans-serif;
+  font-family: 'manrope-bold', sans-serif;
 }
 
 @media (min-width: 768px) {
@@ -232,12 +232,12 @@ body {
 }
 
 .w-header__text {
-  font-family: 'europa-light', sans-serif;
+  font-family: 'inter-light', sans-serif;
   color: #FFFFFF;
 }
 
 .w-header__title {
-  font-family: 'europa-light', sans-serif;
+  font-family: 'inter-light', sans-serif;
   font-size: 1.5rem;
   color: #FFFFFF;
 }
@@ -268,7 +268,7 @@ body {
   height: 2.5rem;
   background-color: var(--color-light);
   border-radius: 50%;
-  font-family: 'panton-bold', sans-serif;
+  font-family: 'manrope-bold', sans-serif;
   color: var(--color-dark);
 }
 
@@ -288,7 +288,7 @@ body {
 }
 
 .w-stepper__label {
-  font-family: 'europa-light', sans-serif;
+  font-family: 'inter-light', sans-serif;
 }
 
 .w-stepper__line {
@@ -312,13 +312,13 @@ body {
 }
 
 .w-connection__title {
-  font-family: 'panton-bold', sans-serif;
+  font-family: 'manrope-bold', sans-serif;
   text-align: center;
 }
 
 .w-connection__subtitle {
   text-align: center;
-  font-family: 'europa-light', sans-serif;
+  font-family: 'inter-light', sans-serif;
   color: var(--secondary-color);
 }
 
@@ -443,19 +443,19 @@ body {
 }
 
 .w-connection-card__title {
-  font-family: 'panton-bold', sans-serif;
+  font-family: 'manrope-bold', sans-serif;
   font-size: 1.75rem;
   color: var(--color-accent);
 }
 
 .w-connection-card__type {
-  font-family: 'europa-light', sans-serif;
+  font-family: 'inter-light', sans-serif;
   font-size: 1.25rem;
   font-weight: 600;
 }
 
 .w-connection-card__description {
-  font-family: 'europa-light', sans-serif;
+  font-family: 'inter-light', sans-serif;
 }
 
 .w-highlighted .w-connection-card__icon-container {
@@ -472,7 +472,7 @@ body {
 }
 
 .w-connection__extra-description {
-  font-family: 'europa-light', sans-serif;
+  font-family: 'inter-light', sans-serif;
 }
 
 .w-connection__cta,
@@ -491,7 +491,7 @@ body {
   border-radius: 21px;
   min-width: 160px;
   background-color: var(--color-accent);
-  font-family: 'panton-bold', sans-serif;
+  font-family: 'manrope-bold', sans-serif;
   color: #FFFFFF;
 }
 
@@ -510,7 +510,7 @@ body {
   min-width: 160px;
   background-color: transparent;
   border: 2px solid var(--color-accent);
-  font-family: 'panton-bold', sans-serif;
+  font-family: 'manrope-bold', sans-serif;
 }
 
 .w-connection-card__cta:hover {
@@ -546,7 +546,7 @@ body {
 
 .w-connection-card__price-info {
   margin-top: 2rem;
-  font-family: 'europa-light', sans-serif;
+  font-family: 'inter-light', sans-serif;
   font-size: 1.25rem;
   color: var(--secondary-color);
 }
@@ -566,7 +566,7 @@ body {
 .w-plan-card__title,
 .w-connection-summary__plane-name {
   margin: 0;
-  font-family: 'panton-bold', sans-serif;
+  font-family: 'manrope-bold', sans-serif;
   font-size: 1.75rem;
   color: var(--secondary-color);
   text-transform: uppercase;
@@ -591,7 +591,7 @@ body {
 
 .w-plan-card__description {
   margin-top: 2px;
-  font-family: 'europa-light', sans-serif;
+  font-family: 'inter-light', sans-serif;
   color: #555;
   max-width: 240px;
 }
@@ -599,7 +599,7 @@ body {
 .w-plan-card__price,
 .w-connection-summary__price {
   margin-top: 1rem;
-  font-family: 'panton-bold', sans-serif !important;
+  font-family: 'manrope-bold', sans-serif !important;
   font-size: 2rem;
   color: var(--secondary-color);
 
@@ -629,7 +629,7 @@ body {
 }
 
 .w-plan-card__price-info {
-  font-family: 'europa-light', sans-serif;
+  font-family: 'inter-light', sans-serif;
   font-size: 14px;
   font-weight: 600;
   color: var(--secondary-color);
@@ -690,7 +690,7 @@ body {
 }
 
 .w-plan-card__features li {
-  font-family: 'europa-light', sans-serif;
+  font-family: 'inter-light', sans-serif;
   font-weight: 600;
   margin-bottom: 8px;
 }
@@ -738,7 +738,7 @@ body {
 .w-connection__switch-button {
   margin-top: 1.5rem;
   padding: 0.5rem 1rem;
-  font-family: 'europa-light', sans-serif;
+  font-family: 'inter-light', sans-serif;
   font-size: 14px;
   font-weight: 600;
   color: #FFFFFF;
@@ -753,7 +753,7 @@ body {
 .w-plan-card__header-esim {
   padding: 2rem 2rem 0;
   width: 100%;
-  font-family: 'europa-light', sans-serif;
+  font-family: 'inter-light', sans-serif;
   font-size: 2rem;
   color: var(--color-primary);
   text-align: left;
@@ -784,7 +784,7 @@ body {
   margin-bottom: 8px;
   padding: 0 2px;
   width: 100%;
-  font-family: 'europa-light', sans-serif;
+  font-family: 'inter-light', sans-serif;
 }
 
 .w-connection-summary__details {
@@ -899,7 +899,7 @@ body {
 }
 
 .w-create-account__summary-subtitle {
-  font-family: 'europa-light', sans-serif;
+  font-family: 'inter-light', sans-serif;
   font-size: 1.125rem;
   opacity: 0.64;
 }
@@ -909,7 +909,7 @@ body {
   display: flex;
   align-items: center;
   gap: 4px;
-  font-family: 'europa-light', sans-serif;
+  font-family: 'inter-light', sans-serif;
   font-size: 15px;
   font-weight: 600;
   color: var(--color-accent);
@@ -928,7 +928,7 @@ body {
 }
 
 .w-create-account__summary-price {
-  font-family: 'panton-bold', sans-serif !important;
+  font-family: 'manrope-bold', sans-serif !important;
   font-size: 1.25rem;
   color: var(--secondary-color);
 
@@ -954,7 +954,7 @@ body {
 .w-create-account__offers {
   display: flex;
   gap: 8px;
-  font-family: 'europa-light', sans-serif;
+  font-family: 'inter-light', sans-serif;
   margin-left: 16px;
   width: 100%;
 }
@@ -966,7 +966,7 @@ body {
 .w-login {
   margin: 2rem 0px 4rem;
   text-align: center;
-  font-family: 'europa-light', sans-serif;
+  font-family: 'inter-light', sans-serif;
   color: var(--secondary-color);
 
   a {
@@ -1301,7 +1301,7 @@ footer {
 
 .w-full-screen-modal__title {
   margin-bottom: 24px;
-  font-family: 'panton-bold', sans-serif;
+  font-family: 'manrope-bold', sans-serif;
   font-size: 32px;
   font-weight: 700;
   color: var(--color-accent-dark);
@@ -1310,7 +1310,7 @@ footer {
 
 .w-full-screen-modal__text {
   margin-bottom: 20px;
-  font-family: 'europa-light', sans-serif;
+  font-family: 'inter-light', sans-serif;
   font-size: 18px;
   color: #FFFFFF;
   text-align: center;

@@ -54,7 +54,7 @@
 }
 
 .w-progress-bar-title {
-  /* font-family: 'europa-light', sans-serif; */
+  /* font-family: 'inter-light', sans-serif; */
   font-size: 1.25rem;
 }
 
@@ -87,7 +87,7 @@
 
 .w-purchase-step__subtitle {
   width: 100%;
-  font-family: 'europa-light', sans-serif;
+  font-family: 'inter-light', sans-serif;
   font-size: 1.25rem;
   font-weight: 600;
   color: var(--primary-color);
@@ -222,7 +222,7 @@
   border-radius: 999px;
   background: #e7f7ec;
   color: #42d36f;
-  font-family: 'europa-light', sans-serif;
+  font-family: 'inter-light', sans-serif;
   font-size: 16px;
   font-weight: 600;
 }
@@ -312,7 +312,7 @@
 
 .w-speed-test-description {
   margin-top: 2rem;
-  font-family: 'europa-light', sans-serif;
+  font-family: 'inter-light', sans-serif;
   font-size: 1.125rem;
   text-align: center;
 }
@@ -344,7 +344,7 @@
 }
 
 .w-purchase-step__connection-type-container__subtitle {
-  font-family: 'europa-light', sans-serif;
+  font-family: 'inter-light', sans-serif;
   font-size: 1.25rem;
   font-weight: 600;
   line-height: 1;
@@ -471,7 +471,7 @@
 
 .w-full-screen-modal__text {
   margin-bottom: 20px;
-  font-family: 'europa-light', sans-serif;
+  font-family: 'inter-light', sans-serif;
   font-size: 18px;
   color: #FFFFFF;
   text-align: center;
