@@ -123,6 +123,84 @@ document.addEventListener(
   }
 );
 
+// Generic function to close any modal element
+function closeModal(modal) {
+  if (!modal) return;
+  modal.classList.remove('w-full-screen-modal--open');
+
+  const content = modal.querySelector('.w-full-screen-modal__content');
+  if (content) {
+    content.style.transform = '';
+    content.style.transition = '';
+  }
+
+  // Restore body scrolling only if no other modals are currently open
+  if (!document.querySelector('.w-full-screen-modal--open')) {
+    document.body.style.overflow = '';
+  }
+}
+
+// Initialize touch-to-dismiss behavior for all modals on the page
+document.querySelectorAll('.w-full-screen-modal').forEach((modal) => {
+  const content = modal.querySelector('.w-full-screen-modal__content');
+  const closeBtn = modal.querySelector('.w-full-screen-modal__close');
+  if (!content) return;
+
+  // Bind close button dynamically if present inside this modal
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => closeModal(modal));
+  }
+
+  let startY = 0;
+  let currentY = 0;
+  let isDragging = false;
+
+  function resetDragState() {
+    isDragging = false;
+    startY = 0;
+    currentY = 0;
+  }
+
+  content.addEventListener('touchstart', (e) => {
+    if (content.scrollTop <= 0) {
+      startY = e.touches[0].clientY;
+      currentY = startY;
+      isDragging = true;
+      content.style.transition = 'none';
+    }
+  }, { passive: true });
+
+  content.addEventListener('touchmove', (e) => {
+    if (!isDragging) return;
+
+    currentY = e.touches[0].clientY;
+    const deltaY = currentY - startY;
+
+    if (deltaY > 0) {
+      if (e.cancelable) e.preventDefault();
+      content.style.transform = `translateY(${deltaY}px)`;
+    }
+  }, { passive: false });
+
+  const handleTouchEnd = () => {
+    if (!isDragging) return;
+
+    const deltaY = currentY - startY;
+
+    if (deltaY > 100) {
+      closeModal(modal);
+    } else {
+      content.style.transition = '';
+      content.style.transform = '';
+    }
+
+    resetDragState();
+  };
+
+  content.addEventListener('touchend', handleTouchEnd);
+  content.addEventListener('touchcancel', handleTouchEnd);
+});
+
 const tabs = document.querySelectorAll('.w-plan-tabs__tab')
 const panels = document.querySelectorAll('.w-plan-tabs__panel')
 

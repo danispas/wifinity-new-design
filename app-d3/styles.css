@@ -56,6 +56,10 @@ body {
   gap: 0px !important;
 }
 
+.ma-1 {
+  margin: 1rem !important;
+}
+
 .mt-0 {
   margin-top: 0rem !important;
 }
@@ -99,6 +103,10 @@ body {
 
 .br-2 {
   border-radius: 2rem !important;
+}
+
+.pa-1 {
+  padding: 1rem !important;
 }
 
 .pa-2 {
@@ -231,9 +239,9 @@ body {
   position: absolute;
   right: 1rem;
   top: 1rem;
-  padding: 0.125rem 1rem;
+  padding: 0.125rem 0.875rem;
   font-family: 'inter-light', sans-serif;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
   border-radius: 13px;
   text-transform: uppercase;
@@ -339,6 +347,12 @@ body {
   min-height: 72px;
   background: linear-gradient(to right, var(--color-dark), var(--color-primary), var(--color-accent));
   padding: 0 2rem;
+}
+
+@media (max-width: 640px) {
+  .w-header {
+    padding: 0 1rem;
+  }
 }
 
 .w-header__container {
@@ -522,7 +536,8 @@ body {
   display: flex;
   flex-flow: column;
   width: 1120px;
-  max-width: calc(100% - 2.5rem);
+  /* max-width: calc(100% - 1.5rem); */
+  max-width: 100%;
   margin: 0px auto;
 }
 
@@ -537,6 +552,12 @@ body {
   font-family: 'manrope-bold', sans-serif;
   font-size: 2.25rem;
   text-align: center;
+}
+
+@media (max-width: 640px) {
+  .w-connection__title {
+    font-size: 1.75rem;
+  }
 }
 
 .w-connection__more-info-cta {
@@ -569,15 +590,51 @@ body {
 }
 
 .w-connection__cards {
-  /* display: flex;
-  flex: 1;
-  justify-content: center;
-  align-items: center; */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   margin-top: 1.5rem;
+  padding: 0 1.5rem;
   width: 100%;
+}
+
+.w-connection__side {
+  display: flex;
+  flex-flow: column;
+  flex: 1;
+  gap: 1.5rem;
+  max-width: 400px;
+}
+
+@media (max-width: 1024px) {
+  .w-connection__cards {
+    display: flex;
+    grid-template-columns: none;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 0 1.5rem;
+    padding: 1rem; /* Left/Right padding creates initial side peeks */
+    gap: 1.25rem;
+    
+    /* Hide scrollbar */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .w-connection__cards::-webkit-scrollbar {
+    display: none;
+  }
+
+  .w-connection__side {
+    flex: 0 0 80vw; /* 80vw ensures the active card dominates while ~10vw peeks on each side */
+    max-width: none;
+    scroll-snap-align: center;
+    max-width: 344px;
+  }
+
+  .w-connection-card--large {
+    height: 100%;
+  }
 }
 
 .w-passes {
@@ -590,14 +647,6 @@ body {
 
 .w-connection:has(#day-passes:checked) .w-passes {
   display: flex;
-}
-
-.w-connection__side {
-  display: flex;
-  flex-flow: column;
-  flex: 1;
-  gap: 1.5rem;
-  max-width: 640px;
 }
 
 .w-connection__side__caption {
@@ -628,7 +677,6 @@ body {
   background-color: #FFFFFF;
   border: 2px solid rgb(232, 232, 232);
   border-radius: 32px;
-  overflow: hidden;
 
   cursor: pointer;
 
@@ -1102,7 +1150,7 @@ body {
   justify-content: space-between;
   align-items: flex-start;
   border-radius: 12px;
-  padding: 16px 20px;
+  padding: 0.75rem 1.5rem;
 }
 
 .w-connection-summary__plans-content__header {
@@ -1117,11 +1165,37 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  gap: 1.5rem;
+}
+
+/* Tablet screens (2 items per row) */
+@media (max-width: 1024px) {
+  .w-connection-summary__plans-features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+}
+
+/* Mobile screens (1 item per row) */
+@media (max-width: 640px) {
+  .w-connection-summary__plans-features {
+    /* grid-template-columns: 1fr; */
+    gap: 1rem;
+  }
 }
 
 .w-connection-summary__plan-feature {
   display: flex;
+  align-items: center;
   gap: 6px;
+  font-size: 1rem;
+}
+
+@media (max-width: 640px) {
+  .w-connection-summary__plan-feature {
+    font-size: 0.875rem;
+  }
 }
 
 .w-accent-highlight .w-connection-summary__plans-features li::marker {
@@ -1502,6 +1576,13 @@ footer {
   height: 22px;
 }
 
+@media (max-width: 640px) {
+  .w-plan-simple-card__icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
 .w-plan-simple-card__plan-name {
   display: flex;
   align-items: center;
@@ -1538,7 +1619,7 @@ footer {
 .w-faq {
   /* max-width: 1280px; */
   width: 78.75rem;
-  max-width: calc(100% - 2.5rem);
+  max-width: calc(100% - 2rem);
   margin: 0px auto;
 }
 
@@ -1622,15 +1703,15 @@ footer {
 
 @media (max-width: 768px) {
   .w-faq__title {
-    font-size: 40px;
+    font-size: 1.5rem;
   }
 
   .w-faq__question {
-    font-size: 22px;
+    font-size: 1.25rem;
   }
 
   .w-faq__answer p {
-    font-size: 18px;
+    font-size: 1.125rem;
     padding-right: 0;
   }
 }
@@ -1752,17 +1833,31 @@ footer {
   padding: 2rem;
 }
 
+@media (max-width: 1024px) {
+  .w-full-screen-modal__body {
+    padding: 0rem;
+  }
+}
+
 .w-full-screen-modal__title {
-  margin-bottom: 24px;
+  padding: 1rem;
   font-family: 'manrope-bold', sans-serif;
-  font-size: 32px;
+  font-size: 30px;
   font-weight: 700;
   color: var(--color-dark);
   text-align: center;
 }
 
+@media (max-width: 1024px) {
+  .w-full-screen-modal__title {
+    padding-top: 2rem;
+    font-size: 22px;
+  }
+}
+
 .w-full-screen-modal__text {
-  margin-bottom: 20px;
+  padding: 1rem;
+  margin-bottom: 1rem;
   font-family: 'inter-light', sans-serif;
   font-size: 18px;
   color: var(--color-dark);
@@ -1776,4 +1871,47 @@ footer {
   align-items: center;
 
   min-height: 480px;
+}
+
+.w-full-screen-modal__placeholder .w-connection__cards {
+  flex-direction: column;
+}
+
+@media (max-width: 1024px) {
+  .w-full-screen-modal {
+    align-items: flex-end;
+    padding: 0;
+  }
+
+  .w-full-screen-modal__content {
+    max-width: 100%;
+    max-height: 85vh;
+    border-radius: 32px 32px 0 0;
+    transform: translateY(100%);
+    transition: transform 0.4s cubic-bezier(0.32, 0.72, 0, 1);
+  }
+
+  /* Optional drawer pull indicator line */
+  .w-full-screen-modal__content::before {
+    content: '';
+    display: block;
+    width: 36px;
+    height: 4px;
+    margin: 12px auto 0;
+    background-color: rgba(0, 0, 0, 0.18);
+    border-radius: 999px;
+  }
+
+  .w-full-screen-modal__body {
+    padding: 1.5rem 1.5rem cubic-bezier(0.25, 1, 0.5, 1);
+    padding-bottom: calc(1.5rem + env(safe-area-inset-bottom, 0px));
+  }
+
+  .w-full-screen-modal__close {
+    top: 18px;
+    right: 18px;
+
+    width: 34px;
+    height: 34px;
+  }
 }
