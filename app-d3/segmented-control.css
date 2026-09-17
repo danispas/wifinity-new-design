@@ -32,12 +32,12 @@
   text-align: center;
   padding: 8px 18px;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: 700;
   color: var(--secondary-color);
   transition: color 0.3s ease;
   user-select: none;
-  width: 160px;
+  width: 148px;
 }
 
 @media (max-width: 640px) {

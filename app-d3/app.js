@@ -222,3 +222,52 @@ tabs.forEach(function (tab) {
       .classList.add('w-plan-tabs__panel--active');
   });
 });
+
+const internetPlanCard = document.getElementById('internet-plan-card');
+const eSIMPlanCard = document.getElementById('esim-plan-card');
+
+const btnPlus = document.getElementById('btn-plus');
+const btnEsim = document.getElementById('btn-esim');
+const continueBtnText = document.getElementById('continue-btn-text');
+
+// Track active states
+let isPlusActive = false;
+let isEsimActive = false;
+
+// 1. Handle Upgrade to Plus Click
+btnPlus.addEventListener('click', () => {
+  isPlusActive = !isPlusActive;
+  
+  // Toggle CSS class on parent card
+  internetPlanCard.classList.toggle('has-plus', isPlusActive);
+  
+  // Update button text
+  btnPlus.querySelector('.btn-text').textContent = isPlusActive 
+    ? 'Back to Standard' 
+    : 'Upgrade to Plus';
+    
+  updateContinueText();
+});
+
+// 2. Handle Add Mobile eSIM Click
+btnEsim.addEventListener('click', () => {
+  isEsimActive = !isEsimActive;
+  
+  // Toggle CSS class on parent card
+  eSIMPlanCard.classList.toggle('has-esim', isEsimActive);
+  
+  // Update button text
+  btnEsim.querySelector('.btn-text').textContent = isEsimActive 
+    ? 'Remove Mobile eSIM' 
+    : 'Add Mobile eSIM';
+    
+  updateContinueText();
+});
+
+// Helper function to keep the Continue button text in sync
+function updateContinueText() {
+  const basePlan = isPlusActive ? 'Plus' : 'Standard';
+  const esimAddon = isEsimActive ? ' + eSIM' : '';
+  
+  continueBtnText.textContent = `Continue with ${basePlan}${esimAddon}`;
+}

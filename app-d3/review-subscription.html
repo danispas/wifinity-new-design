@@ -10,7 +10,7 @@
 
     <title>Wifinity - Review Subscription</title>
 
-    <script src="toggle-esim.js" defer></script>
+    <script src="./toggle-esim.js" defer></script>
     <script
       type="text/javascript"
       src="https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
@@ -33,13 +33,13 @@
           Need Help?
         </div>
 
-        <div class="w-header__menu-icon-button">
+        <!-- <div class="w-header__menu-icon-button">
           <a href="./sign-in.html" class="w-header__menu-item-ahref"></a>
           <img
             src="../img/person_icon.svg"
             class="w-header__menu-icon-button__icon"
           />
-        </div>
+        </div> -->
       </div>
     </header>
     
@@ -95,7 +95,7 @@
                   <div id="planName" class="w-create-account__summary-plane-name">
                     Standard
                     <p class="w-create-account__summary-subtitle">
-                      In-room Internet
+                      SLA Internet
                     </p>
                     <div class="w-order-summary__cta">
                       <a href="../index.html" class="w-connection-card__ahref"></a>
@@ -169,10 +169,6 @@
             </div>
 
             <div class="w-connetion-contract">
-              <div class="w-connection-summary__session w-accent-text">
-                <div>Contract summary</div>
-              </div>
-
               <div class="w-create-account__offers">
                 <input
                   id="terms-conditions"
@@ -182,8 +178,40 @@
                   class="w-primary-checkbox"
                 >
                 <label for="terms-conditions">
-                  I have read and accepted the <span class="w-login-content__info-link">Terms and Conditions</span> and <span class="w-login-content__info-link">Contract Information</span>
+                  I have read and accepted the <span class="w-login-content__info-link">Terms and Conditions</span>
+                  and <a href="#" id="openMoreInfoModal" class="w-login-content__info-link">Contract Information</a>, view <span class="w-login-content__info-link">Contract Summary</span>
                 </label><br>
+              </div>
+            </div>
+
+            <!-- More Info Modal -->
+            <div
+              class="w-full-screen-modal"
+              id="moreInfoModal"
+              aria-hidden="true"
+            >
+              <div class="w-full-screen-modal__overlay"></div>
+
+              <div class="w-full-screen-modal__content">
+                <button
+                  class="w-full-screen-modal__close"
+                  id="closeMoreInfoModal"
+                  aria-label="Close modal"
+                >
+                  <span></span>
+                  <span></span>
+                </button>
+
+                <div class="w-full-screen-modal__body">
+                  <h2 class="w-full-screen-modal__title">
+                    Contract Information
+                  </h2>
+
+                  <!-- Example -->
+                  <div class="w-full-screen-modal__placeholder">
+
+                  </div>
+                </div>
               </div>
             </div>
 

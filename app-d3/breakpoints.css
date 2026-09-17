@@ -1,0 +1,42 @@
+/* ==========================================
+   BREAKPOINTS (Mobile-First / min-width)
+   xs: 0 | sm: 576px | md: 768px | lg: 992px | xl: 1200px | xxl: 1400px
+   ========================================== */
+
+/* --- HIDE UTILITIES --- */
+/* Hide from Small screens (≥ 576px) and up */
+@media (min-width: 576px) {
+  .d-sm-none { display: none !important; }
+}
+
+/* Hide from Medium screens (≥ 768px) and up */
+@media (min-width: 768px) {
+  .d-md-none { display: none !important; }
+}
+
+/* Hide from Large screens (≥ 992px) and up */
+@media (min-width: 992px) {
+  .d-lg-none { display: none !important; }
+}
+
+/* Hide from Extra Large screens (≥ 1200px) and up */
+@media (min-width: 1200px) {
+  .d-xl-none { display: none !important; }
+}
+
+/* Hide from 2X Extra Large screens (≥ 1400px) and up */
+@media (min-width: 1400px) {
+  .d-xxl-none { display: none !important; }
+}
+
+
+/* --- SHOW / DISPLAY RESET UTILITIES --- */
+/* Show as Block starting at Medium screens (≥ 768px) */
+@media (min-width: 768px) {
+  .d-md-block { display: block !important; }
+}
+
+/* Show as Grid starting at Medium screens (≥ 768px) */
+@media (min-width: 768px) {
+  .d-md-grid { display: grid !important; }
+}

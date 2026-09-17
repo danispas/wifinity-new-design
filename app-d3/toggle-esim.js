@@ -23,3 +23,37 @@ addMobileESIM.addEventListener('click', function () {
   addEsimSummary.classList.add('is-hidden');
   totalPriceMobile.innerHTML = '£49.49<span>/month</span>';
 });
+
+const moreInfoModal = document.getElementById('moreInfoModal');
+const openMoreInfoButton = document.getElementById('openMoreInfoModal');
+const closeMoreInfoButton = document.getElementById('closeMoreInfoModal');
+
+const overlay = moreInfoModal.querySelector('.w-full-screen-modal__overlay');
+
+openMoreInfoButton.addEventListener('click', function (event) {
+  event.preventDefault();
+
+  moreInfoModal.classList.add(
+    'w-full-screen-modal--open'
+  );
+
+  document.body.style.overflow = 'hidden';
+});
+
+function closeMoreInfoModal() {
+  moreInfoModal.classList.remove(
+    'w-full-screen-modal--open'
+  );
+
+  document.body.style.overflow = '';
+}
+
+closeMoreInfoButton.addEventListener(
+  'click',
+  closeMoreInfoModal
+);
+
+overlay.addEventListener(
+  'click',
+  closeMoreInfoModal
+);

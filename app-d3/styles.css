@@ -28,6 +28,10 @@
 /* ---------------------
   3. GRID
 --------------------- */
+/* ==========================================
+   BREAKPOINTS (Mobile-First / min-width)
+   xs: 0 | sm: 576px | md: 768px | lg: 992px | xl: 1200px | xxl: 1400px
+   ========================================== */
 
 /* ---------------------
   4. BASE
@@ -111,6 +115,28 @@ body {
 
 .pa-2 {
   padding: 2rem !important;
+}
+
+.pt-2 {
+  padding-top: 2rem !important;
+}
+
+.pb-1 {
+  padding-bottom: 1rem !important;
+}
+
+.pb-2 {
+  padding-bottom: 2rem !important;
+}
+
+.px-1 {
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+}
+
+.px-2 {
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
 }
 
 .py-0 {
@@ -321,6 +347,14 @@ body {
   color: var(--color-accent-dark) !important;
 }
 
+.w-text-center {
+  text-align: center;
+}
+
+.w-text-bold {
+  font-weight: 700 !important;
+}
+
 /* ---------------------
   5. COMPONENTS
 --------------------- */
@@ -338,7 +372,8 @@ body {
   align-items: center;
   justify-content: center;
   margin: 1rem;
-  height: 48px;
+  padding: 0.5rem 1rem;
+  min-height: 48px;
   border-radius: 24px;
   background-color: var(--color-light);
   font-weight: 600;
@@ -379,7 +414,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 72px;
+  min-height: 76px;
   background: linear-gradient(to right, var(--color-dark), var(--color-primary), var(--color-accent));
   padding: 0 2rem;
 }
@@ -398,7 +433,7 @@ body {
 
 .w-logo {
   height: auto;
-  width: 120px;
+  width: 112px;
 }
 
 .w-header__menu {
@@ -510,7 +545,14 @@ body {
   display: flex;
   justify-content: center;
   gap: 1rem;
-  padding: 2rem 0px;
+  padding: 1.5rem 0px;
+}
+
+@media (max-width: 992px) {
+  .w-stepper {
+    gap: 0.5rem;
+    padding: 1rem 0px;
+  }
 }
 
 .w-stepper__item {
@@ -553,6 +595,7 @@ body {
 
 .w-stepper__label {
   font-family: 'inter-light', sans-serif;
+  font-size: 1rem;
 }
 
 .w-stepper__line {
@@ -560,6 +603,12 @@ body {
   height: 2px;
   width: 120px;
   background-color: #e5e0ff;
+}
+
+@media (max-width: 992px) {
+  .w-stepper__line {
+    width: 48px;
+  }
 }
 
 .w-stepper__item--active .w-stepper__label {
@@ -585,7 +634,7 @@ body {
 
 .w-connection__title {
   font-family: 'manrope-bold', sans-serif;
-  font-size: 2.25rem;
+  font-size: 2rem;
   text-align: center;
 }
 
@@ -593,6 +642,11 @@ body {
   .w-connection__title {
     font-size: 1.75rem;
   }
+}
+
+.w-connection__title-image {
+  width: 224px;
+  height: auto;
 }
 
 .w-connection__more-info-cta {
@@ -629,7 +683,6 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   margin-top: 1.5rem;
-  padding: 0 1.5rem;
   width: 100%;
 }
 
@@ -638,7 +691,7 @@ body {
   flex-flow: column;
   flex: 1;
   gap: 1.5rem;
-  max-width: 400px;
+  max-width: 560px;
 }
 
 @media (max-width: 1024px) {
@@ -662,9 +715,8 @@ body {
 
   .w-connection__side {
     flex: 0 0 80vw; /* 80vw ensures the active card dominates while ~10vw peeks on each side */
-    max-width: none;
     scroll-snap-align: center;
-    max-width: 344px;
+    max-width: 100%;
   }
 
   .w-connection-card--large {
@@ -682,6 +734,20 @@ body {
 
 .w-connection:has(#day-passes:checked) .w-passes {
   display: flex;
+}
+
+.w-esim-plans {
+  position: relative;
+  border-radius: 32px;
+  background: linear-gradient(90deg, #F5F5F5 0%, var(--color-light) 100%);
+  overflow: hidden;
+}
+
+.w-esim-plans__pattern {
+  position: absolute;
+  right: 40px;
+  height: 120%;
+  opacity: 0.48;
 }
 
 .w-connection__side__caption {
@@ -719,6 +785,10 @@ body {
     border-color 0.3s ease,
     box-shadow 0.3s ease,
     transform 0.3s ease;
+}
+
+.w-connection-card--large {
+  max-width: 352px;
 }
 
 .w-connection-card {
@@ -824,7 +894,8 @@ body {
   color: #FFFFFF;
   line-height: 1;
   text-align: center;
-  border-radius: 21px;
+  height: 44px;
+  border-radius: 22px;
   min-width: 160px;
   background-color: var(--color-accent);
   font-family: 'manrope-bold', sans-serif;
@@ -1336,7 +1407,7 @@ body {
   gap: 8px;
   font-family: 'inter-light', sans-serif;
   margin-left: 16px;
-  width: 100%;
+  /* width: 100%; */
 }
 
 .w-create-account__offers-selection {
@@ -1671,6 +1742,42 @@ footer {
   opacity: 0.8;
 }
 
+.w-more-info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  margin: 24px 0;
+}
+
+.w-more-info__icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Prevent flexbox from squashing this element */
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+}
+
+.w-more-info__icon {
+  width: 32px;
+  height: 32px;
+}
+
+.w-more-info__title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.w-more-info__text {
+  font-size: 1rem;
+  font-weight: 400;
+  opacity: 0.88;
+}
+
 /* -------------------- */
 /* FAQ */
 /* -------------------- */
@@ -1687,10 +1794,9 @@ footer {
 }
 
 .w-faq__title {
-  margin: 0 0 16px;
+  margin: 10px 0 28px;
   font-family: 'manrope-bold', sans-serif;
   font-size: 2rem;
-  font-weight: 500;
   line-height: 1.1;
   text-align: center;
 }
@@ -1723,7 +1829,7 @@ footer {
   padding: 24px 0;
   cursor: pointer;
 
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 600;
   line-height: 1.2;
   color: #333333;
@@ -1746,7 +1852,7 @@ footer {
   margin: 0;
   padding: 0 64px 28px 0;
 
-  font-size: 1.25rem;
+  font-size: 1rem;
   line-height: 2rem;
   font-family: 'inter-light', sans-serif;
   color: var(--secondary-color);
@@ -1770,11 +1876,11 @@ footer {
   }
 
   .w-faq__question {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
   }
 
   .w-faq__answer p {
-    font-size: 1.125rem;
+    font-size: 1rem;
     padding-right: 0;
   }
 }
@@ -1911,10 +2017,11 @@ footer {
   text-align: center;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 992px) {
   .w-full-screen-modal__title {
     padding-top: 2rem;
     font-size: 22px;
+    text-align: left;
   }
 }
 
@@ -1928,19 +2035,29 @@ footer {
   opacity: 0.88;
 }
 
+@media (max-width: 992px) {
+  .w-full-screen-modal__text {
+    padding-top: 0;
+    font-size: 16px;
+    text-align: left;
+  }
+}
+
 .w-full-screen-modal__placeholder {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 
-  min-height: 480px;
+  min-height: 400px;
 }
 
-.w-full-screen-modal__placeholder .w-connection__cards {
-  flex-direction: column;
+@media (max-width: 639.98px) {
+  .w-full-screen-modal__placeholder .w-connection__cards {
+    flex-direction: column;
+  }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 992px) {
   .w-full-screen-modal {
     align-items: flex-end;
     padding: 0;
@@ -1977,4 +2094,20 @@ footer {
     width: 34px;
     height: 34px;
   }
+}
+
+.has-plus #btn-plus {
+  background: #f1f3f5;
+  border: 2px solid #ced4da;
+  color: #495057 !important;
+}
+
+.has-esim #btn-esim {
+  background: #fdf2f2;
+  border: 2px solid #f8b4b4;
+  color: #9b1c1c !important;
+}
+
+.w-login-content__info {
+  position: relative;
 }

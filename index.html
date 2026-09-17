@@ -6,6 +6,8 @@
 
     <link rel="icon" href="./favicon.ico" />
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap-grid.min.css">
+
     <link rel="stylesheet" href="./app-d3/styles.css">
     <link rel="stylesheet" href="./app-d3/segmented-control.css">
     <link rel="stylesheet" href="./app-d3/tooltip.css">
@@ -417,80 +419,106 @@
           <a href="#" id="openSpeedTestModal">Test the speed</a> where you are.
         </div>
 
-        <div class="w-connection__title-container mt-2">
-          <h1 class="w-connection__title">
-            Mobile eSIM
-          </h1>
-        </div>
+        
+        <div class="container-fluid w-esim-plans mt-2">
+          <!-- <img src="./img/pattern_01.png" alt="Pattern" class="w-esim-plans__pattern"> -->
 
-        <div class="w-connection__cards w-esim-plans">
-          <div class="w-connection__side d-sm-down-none"></div>
+          <div class="w-connection__title-container mb-2 pt-2">
+            <img src="./img/wifinity_mobile.svg" alt="Wifinity Mobile" class="w-connection__title-image">
+          </div>
 
-          <div class="w-connection__side">
-            <div class="w-connection-card--large w-accent-dark-border">
-              <div class="w-plan-card__header w-accent-dark-gradient-bg">
-                <div class="w-plan-card__info">
-                  <h3 class="w-plan-card__title">Unlimited Mobile Data</h3>
+          <div class="row g-5 px-1 pb-1">
+            <div class="col-12 col-md-5">
+              <div class="w-connection-card--large w-connection-card--large-max-width w-accent-dark-border">
+                <div class="w-plan-card__header w-accent-dark-gradient-bg">
+                  <div class="w-plan-card__info">
+                    <h3 class="w-plan-card__title">Unlimited Mobile Data</h3>
+    
+                    <div class="w-plan-card__price">
+                      <div>£20<span>/month</span></div>
+                    </div>
   
-                  <div class="w-plan-card__price">
-                    <div>£20<span>/month</span></div>
+                    <div class="w-plan-card__description w-white-text opacity-88">
+                      Mobile data wherever you go 
+                    </div>
                   </div>
-
-                  <div class="w-plan-card__description w-white-text opacity-88">
-                    Mobile data wherever you go 
+                </div>
+    
+                <div class="w-plan-card__content">
+                  <div class="w-plan-simple-card__row-start">
+                    <img
+                    src="./img/sim_icon.svg"
+                    alt="Devices Icon"
+                    class="w-plan-simple-card__icon"
+                    >
+                    <span>Unlimited UK 4G / 5G</span>
+                  </div>
+                  
+                  <div class="w-plan-card__divider"></div>
+  
+                  <div class="w-plan-simple-card__row-start">
+                    <img
+                    src="./img/change_icon.svg"
+                    alt="Devices Icon"
+                    class="w-plan-simple-card__icon"
+                    >
+                    <span>5GB EU roaming included</span>
+                  </div>
+  
+                  <div class="w-plan-card__cta w-accent-dark-gradient-bg mt-1">
+                    <a href="review-subscription.html" class="w-connection-card__ahref"></a>
+          
+                    <div>Buy Plan</div>
                   </div>
                 </div>
               </div>
-  
-              <div class="w-plan-card__content">
-                <div class="w-plan-simple-card__row-start">
-                  <img
-                  src="./img/sim_icon.svg"
-                  alt="Devices Icon"
-                  class="w-plan-simple-card__icon"
-                  >
-                  <span>Unlimited UK 4G / 5G</span>
-                </div>
-                
-                <div class="w-plan-card__divider"></div>
+            </div>
 
-                <div class="w-plan-simple-card__row-start">
-                  <img
-                  src="./img/change_icon.svg"
-                  alt="Devices Icon"
-                  class="w-plan-simple-card__icon"
-                  >
-                  <span>5GB EU roaming included</span>
-                </div>
-                
-                <div class="w-plan-card__divider"></div>
-                
-                <div class="w-plan-simple-card__row-start">
-                  <img
-                    src="./img/wifi_icon.svg"
-                    alt="Speed Icon"
-                    class="w-plan-simple-card__icon"
-                  >
-                  <span>Access Wifinity MOD WiFi</span>
+            <div class="col-12 col-md-7">
+              <div class="w-text-accent w-text-bold">Why Wifinity Mobile?</div>
+
+              <div class="w-more-info">
+                <div class="w-more-info__icon-container">
+                  <img src="./img/no_sim_icon.svg" alt="eSIM Icon" class="w-more-info__icon">
                 </div>
 
-                <div class="w-plan-card__cta w-accent-dark-gradient-bg mt-1">
-                  <a href="review-subscription.html" class="w-connection-card__ahref"></a>
-        
-                  <div>Buy Plan</div>
+                <div>
+                  <p class="w-more-info__title">Convenient eSIM</p>
+                  <p class="w-more-info__text">No physical SIM card needed. Easily switch between plans and devices with a digital SIM.</p>
+                </div>
+              </div>
+
+              <div class="w-more-info">
+                <div class="w-more-info__icon-container">
+                  <img src="./img/qr_code_icon.svg" alt="eSIM Icon" class="w-more-info__icon">
+                </div>
+
+                <div>
+                  <p class="w-more-info__title">Quick QR Code Setup</p>
+                  <p class="w-more-info__text">Easily activate your eSIM by scanning a QR code, making the setup process fast and hassle-free.</p>
+                </div>
+              </div>
+
+              <div class="w-more-info">
+                <div class="w-more-info__icon-container">
+                  <img src="./img/star_shine_icon.svg" alt="eSIM Icon" class="w-more-info__icon">
+                </div>
+
+                <div>
+                  <p class="w-more-info__title">eSIM Special Offer</p>
+                  <p class="w-more-info__text">Get your SLA internet plan today and get a special discount on your eSIM purchase.</p>
                 </div>
               </div>
             </div>
           </div>
-
-          <div class="w-connection__side d-sm-down-none"></div>
         </div>
 
         <div class="w-faq-container my-2">
           <div class="w-faq">
-            <h2 class="w-faq__title">Got questions? <span class="w-text-accent">We've got answers.</span></h2>
-    
-            <p class="w-faq__subtitle">We're here to help you get started with ease.</p>
+            <div class="w-text-accent w-text-center w-text-bold">Q&A</div>
+            <h2 class="w-faq__title">
+              Frequently asked questions
+            </h2>
     
             <div class="w-faq__item">
               <input
@@ -665,7 +693,37 @@
 
               <!-- Example -->
               <div class="w-full-screen-modal__placeholder">
-                
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="w-more-info">
+                        <div class="w-more-info__icon-container">
+                          <img src="./img/star_shine_icon.svg" alt="Star Shine Icon" class="w-more-info__icon" />
+                        </div>
+
+                        <div>
+                          <p class="w-more-info__title">Flexible plans</p>
+                          <p class="w-more-info__text">Daily, weekly, monthly options. Pause your subscription for deployment or leave.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="w-more-info">
+                        <div class="w-more-info__icon-container">
+                          <img src="./img/electric_bolt_icon.svg" alt="Electric Bolt Icon" class="w-more-info__icon" />
+                        </div>
+
+                        <div>
+                          <p class="w-more-info__title">High-speed connections</p>
+                          <p class="w-more-info__text">Up to 100 Mbps at supported sites</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -691,14 +749,15 @@
 
             <div class="w-full-screen-modal__body">
               <h2 class="w-full-screen-modal__title">
-                Get More from Your Plan
+                Get More From Your Plan
               </h2>
 
               <div class="w-full-screen-modal__placeholder">
                 <div class="w-connection__cards w-plans">
                   <div class="w-connection__side">
-                    <div class="w-connection__side__caption">Boost Plan</div>
-                    <div class="w-connection-card--large w-gold-border">
+                    <div class="w-connection__side__caption">Boost Your Plan</div>
+
+                    <div id="internet-plan-card" class="w-internet-plan-card w-connection-card--large w-gold-border">
                       <div class="w-plan-card__header w-gold-gradient-bg">
                         <div class="w-plan-card__info">
                           <h3 class="w-plan-card__title">
@@ -750,10 +809,9 @@
                           </div>
                         </div>
 
-                        <div class="w-plan-card__cta w-gold-gradient-bg mt-1">
-                          <a href="./app-d3/create-account.html" class="w-connection-card__ahref"></a>
-                
-                          <div>Upgrade to Plus</div>
+                        <div id="btn-plus" class="w-plan-card__cta w-gold-gradient-bg mt-1">
+                          <!-- <a href="./app-d3/create-account.html" class="w-connection-card__ahref"></a> -->
+                          <div class="btn-text">Upgrade to Plus</div>
                         </div>
                       </div>
                     </div>
@@ -761,7 +819,8 @@
 
                   <div class="w-connection__side">
                     <div class="w-connection__side__caption">eSIM Offer</div>
-                    <div class="w-connection-card--large w-accent-dark-border">
+
+                    <div id="esim-plan-card" class="w-esim-plan-card w-connection-card--large w-accent-dark-border">
                       <div class="w-plan-card__header w-accent-dark-gradient-bg">
                         <div class="w-plan-card__info">
                           <h3 class="w-plan-card__title">Add Mobile eSIM</h3>
@@ -795,10 +854,9 @@
                           <span>5GB EU roaming included</span>
                         </div>
 
-                        <div class="w-plan-card__cta w-accent-dark-gradient-bg mt-1">
-                          <a href="./app-d3/create-account.html" class="w-connection-card__ahref"></a>
-                
-                          <div>Add Mobile eSIM</div>
+                        <div id="btn-esim"class="w-plan-card__cta w-accent-dark-gradient-bg mt-1">
+                          <!-- <a href="./app-d3/create-account.html" class="w-connection-card__ahref"></a> -->
+                          <div class="btn-text">Add Mobile eSIM</div>
                         </div>
                       </div>
                     </div>
@@ -809,7 +867,7 @@
               <div class="w-dashboard__card-footer py-0">
                 <div class="w-dashboard__button w-dashboard__button--outlined">
                   <a href="./app-d3/create-account.html" class="w-connection-card__ahref"></a>
-                  Continue with Standard
+                  <span id="continue-btn-text">Continue with Standard</span>
                 </div>
               </div>
             </div>
