@@ -52,8 +52,35 @@
     </header>
     
     <main class="w-main">
-      <section class="w-connection mt-2 mb-2">
-        <div class="w-connection__title-container">
+      <section class="w-hero">
+        <div class="w-hero__container">
+          <div class="w-hero__slide">
+            <!-- Background Image -->
+            <img src="./img/hero_image_01.png" alt="Hero Image" class="w-hero__image" />
+            
+            <!-- Gradient overlay for text readability -->
+            <div class="w-hero__overlay"></div>
+
+            <!-- Content placed on top -->
+            <div class="w-hero__content">
+              <div class="w-hero__text-group">
+                <h1 class="w-hero__title">SLA Internet</h1>
+                <h1 class="w-hero__title">& Wifinity Mobile</h1>
+
+                <div class="w-hero__actions mt-2">
+                  <a id="scrollToSLAPlans" href="#" class="w-connection__cta w-btn--purple">Buy SLA internet</a>
+                  <a id="scrollToEsimPlans" href="#" class="w-connection__cta w-btn--green">Buy Wifinity mobile</a>
+                </div>
+              </div>
+
+              <div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="w-connection mb-2">
+        <div id="sla-plans" class="w-connection__title-container">
           <h1 class="w-connection__title">
             SLA Internet
           </h1>
@@ -110,12 +137,7 @@
                 <div>24/7 support</div>
               </div>
 
-              <!-- <div class="w-connection__more-info-cta">
-                <img src="./img/info_icon.svg" class="w-connection__more-info-cta__icon">
-                <a href="#" id="openMoreInfoModal" class="w-connection__more-info-cta__title">More Info</a>
-              </div> -->
-
-              <div id="openMoreInfoModal" class="w-connection-summary__plan-feature">
+              <div id="openMoreInfoPlansModal" class="w-connection-summary__plan-feature">
                 <a href="#" class="w-connection__more-info-cta__title">More info</a>
                 <img
                   src="./img/arrow_right_alt_icon.svg"
@@ -415,12 +437,10 @@
         </div>
 
         <div class="w-login">
-          Not sure?
-          <a href="#" id="openSpeedTestModal">Test the speed</a> where you are.
+          Not sure? <a href="#" id="openSpeedTestModal">Test your speed</a> or <a href="#" id="scrollToFAQs">read our FAQs</a>.
         </div>
-
         
-        <div class="container-fluid w-esim-plans mt-2">
+        <div id="esim-plans" class="container-fluid w-esim-plans mt-2">
           <!-- <img src="./img/pattern_01.png" alt="Pattern" class="w-esim-plans__pattern"> -->
 
           <div class="w-connection__title-container mb-2 pt-2">
@@ -429,46 +449,48 @@
 
           <div class="row g-5 px-1 pb-1">
             <div class="col-12 col-md-5">
-              <div class="w-connection-card--large w-connection-card--large-max-width w-accent-dark-border">
-                <div class="w-plan-card__header w-accent-dark-gradient-bg">
-                  <div class="w-plan-card__info">
-                    <h3 class="w-plan-card__title">Unlimited Mobile Data</h3>
+              <div class="w-esim-plan-card__container">
+                <div class="w-connection-card--large w-connection-card--large-max-width w-accent-dark-border">
+                  <div class="w-plan-card__header w-accent-dark-gradient-bg">
+                    <div class="w-plan-card__info">
+                      <h3 class="w-plan-card__title">Unlimited Mobile Data</h3>
+      
+                      <div class="w-plan-card__price">
+                        <div>£20<span>/month</span></div>
+                      </div>
     
-                    <div class="w-plan-card__price">
-                      <div>£20<span>/month</span></div>
-                    </div>
-  
-                    <div class="w-plan-card__description w-white-text opacity-88">
-                      Mobile data wherever you go 
+                      <div class="w-plan-card__description w-white-text opacity-88">
+                        Mobile data wherever you go 
+                      </div>
                     </div>
                   </div>
-                </div>
+      
+                  <div class="w-plan-card__content">
+                    <div class="w-plan-simple-card__row-start">
+                      <img
+                      src="./img/sim_icon.svg"
+                      alt="Devices Icon"
+                      class="w-plan-simple-card__icon"
+                      >
+                      <span>Unlimited UK 4G / 5G</span>
+                    </div>
+                    
+                    <div class="w-plan-card__divider"></div>
     
-                <div class="w-plan-card__content">
-                  <div class="w-plan-simple-card__row-start">
-                    <img
-                    src="./img/sim_icon.svg"
-                    alt="Devices Icon"
-                    class="w-plan-simple-card__icon"
-                    >
-                    <span>Unlimited UK 4G / 5G</span>
-                  </div>
-                  
-                  <div class="w-plan-card__divider"></div>
-  
-                  <div class="w-plan-simple-card__row-start">
-                    <img
-                    src="./img/change_icon.svg"
-                    alt="Devices Icon"
-                    class="w-plan-simple-card__icon"
-                    >
-                    <span>5GB EU roaming included</span>
-                  </div>
-  
-                  <div class="w-plan-card__cta w-accent-dark-gradient-bg mt-1">
-                    <a href="review-subscription.html" class="w-connection-card__ahref"></a>
-          
-                    <div>Buy Plan</div>
+                    <div class="w-plan-simple-card__row-start">
+                      <img
+                      src="./img/change_icon.svg"
+                      alt="Devices Icon"
+                      class="w-plan-simple-card__icon"
+                      >
+                      <span>5GB EU roaming included</span>
+                    </div>
+    
+                    <div class="w-plan-card__cta w-accent-dark-gradient-bg mt-1">
+                      <a href="review-subscription.html" class="w-connection-card__ahref"></a>
+            
+                      <div>Buy Plan</div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -509,11 +531,22 @@
                   <p class="w-more-info__text">Get your SLA internet plan today and get a special discount on your eSIM purchase.</p>
                 </div>
               </div>
+
+              <div class="w-more-info">
+                <div id="openMoreInfoESIMModal" class="w-connection-summary__plan-feature">
+                  <a href="#" class="w-connection__more-info-cta__title">More info</a>
+                  <img
+                    src="./img/arrow_right_alt_icon.svg"
+                    alt="Devices Icon"
+                    class="w-plan-simple-card__icon"
+                  >
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="w-faq-container my-2">
+        <div id="faq" class="w-faq-container my-2">
           <div class="w-faq">
             <div class="w-text-accent w-text-center w-text-bold">Q&A</div>
             <h2 class="w-faq__title">

@@ -10,8 +10,8 @@ document
 });
 
 const moreInfoModal = document.getElementById('moreInfoModal');
-const openMoreInfoButton = document.getElementById('openMoreInfoModal');
-const closeMoreInfoButton = document.getElementById('closeMoreInfoModal');
+const openMoreInfoPlansButton = document.getElementById('openMoreInfoPlansModal');
+const closeMoreInfoPlansButton = document.getElementById('closeMoreInfoModal');
 
 const speedTestModal = document.getElementById('speedTestModal');
 const openSpeedTestButton = document.getElementById('openSpeedTestModal');
@@ -24,7 +24,7 @@ const closeBoostYourPlanButton = document.getElementById('closeBoostYourPlanModa
 const overlay = moreInfoModal.querySelector('.w-full-screen-modal__overlay');
 const speedTestOverlay = speedTestModal.querySelector('.w-full-screen-modal__overlay');
 
-openMoreInfoButton.addEventListener('click', function (event) {
+openMoreInfoPlansButton.addEventListener('click', function (event) {
   event.preventDefault();
 
   moreInfoModal.classList.add(
@@ -42,7 +42,7 @@ function closeMoreInfoModal() {
   document.body.style.overflow = '';
 }
 
-closeMoreInfoButton.addEventListener(
+closeMoreInfoPlansButton.addEventListener(
   'click',
   closeMoreInfoModal
 );
@@ -271,3 +271,26 @@ function updateContinueText() {
   
   continueBtnText.textContent = `Continue with ${basePlan}${esimAddon}`;
 }
+
+document.getElementById('scrollToFAQs').addEventListener('click', function(e) {
+  // Prevent the default jump behavior
+  e.preventDefault();
+  
+  // Find the FAQ container
+  const faqSection = document.getElementById('faq');
+  
+  // Smoothly scroll to the target section
+  faqSection.scrollIntoView({ behavior: 'smooth' });
+});
+
+document.getElementById('scrollToSLAPlans').addEventListener('click', function(e) {
+  e.preventDefault();
+  const slaPlansSection = document.getElementById('sla-plans');
+  slaPlansSection.scrollIntoView({ behavior: 'smooth' });
+});
+
+document.getElementById('scrollToEsimPlans').addEventListener('click', function(e) {
+  e.preventDefault();
+  const esimPlansSection = document.getElementById('esim-plans');
+  esimPlansSection.scrollIntoView({ behavior: 'smooth' });
+});
