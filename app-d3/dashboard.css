@@ -100,10 +100,16 @@
   font-family: 'manrope-bold', sans-serif;
 }
 
-.w-dashboard__card-details__separator {
+.w-dashboard__card__v-separator {
   width: 1px;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.08);
   align-self: stretch;
+}
+
+.w-dashboard__card__h-separator {
+  height: 1px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.08);
 }
 
 .w-dashboard__card-details__item {
@@ -122,6 +128,40 @@
   font-size: 0.875rem;
   font-weight: bold;
   opacity: 0.48;
+}
+
+.w-dashboard__card-content {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  padding: 1.5rem;
+}
+
+.w-dashboard__card-content__label {
+  font-family: 'manrope-bold', sans-serif;
+  font-size: 0.875rem;
+  color: #83868F;
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+  text-align: left;
+  padding-bottom: 0.25rem;
+}
+
+.w-dashboard__card-content__value-container {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.w-dashboard__card-content__value {
+  font-family: 'manrope-bold', sans-serif;
+  font-size: 1.25rem;
+  color: #000000;
+  text-align: left;
+  padding-bottom: 2rem;
 }
 
 .w-dashboard__card-promo-price {
