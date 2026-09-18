@@ -659,7 +659,7 @@ body {
 }
 
 /* Align the widget to the left */
-.trustpilot-widget {
+.w-hero .trustpilot-widget {
   align-self: flex-start;
 }
 
