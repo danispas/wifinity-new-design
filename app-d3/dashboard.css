@@ -31,6 +31,18 @@
   border-radius: 24px;
 }
 
+.w-dashboard__card-label {
+  position: absolute;
+  top: -28px;
+  left: 4px;
+  font-family: 'manrope-bold', sans-serif;
+  font-size: 0.875rem;
+  color: #83868F;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: left;
+}
+
 .w-dashboard__card-header {
   display: flex;
   flex-flow: column;

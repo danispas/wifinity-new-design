@@ -556,7 +556,7 @@ body {
 .w-hero__container {
   display: flex;
   width: 100%;
-  height: 384px;
+  height: 344px;
   margin: 0 auto;
   border-radius: 32px;
   color: #FFFFFF;
@@ -648,7 +648,7 @@ body {
   justify-content: space-between;
   gap: 1rem;
   width: 280px;
-  height: 320px;
+  height: 280px;
 }
 
 /* Align the logo to the right */
@@ -1611,7 +1611,7 @@ footer {
   width: 100%;
   margin: 0px auto;
   border-radius: 32px;
-  padding: 2rem;
+  padding: 2rem 4rem;
   background: linear-gradient(to right, var(--color-dark), var(--color-primary), var(--color-accent));
   color: #FFFFFF;
 }
@@ -1633,7 +1633,7 @@ footer {
 /* Desktop styles */
 @media (min-width: 768px) {
   .w-footer__info {
-    grid-template-columns: repeat(4, 1fr); /* 4 columns for desktop */
+    grid-template-columns: repeat(3, 1fr); /* 4 columns for desktop */
     gap: 2rem;
   }
 }
@@ -1644,13 +1644,14 @@ footer {
   gap: 8px;
 }
 
-.w-footer__amf-logo {
-  width: 112px;
+.w-footer__wifinity-icon {
+  width: 48px;
   height: auto;
 }
 
 .w-footer__info-block__description {
-  font-weight: 600;
+  font-family: 'manrope-bold', sans-serif;
+  opacity: 0.8;
 }
 
 .w-footer__info-block__title {
@@ -2203,6 +2204,10 @@ footer {
   }
 }
 
+.w-full-screen-modal__actions {
+  padding-bottom: 2rem;
+}
+
 @media (max-width: 992px) {
   .w-full-screen-modal {
     align-items: flex-end;
@@ -2210,6 +2215,7 @@ footer {
   }
 
   .w-full-screen-modal__content {
+    position: relative;
     max-width: 100%;
     max-height: 85vh;
     border-radius: 32px 32px 0 0;
@@ -2228,17 +2234,30 @@ footer {
     border-radius: 999px;
   }
 
-  .w-full-screen-modal__body {
-    padding: 1.5rem 1.5rem cubic-bezier(0.25, 1, 0.5, 1);
-    padding-bottom: calc(1.5rem + env(safe-area-inset-bottom, 0px));
-  }
-
   .w-full-screen-modal__close {
     top: 18px;
     right: 18px;
 
     width: 34px;
     height: 34px;
+  }
+
+  .w-full-screen-modal__body {
+    padding: 1.5rem 1.5rem;
+    padding-bottom: calc(1.5rem + env(safe-area-inset-bottom, 0px));
+  }
+
+  .w-full-screen-modal__actions {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: #fff; /* Match your modal content background */
+    border-top-right-radius: 32px;
+    border-top-left-radius: 32px;
+    padding: 1rem 0 calc(1rem + env(safe-area-inset-bottom, 0px));
+    z-index: 2;
   }
 }
 
