@@ -564,6 +564,12 @@ body {
   background-color: #0b0738; /* Base dark purple fallback */
 }
 
+@media (max-width: 767px) {
+  .w-hero__container {
+    padding: 1.5rem;
+  }
+}
+
 .w-hero__slide {
   position: relative;
   width: 100%;
@@ -636,10 +642,34 @@ body {
   background: linear-gradient(90deg, #0A7A64 0%, #3CD578 84%);
 }
 
-@media (max-width: 767px) {
-  .w-hero__container {
-    padding: 1.5rem;
-  }
+.w-hero__image-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 280px;
+  height: 320px;
+}
+
+/* Align the logo to the right */
+.w-hero__image-group-amf-logo {
+  align-self: flex-end;
+  width: 72px;
+  height: auto;
+}
+
+/* Align the widget to the left */
+.trustpilot-widget {
+  align-self: flex-start;
+}
+
+.w-hero__image-group-pattern {
+  position: absolute;
+  top: 0;
+  right: 4rem;
+  width: auto;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* Stepper */
