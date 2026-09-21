@@ -10,6 +10,7 @@
 .w-dashboard__cards-container {
   display: grid;
   grid-template-columns: 1fr;
+  align-items: start;
   gap: 2rem;
 }
 
@@ -28,7 +29,7 @@
   flex-grow: 1;
   background-color: #FFFFFF;
   border: 2px solid rgb(232, 232, 232);
-  border-radius: 24px;
+  border-radius: 32px;
 }
 
 .w-dashboard__card-label {
@@ -49,8 +50,8 @@
   justify-content: space-between;
   align-items: flex-start;
   border: 4px solid #FFFFFF;
-  border-top-left-radius: 24px;
-  border-top-right-radius: 24px;
+  border-top-left-radius: 32px;
+  border-top-right-radius: 32px;
   min-height: 150px;
   width: 100%;
   padding: 1rem 2rem;
@@ -74,7 +75,7 @@
   margin: 0.25rem 0;
   font-size: 1rem;
   text-align: left;
-  opacity: 0.8;
+  opacity: 0.88;
 }
 
 .w-dashboard__card-badge {
@@ -130,13 +131,33 @@
   opacity: 0.48;
 }
 
+.w-dashboard__card-content__details {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.w-dashboard__card-content__details__qr-code {
+  width: 180px;
+  height: 180px;
+}
+
+.w-dashboard__card-content__details__description {
+  font-size: 1rem;
+  text-align: center;
+  max-width: 320px;
+  opacity: 0.88;
+}
+
 .w-dashboard__card-content {
   display: flex;
   flex-flow: column;
   justify-content: center;
   align-items: flex-start;
   width: 100%;
-  padding: 1.5rem;
+  padding: 1rem 1.5rem;
 }
 
 .w-dashboard__card-content__label {
@@ -154,6 +175,29 @@
   flex-flow: row;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+}
+
+.w-dashboard__card-content__actions {
+  display: flex;
+  flex-flow: row;
+  gap: 0.5rem;
+}
+
+.w-dashboard__card-content__action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #F2F3F5;
+  cursor: pointer;
+}
+
+.w-dashboard__card-content__action-icon {
+  width: 22px;
+  height: 22px;
 }
 
 .w-dashboard__card-content__value {
@@ -161,7 +205,6 @@
   font-size: 1.25rem;
   color: #000000;
   text-align: left;
-  padding-bottom: 2rem;
 }
 
 .w-dashboard__card-promo-price {
@@ -241,4 +284,76 @@
 
 .w-dashboard__button.w-accent-dark-gradient-bg:hover {
   background: linear-gradient(135deg, var(--color-dark) 24.64%, var(--color-accent-dark) 94.36%);
+}
+
+.w-dashboard__column {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.w-dashboard__mini-cards-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.w-dashboard__mini-card {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #FFFFFF;
+  border: 2px solid rgb(232, 232, 232);
+  border-radius: 32px;
+  padding: 1rem 1.5rem;
+}
+
+.w-dashboard__device-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 1.5rem;
+}
+
+.w-dashboard__device-item__info-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.w-dashboard__device-item__icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background-color: #F2F3F5;
+}
+
+.w-dashboard__device-item__icon {
+  width: 22px;
+  height: 22px;
+}
+
+.w-dashboard__device-item__name {
+  font-weight: 600;
+}
+
+.w-dashboard__device-item__status {
+  font-weight: 400;
+  opacity: 0.6;
+}
+
+.w-dashboard__device-item__arrow {
+  width: 26px;
+  height: 26px;
+  opacity: 0.6;
 }
