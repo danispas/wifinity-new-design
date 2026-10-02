@@ -47,6 +47,15 @@
   margin-bottom: 16px;
 }
 
+.w-login-content__field__label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+label .required {
+  color: #e53e3e; /* Red color for asterisk */
+}
+
 .w-login-content__input-field {
   width: 100%;
   height: 56px;
@@ -135,6 +144,12 @@
   margin-top: 1rem;
   font-family: 'inter-light', sans-serif;
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  .w-login-content__info {
+    padding: 0 2rem;
+  }
 }
 
 .w-login-content__info-link {

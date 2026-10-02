@@ -286,6 +286,16 @@
   background: linear-gradient(135deg, var(--color-dark) 24.64%, var(--color-accent-dark) 94.36%);
 }
 
+.w-dashboard__button--continue:hover {
+  border: 2px solid var(--color-accent);
+  background-color: var(--color-accent) !important;
+  color: #FFFFFF;
+}
+
+.w-dashboard__button--continue:hover {
+  background-color: var(--color-accent-dark-hover);
+}
+
 .w-dashboard__column {
   display: flex;
   flex-direction: column;

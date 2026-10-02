@@ -25,7 +25,7 @@
   </head>
 
   <body class="w-light-theme">
-    <header class="w-header">
+    <header class="w-header transparent-bg">
       <div class="w-header__container">
         <img
           src="./img/wifinity_logo_white.svg"
@@ -63,35 +63,37 @@
 
             <!-- Content placed on top -->
             <div class="w-hero__content">
-              <div class="w-hero__text-group">
-                <h1 class="w-hero__title">SLA Internet</h1>
-                <h1 class="w-hero__title">& Wifinity Mobile</h1>
+              <div class="w-hero__text-group mb-1">
+                <h1 class="w-hero__title">SLA Internet & Wifinity Mobile</h1>
 
-                <div class="w-hero__actions mt-2">
+                <div class="w-hero__actions mt-1">
                   <a id="scrollToSLAPlans" href="#" class="w-connection__cta w-btn--purple">Buy SLA internet</a>
                   <a id="scrollToEsimPlans" href="#" class="w-connection__cta w-btn--green">Buy Wifinity mobile</a>
                 </div>
               </div>
 
               <div class="w-hero__image-group">
-                <img src="./img/pattern_01.png" alt="Pattern" class="w-hero__image-group-pattern" />
+                <!-- <img src="./img/pattern_01.png" alt="Pattern" class="w-hero__image-group-pattern" /> -->
                 <img src="./img/amf_logo.png" alt="AMF Logo" class="w-hero__image-group-amf-logo" />
 
-                <div
-                  ref="trustbox"
-                  class="trustpilot-widget"
-                  data-locale="en-US"
-                  data-template-id="53aa8807dec7e10d38f59f32"
-                  data-businessunit-id="57b60ae20000ff000593a426"
-                  data-style-height="120px"
-                  data-style-width="200px"
-                  data-theme="dark"
-                >
-                  <a
-                    href="https://www.trustpilot.com/review/wifinity.co.uk"
-                    target="_blank"
-                    rel="noopener"
-                  >Trustpilot</a>
+                <!-- Container wrapper -->
+                <div style="position: relative; display: inline-block;">
+                  <!-- The overlay that blocks all clicks -->
+                  <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 10; cursor: default;"></div>
+
+                  <!-- Your existing Trustpilot Widget -->
+                  <div
+                    ref="trustbox"
+                    class="trustpilot-widget"
+                    data-locale="en-US"
+                    data-template-id="53aa8807dec7e10d38f59f32"
+                    data-businessunit-id="57b60ae20000ff000593a426"
+                    data-style-height="96px"
+                    data-style-width="200px"
+                    data-theme="dark"
+                  >
+                    <a href="https://www.trustpilot.com/review/wifinity.co.uk" target="_blank" rel="noopener">Trustpilot</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -99,7 +101,7 @@
         </div>
       </section>
 
-      <section class="w-connection mb-2">
+      <section class="w-connection mt-2 mb-2">
         <div id="sla-plans" class="w-connection__title-container">
           <h1 class="w-connection__title">
             SLA Internet
@@ -507,8 +509,7 @@
                     </div>
     
                     <div class="w-plan-card__cta w-accent-dark-gradient-bg mt-1">
-                      <a href="review-subscription.html" class="w-connection-card__ahref"></a>
-            
+                      <a href="#" id="openBoostYourESIMModal" class="w-connection-card__ahref"></a>
                       <div>Buy Plan</div>
                     </div>
                   </div>
@@ -714,6 +715,10 @@
               </div>
             </div>
           </div>
+
+          <div class="w-login mt-2">
+            <a id="scrollToSLAPlansFAQ" href="#">Back to Plans</a>
+          </div>
         </div>
 
         <!-- More Info Modal -->
@@ -782,6 +787,71 @@
           </div>
         </div>
 
+        <!-- More Info eSIM Modal -->
+        <div
+          class="w-full-screen-modal"
+          id="moreInfoESIMModal"
+          aria-hidden="true"
+        >
+          <div class="w-full-screen-modal__overlay"></div>
+
+          <div class="w-full-screen-modal__content">
+            <button
+              class="w-full-screen-modal__close"
+              id="closeMoreInfoESIMModal"
+              aria-label="Close modal"
+            >
+              <span></span>
+              <span></span>
+            </button>
+
+            <div class="w-full-screen-modal__body">
+              <h2 class="w-full-screen-modal__title">
+                Wifinity Mobile
+              </h2>
+
+              <p class="w-full-screen-modal__text">
+                Manage your mobile connectivity effortlessly with Wifinity Mobile.
+              </p>
+
+              <!-- Example -->
+              <div class="w-full-screen-modal__placeholder">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="w-more-info">
+                        <div class="w-more-info__icon-container">
+                          <img src="./img/star_shine_icon.svg" alt="Star Shine Icon" class="w-more-info__icon" />
+                        </div>
+
+                        <div>
+                          <p class="w-more-info__title">Instant Global Connectivity</p>
+                          <p class="w-more-info__text">Stay connected wherever you go. Connect to local networks around the world without waiting for shipping or visiting a store.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="w-more-info">
+                        <div class="w-more-info__icon-container">
+                          <img src="./img/electric_bolt_icon.svg" alt="Electric Bolt Icon" class="w-more-info__icon" />
+                        </div>
+
+                        <div>
+                          <p class="w-more-info__title">Dual-SIM Flexibility</p>
+                          <p class="w-more-info__text">Keep your primary number active while using Wifinity Mobile for mobile data, keeping work and personal lines separate on one phone.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <!-- Boost Your Plan Modal -->
         <div
           class="w-full-screen-modal"
@@ -791,14 +861,14 @@
           <div class="w-full-screen-modal__overlay"></div>
 
           <div class="w-full-screen-modal__content">
-            <button
+            <!-- <button
               class="w-full-screen-modal__close"
               id="closeBoostYourPlanModal"
               aria-label="Close modal"
             >
               <span></span>
               <span></span>
-            </button>
+            </button> -->
 
             <div class="w-full-screen-modal__body">
               <h2 class="w-full-screen-modal__title">
@@ -871,12 +941,12 @@
                   </div>
 
                   <div class="w-connection__side">
-                    <div class="w-connection__side__caption">eSIM Offer</div>
+                    <div class="w-connection__side__caption">Wifinity Mobile Offer</div>
 
                     <div id="esim-plan-card" class="w-esim-plan-card w-connection-card--large w-accent-dark-border">
                       <div class="w-plan-card__header w-accent-dark-gradient-bg">
                         <div class="w-plan-card__info">
-                          <h3 class="w-plan-card__title">Add Mobile eSIM</h3>
+                          <h3 class="w-plan-card__title">Add Wifinity Mobile</h3>
           
                           <div class="w-plan-card__price">
                             <div><del>£20</del> +£15<span>/month</span></div>
@@ -909,7 +979,7 @@
 
                         <div id="btn-esim"class="w-plan-card__cta w-accent-dark-gradient-bg mt-1">
                           <!-- <a href="./app-d3/create-account.html" class="w-connection-card__ahref"></a> -->
-                          <div class="btn-text">Add Mobile eSIM</div>
+                          <div class="btn-text">Add Wifinity Mobile</div>
                         </div>
                       </div>
                     </div>
@@ -919,10 +989,219 @@
             </div>
 
             <div class="w-full-screen-modal__actions">
-              <div class="w-dashboard__card-footer py-0">
-                <div class="w-dashboard__button w-dashboard__button--outlined">
+              <div class="w-dashboard__card-footer flex-column gap-1 py-0">
+                <div class="w-dashboard__button w-dashboard__button--outlined w-dashboard__button--outlined w-dashboard__button--continue">
                   <a href="./app-d3/create-account.html" class="w-connection-card__ahref"></a>
                   <span id="continue-btn-text">Continue with Standard</span>
+                </div>
+
+                <div
+                  id="closeBoostYourPlanModal"
+                  class="w-dashboard__button w-dashboard__button--outlined w-dashboard__button--outlined"
+                >
+                  <span>Back To Plans</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Boost Your eSIM Modal -->
+        <div
+          class="w-full-screen-modal"
+          id="boostYourESIMModal"
+          aria-hidden="true"
+        >
+          <div class="w-full-screen-modal__overlay"></div>
+
+          <div class="w-full-screen-modal__content mw-1200">
+            <!-- <button
+              class="w-full-screen-modal__close"
+              id="closeBoostYourESIMModal"
+              aria-label="Close modal"
+            >
+              <span></span>
+              <span></span>
+            </button> -->
+
+            <div class="w-full-screen-modal__body">
+              <h2 class="w-full-screen-modal__title">
+                Add SLA Internet & <span class="w-text-accent">Save 25%</span> on Mobile
+              </h2>
+
+              <p class="w-full-screen-modal__text">
+                Add any SLA internet plan to unlock an instant 25% monthly discount on your mobile plan.
+              </p>
+
+              <div class="w-full-screen-modal__placeholder">
+                <div class="w-connection__cards w-plans">
+                  <div class="w-connection__side">
+                    <div id="basic-plan-card"class="w-connection-card--large w-dark-border">
+                      <div class="w-plan-card__header w-dark-bg">
+                        <div class="w-plan-card__info">
+                          <h3 class="w-plan-card__title">BASIC</h3>
+          
+                          <div class="w-plan-card__price">
+                            <div>£23.99<span>/month</span></div>
+                          </div>
+
+                          <div class="w-plan-card__description w-white-text opacity-88">
+                            Suitable for browsing and everyday tasks
+                          </div>
+                        </div>
+                      </div>
+          
+                      <div class="w-plan-card__content">
+                        <div class="w-plan-simple-card__row-start">
+                          <img
+                            src="./img/wifi_icon.svg"
+                            alt="Speed Icon"
+                            class="w-plan-simple-card__icon"
+                          >
+                          <span>Up to <b>30 Mb/s</b></span>
+                        </div>
+
+                        <div class="w-plan-card__divider"></div>
+
+                        <div class="w-plan-simple-card__row-start">
+                          <img
+                            src="./img/devices_icon_accent.svg"
+                            alt="Devices Icon"
+                            class="w-plan-simple-card__icon"
+                          >
+                          <span>Use on <b>2 devices</b></span>
+                        </div>
+
+                        <div id="btn-add-basic" class="w-plan-card__cta w-dark-bg mt-1">
+                          Add Basic
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="w-connection__side">
+                    <div id="standard-plan-card" class="w-connection-card--large w-accent-border">
+                      <div class="w-plan-card__header w-accent-gradient-bg">
+                        <div class="w-plan-card__info">
+                          <h3 class="w-plan-card__title">Standard</h3>
+          
+                          <div class="w-plan-card__price">
+                            <div>£34.49<span>/month</span></div>
+                          </div>
+
+                          <div class="w-plan-card__description w-white-text opacity-88">
+                            Great for a streaming and video calls
+                          </div>
+                        </div>
+                      </div>
+          
+                      <div class="w-plan-card__content">
+                        <div class="w-plan-simple-card__row-start">
+                          <img
+                            src="./img/wifi_icon.svg"
+                            alt="Speed Icon"
+                            class="w-plan-simple-card__icon"
+                          >
+                          <span>Up to <b>120 Mb/s</b></span>
+                        </div>
+
+                        <div class="w-plan-card__divider"></div>
+
+                        <div class="w-plan-simple-card__row-start">
+                          <img
+                            src="./img/devices_icon_accent.svg"
+                            alt="Devices Icon"
+                            class="w-plan-simple-card__icon"
+                          >
+                          <span>Use on <b>5 devices</b></span>
+                        </div>
+
+                        <div id="btn-add-standard" class="w-plan-card__cta w-accent-gradient-bg mt-1">
+                          Add Standard
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="w-connection__side">
+                    <div id="plus-plan-card" class="w-connection-card--large w-gold-border">
+                      <div class="w-plan-card__header w-gold-gradient-bg">
+                        <div class="w-plan-card__info">
+                          <h3 class="w-plan-card__title">Plus</h3>
+          
+                          <div class="w-plan-card__price">
+                            <div>£41.99<span>/month</span></div>
+                          </div>
+
+                          <div class="w-plan-card__description w-white-text opacity-88">
+                            Ideal for gamers or large downloads
+                          </div>
+
+                          <div class="w-badge w-dark-bg">Fastest</div>
+                        </div>
+                      </div>
+          
+                      <div class="w-plan-card__content">
+                        <div class="w-plan-simple-card__row-start">
+                          <img
+                            src="./img/wifi_icon.svg"
+                            alt="Speed Icon"
+                            class="w-plan-simple-card__icon"
+                          >
+                          <span>Up to <b>1 Gb/s</b></span>
+                          <div class="w-tooltip-container">
+                            <button class="w-tooltip-trigger">
+                              <img src="./img/info_icon.svg" class="w-tooltip-icon">
+                            </button>
+                            <div class="w-tooltip" role="tooltip" id="tooltip-demo">
+                              Fastest possible WiFi, up to 1 Gb/s on wired connections
+                              <div class="w-tooltip-arrow"></div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="w-plan-card__divider"></div>
+
+                        <div class="w-plan-simple-card__row-start">
+                          <img
+                            src="./img/devices_icon_accent.svg"
+                            alt="Devices Icon"
+                            class="w-plan-simple-card__icon"
+                          >
+                          <span><b>All</b> personal <b>devices</b></span>
+                          <div class="w-tooltip-container">
+                            <button class="w-tooltip-trigger">
+                              <img src="./img/info_icon.svg" class="w-tooltip-icon">
+                            </button>
+                            <div class="w-tooltip" role="tooltip" id="tooltip-demo">
+                              6 device slots provided, further devices slots can be added on request for legitimate personal use. Account sharing with non-subscribers is not permitted
+                              <div class="w-tooltip-arrow"></div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div id="btn-add-plus" class="w-plan-card__cta w-gold-gradient-bg mt-1">
+                          Add Plus
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="w-full-screen-modal__actions">
+              <div class="w-dashboard__card-footer flex-column gap-1 py-0">
+                <div class="w-dashboard__button w-dashboard__button--outlined w-dashboard__button--outlined w-dashboard__button--continue">
+                  <a href="./app-d3/create-account.html" class="w-connection-card__ahref"></a>
+                  <span id="esim-continue-btn-text">Continue with Mobile</span>
+                </div>
+
+                <div
+                  id="closeBoostYourESIMModal"
+                  class="w-dashboard__button w-dashboard__button--outlined w-dashboard__button--outlined"
+                >
+                  <span>Back To Plans</span>
                 </div>
               </div>
             </div>

@@ -157,6 +157,26 @@ body {
   padding-bottom: 2rem !important;
 }
 
+.mw-1200 {
+  max-width: 1200px !important;
+}
+
+.w-100 {
+  width: 100% !important;
+}
+
+.gap-1 {
+  gap: 1rem !important;
+}
+
+.flex-column {
+  flex-direction: column !important;
+}
+
+.flex-row {
+  flex-direction: row !important;
+}
+
 /* Hide ONLY on extra-small mobile (< 640px) */
 @media (max-width: 639.98px) {
   .d-xs-none {
@@ -192,6 +212,10 @@ body {
   }
 }
 
+.transparent-bg {
+  background: transparent !important;
+}
+
 .cursor-none {
   cursor: none !important;
 }
@@ -220,7 +244,7 @@ body {
 }
 
 .w-accent-bg {
-  background-color: var(--color-accent);
+  background-color: var(--color-accent) !important;
   color: #FFFFFF !important;
 }
 
@@ -456,6 +480,7 @@ body {
   font-family: 'manrope-bold', sans-serif;
   color: #FFFFFF;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .w-header__menu-text {
@@ -551,22 +576,23 @@ body {
 
 /* Hero Section */
 .w-hero {
-  padding: 2rem;
+  /* padding: 2rem; */
+  margin-top: -76px;
 }
 
 @media (max-width: 767px) {
   .w-hero {
-    padding: 0.5rem;
-    padding-bottom: 1rem;
+    /* padding: 0.5rem; */
+    /* padding-bottom: 1rem; */
   }
 }
 
 .w-hero__container {
   display: flex;
   width: 100%;
-  height: 344px;
+  height: 272px;
   margin: 0 auto;
-  border-radius: 32px;
+  /* border-radius: 32px; */
   color: #FFFFFF;
   overflow: hidden;
   background-color: #0b0738; /* Base dark purple fallback */
@@ -614,9 +640,9 @@ body {
   inset: 0;
   z-index: 2;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
-  padding: 0 4rem;
+  padding: 2rem;
 }
 
 .w-hero__text-group {
@@ -626,7 +652,7 @@ body {
 }
 
 .w-hero__title {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 700;
   line-height: 1.2;
 }
@@ -637,14 +663,14 @@ body {
 }
 
 .w-btn--purple {
-  height: 50px !important;
+  /* height: 50px !important; */
   border-radius: 25px !important;
   padding: 1rem 2rem !important;
   background: linear-gradient(101.03deg, #38258C 26.44%, #6140F2 73.56%);
 }
 
 .w-btn--green {
-  height: 50px !important;
+  /* height: 50px !important; */
   border-radius: 25px !important;
   padding: 1rem 2rem !important;
   background: linear-gradient(90deg, #0A7A64 0%, #3CD578 84%);
@@ -652,23 +678,31 @@ body {
 
 .w-hero__image-group {
   display: flex;
-  flex-direction: column;
+  flex-direction: row-reverse;
   justify-content: space-between;
+  align-items: flex-end;
   gap: 1rem;
   width: 280px;
-  height: 280px;
+  /* height: 280px; */
 }
 
 /* Align the logo to the right */
 .w-hero__image-group-amf-logo {
-  align-self: flex-end;
+  /* align-self: flex-end; */
   width: 72px;
   height: auto;
 }
 
 /* Align the widget to the left */
 .w-hero .trustpilot-widget {
-  align-self: flex-start;
+  /* align-self: flex-start; */
+}
+
+/* Disable interaction on the container AND any generated iframe inside it */
+.trustpilot-widget,
+.trustpilot-widget iframe {
+  pointer-events: none !important;
+  cursor: default !important;
 }
 
 .w-hero__image-group-pattern {
@@ -678,6 +712,7 @@ body {
   width: auto;
   height: 100%;
   object-fit: cover;
+  opacity: 0.5;
 }
 
 /* Stepper */
@@ -1032,11 +1067,28 @@ body {
   font-family: 'inter-light', sans-serif;
 }
 
+.w-create-account__cta {
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  outline: none;
+}
+
 .w-header__cta,
 .w-connection__cta,
 .w-connection-card__cta,
 .w-create-account__cta,
 .w-plan-card__cta {
+  /* 1. Reset native button appearance */
+  appearance: none;
+  -webkit-appearance: none;
+
+  /* 2. Ensure consistent layout & pointer cursor */
+  display: inline-block;
+  cursor: pointer;
+  padding: 0;
+  font: inherit;
+
   position: relative;
   display: flex;
   justify-content: center;
@@ -1063,6 +1115,14 @@ body {
 
 .w-create-account__cta {
   min-width: 320px;
+}
+
+/* Styling for disabled state */
+.w-create-account__cta[disabled],
+.w-create-account__cta.is-disabled {
+  opacity: 0.32;
+  cursor: not-allowed;
+  pointer-events: none;
 }
 
 .w-plan-card__cta-outlined {
@@ -1472,11 +1532,25 @@ body {
   margin-top: 2rem;
 }
 
+.w-create-account__form-container {
+  display: flex;
+  flex-flow: column;
+  flex: 1;
+  gap: 1.5rem;
+  max-width: 560px;
+}
+
 .w-create-account__form {
   display: flex;
   flex-flow: column;
   justify-content: center;
   width: 100%;
+}
+
+@media (max-width: 768px) {
+  .w-create-account__form-container {
+    padding: 0 2rem;
+  }
 }
 
 .w-create-account__summary-details {
@@ -1524,6 +1598,50 @@ body {
 .w-order-summary__cta-icon {
   width: 24px;
   height: 24px;
+}
+
+.w-esim-alert-box {
+  position: relative;
+  display: flex;
+  background-color: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin: 1.25rem 0;
+  overflow: hidden;
+}
+
+.w-esim-alert-box__left-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: #22c55e;
+}
+
+.w-esim-alert-box__title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #14532d;
+  margin-bottom: 0.25rem;
+}
+
+.w-esim-alert-box__discount {
+  background-color: #22c55e;
+  color: #ffffff;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  margin-right: 0.35rem;
+  vertical-align: middle;
+}
+
+.w-esim-alert-box__text {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #166534;
+  line-height: 1.4;
 }
 
 .w-create-account__summary-header__esim.is-hidden,
@@ -2282,5 +2400,39 @@ footer {
 }
 
 .w-login-content__info {
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.w-login-content__info_block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 560px;
+}
+
+.w-login-content__info_block_text {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.has-plan-selected #btn-add-basic,
+.has-plan-selected #btn-add-standard,
+.has-plan-selected #btn-add-plus {
+  background: #f1f3f5 !important;
+  border: 2px solid #ced4da;
+  color: #495057 !important;
+}
+
+.w-help-list {
+  width: 88%;
+  border: 2px solid rgb(232, 232, 232);
+  border-radius: 32px;
+}
+
+@media (max-width: 639.98px) {
+  .w-help-list {
+    width: 100%;
+  }
 }

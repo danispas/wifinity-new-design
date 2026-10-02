@@ -21,11 +21,13 @@
   <body class="w-light-theme">
     <header class="w-header">
       <div class="w-header__container">
-        <img
-          src="../img/wifinity_logo_white.svg"
-          alt="Wifinity"
-          class="w-logo"
-        />
+        <a href="../index.html">
+          <img
+            src="../img/wifinity_logo_white.svg"
+            alt="Wifinity"
+            class="w-logo"
+          />
+        </a>
       </div>
 
       <div class="w-header__menu">
@@ -80,87 +82,14 @@
         </h1>
 
         <div class="w-create-account__cards">
-          <div class="w-connection__side flex-2">
-            <div class="w-order-summary">
-              <div class="w-connection-summary__session">
+          <div class="w-create-account__stripe-container">
+            <div class="w-order-summary mb-2">
+              <!-- <div class="w-connection-summary__session">
                 <div>Order summary</div>
-              </div>
+              </div> -->
   
               <div class="w-create-account__summary-details">
-                <div class="w-create-account__summary-header">
-                  <div id="planName" class="w-create-account__summary-plane-name">
-                    Standard
-                    <p class="w-create-account__summary-subtitle">
-                      In-room Internet
-                    </p>
-                    <div class="w-order-summary__cta">
-                      <a href="../index.html" class="w-connection-card__ahref"></a>
-                      <img
-                        src="../img/change_icon.svg"
-                        alt="Change Icon"
-                        class="w-order-summary__cta-icon"
-                      >
-                      Change plan
-                    </div>
-                  </div>
-  
-                  <span
-                    class="w-create-account__summary-price mt-0"
-                  >
-                    £34.49<span>/month</span>
-                  </span>
-                </div>
-
-                <hr class="w-create-account__divider">
-
-                <div class="w-create-account__summary-header w-create-account__summary-header__esim">
-                  <div id="mobileESIM" class="w-create-account__summary-plane-name">
-                    Mobile eSIM
-                    <p class="w-create-account__summary-subtitle">
-                      Unlimited UK eSIM
-                    </p>
-                    <div id="removeMobileESIM" class="w-order-summary__cta">
-                      <img
-                        src="../img/close_icon.svg"
-                        alt="Remove Icon"
-                        class="w-order-summary__cta-icon"
-                      >
-                      Remove Mobile eSIM
-                    </div>
-                  </div>
-  
-                  <span
-                    class="w-create-account__summary-price mt-0"
-                  >
-                    <del>£20</del> £15<span>/month</span>
-                  </span>
-                </div>
-
-                <div class="w-create-account__summary-header w-create-account__summary-header__add-esim is-hidden">
-                  <div id="addMobileESIM" class="w-order-summary__cta">
-                    <img
-                      src="../img/add_icon.svg"
-                      alt="Add Icon"
-                      class="w-order-summary__cta-icon"
-                    >
-                    Add Mobile eSIM
-                  </div>
-                </div>
-
-                <hr class="w-create-account__divider">
-
-                <div class="w-create-account__summary-header mt-2">
-                  <div id="planName" class="w-create-account__summary-plane-name">
-                    Total:
-                  </div>
-  
-                  <span
-                    id="totalPriceMobile"
-                    class="w-create-account__summary-price mt-0"
-                  >
-                    £49.49<span>/month</span>
-                  </span>
-                </div>
+                <img src="../img/stripe-checkout.PNG" alt="Stripe Checkout" class="w-order-summary__checkout-image" />
               </div>
             </div>
 
@@ -179,22 +108,7 @@
       <div class="w-footer__container">
         <div class="w-footer__info">
           <div class="w-footer__info-block">
-            <div
-              ref="trustbox"
-              class="trustpilot-widget"
-              data-locale="en-US"
-              data-template-id="53aa8807dec7e10d38f59f32"
-              data-businessunit-id="57b60ae20000ff000593a426"
-              data-style-height="120px"
-              data-style-width="240px"
-              data-theme="dark"
-            >
-              <a
-                href="https://www.trustpilot.com/review/wifinity.co.uk"
-                target="_blank"
-                rel="noopener"
-              >Trustpilot</a>
-            </div>
+            <img src="../img/wifinity_icon.png" class="w-footer__wifinity-icon">
             <div class="w-footer__info-block__description">
               Connecting the Armed Forces since 2007
             </div>
@@ -202,7 +116,6 @@
 
           <div class="w-footer__info-block">
             <div class="w-footer__info-block__title">Support</div>
-            <a href="#" class="w-footer__info-block__link">FAQ</a>
             <a href="#" class="w-footer__info-block__link">+44 (0) 20 8090 1290</a>
             <a href="#" class="w-footer__info-block__link">support@wifinity.co.uk</a>
           </div>
