@@ -184,6 +184,16 @@
 
             <div class="w-connetion-contract">
               <div class="w-create-account__offers">
+                <a
+                  href="#"
+                  id="openContractSummaryModal"
+                  class="w-login-content__info-link"
+                >Contract Summary</a>
+              </div>
+            </div>
+
+            <div class="w-connetion-contract">
+              <div class="w-create-account__offers">
                 <input
                   id="terms-conditions"
                   type="checkbox"
@@ -193,8 +203,15 @@
                 >
                 <label for="terms-conditions">
                   I have read and accepted the <span class="w-login-content__info-link">Terms and Conditions</span>
-                  and <a href="#" id="openMoreInfoModal" class="w-login-content__info-link">Contract Information</a>, view <span class="w-login-content__info-link">Contract Summary</span>
+                  and <a href="#" id="openMoreInfoModal" class="w-login-content__info-link">Contract Information</a>.
                 </label><br>
+              </div>
+            </div>
+
+            <div class="w-create-account__cta-container">
+              <div class="w-create-account__cta is-disabled" id="continueCta">
+                <a href="payment.html" class="w-connection-card__ahref"></a>
+                <div>Continue</div>
               </div>
             </div>
 
@@ -218,7 +235,7 @@
 
                 <div class="w-full-screen-modal__body">
                   <h2 class="w-full-screen-modal__title">
-                    Contract Information
+                    Contract Summary
                   </h2>
 
                   <!-- Example -->
@@ -226,13 +243,6 @@
 
                   </div>
                 </div>
-              </div>
-            </div>
-
-            <div class="w-create-account__cta-container">
-              <div class="w-create-account__cta">
-                <a href="payment.html" class="w-connection-card__ahref"></a>
-                <div>Continue</div>
               </div>
             </div>
           </div>

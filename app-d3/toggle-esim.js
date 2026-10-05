@@ -28,17 +28,19 @@ const moreInfoModal = document.getElementById('moreInfoModal');
 const openMoreInfoButton = document.getElementById('openMoreInfoModal');
 const closeMoreInfoButton = document.getElementById('closeMoreInfoModal');
 
+const openContractSummaryModal = document.getElementById('openContractSummaryModal');
+
 const overlay = moreInfoModal.querySelector('.w-full-screen-modal__overlay');
 
-openMoreInfoButton.addEventListener('click', function (event) {
+function handleModalOpen(event) {
   event.preventDefault();
 
-  moreInfoModal.classList.add(
-    'w-full-screen-modal--open'
-  );
-
+  moreInfoModal.classList.add('w-full-screen-modal--open');
   document.body.style.overflow = 'hidden';
-});
+}
+
+openMoreInfoButton.addEventListener('click', handleModalOpen);
+openContractSummaryModal.addEventListener('click', handleModalOpen);
 
 function closeMoreInfoModal() {
   moreInfoModal.classList.remove(
@@ -57,3 +59,10 @@ overlay.addEventListener(
   'click',
   closeMoreInfoModal
 );
+
+const checkbox = document.getElementById('terms-conditions');
+const continueCta = document.getElementById('continueCta');
+
+checkbox.addEventListener('change', () => {
+  continueCta.classList.toggle('is-disabled', !checkbox.checked);
+});
